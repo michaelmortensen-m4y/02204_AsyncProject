@@ -27,7 +27,7 @@ begin
 
     -- Remove this delay
     ff_clock <=  transport ((not a_req) and a_ack_internal and b_ack) 
-                or (a_req and (not a_ack_internal) and (not b_ack)) after 2 ns;
+                or (a_req and (not a_ack_internal) and (not b_ack)) after 1 ns;
     b_req_internal <= ff_value;
     a_ack_internal <= ff_value;
 

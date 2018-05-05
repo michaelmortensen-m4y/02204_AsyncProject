@@ -62,13 +62,16 @@ begin
 
 			when swap =>
 				if (a_reg = b_reg) then
+
 					if (n_reg = 0) then
 						state_next <= idle;
 					else
 						state_next <= res;
 					end if;
+
 				else
-					if (a_reg(0) = '1' and b_reg(0) = '1') then -- swap
+
+					if (a_reg(0) = '1' and b_reg(0) = '1') then -- swap, since both odd
 						if ( a_reg < b_reg) then
 							a_next <= b_reg;
 							b_next <= a_reg;
@@ -76,10 +79,12 @@ begin
 					state_next <= sub;
 
 					else
+
 					-- shift out 0s of a_reg
 					if (a_reg(0) = '1') then
 						a_zero <= "000";
 
+					-- We can shift at least once!, since the above statement failed
 					elsif (a_reg(1) = '1' ) then
 						a_next <= "0" & a_reg (7 downto 1);
 						a_zero <= "001";

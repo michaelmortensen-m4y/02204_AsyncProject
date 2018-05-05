@@ -1,4 +1,4 @@
-vsim work.gcd
+vsim work.gcd -t ns
 
 # Restart simulation and remove waves
 
@@ -23,13 +23,13 @@ force -freeze /gcd/clk 1 0, 0 {5 ns} -r 10
 
 
 force -drive /gcd/reset 1
-force -drive /gcd/a_in 8'h2a
-force -drive /gcd/b_in 8'h21
+force -drive /gcd/a_in 8'hff
+force -drive /gcd/b_in 8'h01
 force -drive /gcd/start 1
 
 run 10
 
 force -drive /gcd/reset 0
 
-run 100
+run 230
 

@@ -1,3 +1,9 @@
+--------------------------------------------------------------------------
+--! @file fork.vhdl
+--! @brief Implements a 2-phase bundled data fork for click-elements
+--------------------------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

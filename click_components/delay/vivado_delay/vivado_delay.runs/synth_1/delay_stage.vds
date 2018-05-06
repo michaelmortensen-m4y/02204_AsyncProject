@@ -1,0 +1,244 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun May  6 08:39:27 2018
+# Process ID: 16962
+# Current directory: /home/andreas/github/02204_AsyncProject/click_components/delay/vivado_delay/vivado_delay.runs/synth_1
+# Command line: vivado -log delay_stage.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source delay_stage.tcl
+# Log file: /home/andreas/github/02204_AsyncProject/click_components/delay/vivado_delay/vivado_delay.runs/synth_1/delay_stage.vds
+# Journal file: /home/andreas/github/02204_AsyncProject/click_components/delay/vivado_delay/vivado_delay.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source delay_stage.tcl -notrace
+Command: synth_design -top delay_stage -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16979 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1248.332 ; gain = 73.996 ; free physical = 117 ; free virtual = 5056
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'delay_stage' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:20]
+	Parameter stages bound to: 10 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:33]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:34]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferStart' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:53]
+INFO: [Synth 8-638] synthesizing module 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:18]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'delay_buffer' (1#1) [/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:18]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:74]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/click_components/delay/buffer.vhdl:11' bound to instance 'bufferEnd' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:63]
+INFO: [Synth 8-256] done synthesizing module 'delay_stage' (2#1) [/home/andreas/github/02204_AsyncProject/click_components/delay/delay.vhdl:20]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1289.863 ; gain = 115.527 ; free physical = 180 ; free virtual = 5051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1289.863 ; gain = 115.527 ; free physical = 180 ; free virtual = 5052
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1297.867 ; gain = 123.531 ; free physical = 179 ; free virtual = 5050
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1305.875 ; gain = 131.539 ; free physical = 171 ; free virtual = 5042
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 136 ; free virtual = 4912
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 136 ; free virtual = 4912
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 135 ; free virtual = 4911
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |    10|
+|2     |IBUF |     1|
+|3     |OBUF |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+--------------------------------------------------+---------------+------+
+|      |Instance                                          |Module         |Cells |
++------+--------------------------------------------------+---------------+------+
+|1     |top                                               |               |    12|
+|2     |  \generate_delays[0].initial_buffer.bufferStart  |delay_buffer   |     0|
+|3     |  \generate_delays[10].final_buffer.bufferEnd     |delay_buffer_0 |     0|
+|4     |  \generate_delays[1].internal_buffer.bufferX     |delay_buffer_1 |     0|
+|5     |  \generate_delays[2].internal_buffer.bufferX     |delay_buffer_2 |     0|
+|6     |  \generate_delays[3].internal_buffer.bufferX     |delay_buffer_3 |     0|
+|7     |  \generate_delays[4].internal_buffer.bufferX     |delay_buffer_4 |     0|
+|8     |  \generate_delays[5].internal_buffer.bufferX     |delay_buffer_5 |     0|
+|9     |  \generate_delays[6].internal_buffer.bufferX     |delay_buffer_6 |     0|
+|10    |  \generate_delays[7].internal_buffer.bufferX     |delay_buffer_7 |     0|
+|11    |  \generate_delays[8].internal_buffer.bufferX     |delay_buffer_8 |     0|
+|12    |  \generate_delays[9].internal_buffer.bufferX     |delay_buffer_9 |     0|
++------+--------------------------------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4912
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.336 ; gain = 247.000 ; free physical = 123 ; free virtual = 4913
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1421.344 ; gain = 247.000 ; free physical = 123 ; free virtual = 4913
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1503.359 ; gain = 342.398 ; free physical = 183 ; free virtual = 4936
+INFO: [Common 17-1381] The checkpoint '/home/andreas/github/02204_AsyncProject/click_components/delay/vivado_delay/vivado_delay.runs/synth_1/delay_stage.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file delay_stage_utilization_synth.rpt -pb delay_stage_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1527.371 ; gain = 0.000 ; free physical = 170 ; free virtual = 4932
+INFO: [Common 17-206] Exiting Vivado at Sun May  6 08:40:17 2018...

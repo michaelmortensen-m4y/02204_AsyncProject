@@ -1,3 +1,9 @@
+--------------------------------------------------------------------------
+--! @file delay.vhdl
+--! @brief N-stage delay element for asynchronous circuits
+--------------------------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

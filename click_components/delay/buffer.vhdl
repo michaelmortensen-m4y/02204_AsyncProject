@@ -1,3 +1,9 @@
+--------------------------------------------------------------------------
+--! @file buffer.vhdl
+--! @brief Delay buffer for asynchronous circuits
+--------------------------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -12,11 +18,11 @@ end delay_buffer;
 architecture behavioural of delay_buffer is
 
     -- https://www.xilinx.com/support/answers/6431.html
-    attribute fpga_dont_touch : string;
+    attribute DONT_TOUCH : string;
 
     signal output_int : std_logic;
 
-    attribute fpga_dont_touch of output_int : signal is "true";
+    attribute DONT_TOUCH of output_int : signal is "true";
 
 begin
 

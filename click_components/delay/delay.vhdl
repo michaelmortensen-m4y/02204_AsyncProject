@@ -1,8 +1,15 @@
+--------------------------------------------------------------------------
+--! @file delay.vhdl
+--! @brief N-stage delay element for asynchronous circuits
+--------------------------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity delay_stage is
+    generic (stages : natural := 10);
     port (
         input: in  std_logic;
         output : out  std_logic
@@ -18,9 +25,8 @@ component delay_buffer is
     );
 end component;
 
-constant elements : integer := 5;
 
-type vector is array (0 to elements) of std_logic;
+type vector is array (0 to stages) of std_logic;
 
 
 signal buffer_inputs : vector;
@@ -29,14 +35,14 @@ signal buffer_outputs : vector;
 signal output_int : std_logic;
 
 
-attribute fpga_dont_touch : string;
+attribute DONT_TOUCH : string;
 
-attribute fpga_dont_touch of buffer_inputs : signal is "true";
-attribute fpga_dont_touch of buffer_outputs : signal is "true";
+attribute DONT_TOUCH of buffer_inputs : signal is "true";
+attribute DONT_TOUCH of buffer_outputs : signal is "true";
 
 begin
 
-    generate_delays: for i in 0 to elements generate
+    generate_delays: for i in 0 to stages generate
 
         initial_buffer: if i = 0 generate
 
@@ -50,8 +56,8 @@ begin
                 );
         end generate initial_buffer;
 
-        final_buffer: if i = elements generate
-            output_int <= buffer_outputs(elements);
+        final_buffer: if i = stages generate
+            output_int <= buffer_outputs(stages);
 
             bufferEnd: delay_buffer 
                 port map (
@@ -60,7 +66,7 @@ begin
                 );
         end generate final_buffer;
 
-        internal_buffer: if (i > 0 and i < elements) generate
+        internal_buffer: if (i > 0 and i < stages) generate
 
             buffer_inputs(i+1) <= buffer_outputs(i);
 

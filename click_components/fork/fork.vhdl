@@ -32,7 +32,7 @@ begin
 
                 -- (b.ack =/= a.req) and (c.ack =/= a.req) and (b.ack = c.ack)
     --ff_clock <=  transport (b_ack xor a_req) and (c_ack xor a_req) and (b_ack xnor c_ack) after 1 ns;
-    ff_clock <=  (b_ack xor a_req) and (c_ack xor a_req) and (b_ack xnor c_ack);
+    ff_clock <=  (b_ack xor a_req) and (c_ack xor a_req) and (a_ack_internal xnor b_ack)  and (a_ack_internal xnor c_ack);
 
     a_ack_internal <= ff_value;
 

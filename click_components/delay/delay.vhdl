@@ -25,9 +25,7 @@ component delay_buffer is
     );
 end component;
 
-
 type vector is array (0 to stages) of std_logic;
-
 
 signal buffer_inputs : vector;
 signal buffer_outputs : vector;

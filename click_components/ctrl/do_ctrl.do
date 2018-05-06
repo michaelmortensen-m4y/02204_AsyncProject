@@ -1,4 +1,4 @@
-vsim work.click_ctrl -t ns
+vsim work.test_tb -t ns
 
 # Restart simulation and remove waves
 
@@ -8,35 +8,15 @@ config wave -signalnamewidth 1
 
 # Add inputs
 
-add wave click_ctrl/a_req
-add wave click_ctrl/b_ack
-add wave click_ctrl/a_ack
-add wave click_ctrl/b_req
-add wave click_ctrl/ff_clock
-add wave click_ctrl/ff_value
-add wave click_ctrl/b_req_internal
-add wave click_ctrl/a_ack_internal
+add wave test_tb/a_req_int
+add wave test_tb/b_ack_int
+add wave test_tb/a_ack_int
+add wave test_tb/b_req_int
+
+add wave test_tb/dut/ff_clock
+add wave test_tb/dut/ff_value
+add wave test_tb/dut/b_req_internal
+add wave test_tb/dut/a_ack_internal
 
 
-
-# Nothing to do
-force -drive click_ctrl/a_req 0
-force -drive click_ctrl/b_ack 0
-
-run 10
-
-force -drive click_ctrl/a_req 1
-
-run 10
-
-force -drive click_ctrl/b_ack 1
-
-run 10
-
-# a has received its acknowledge and b has acknowledged
-
-force -drive click_ctrl/a_req 0
-
-run 10
-
-force -drive click_ctrl/b_ack 0
+run 200

@@ -1,4 +1,4 @@
-vsim work.click_join -t ns
+vsim work.test_tb -t ns
 
 # Restart simulation and remove waves
 
@@ -8,58 +8,17 @@ config wave -signalnamewidth 1
 
 # Add inputs
 
-add wave click_join/a_req
-add wave click_join/b_req
-add wave click_join/c_req
+add wave test_tb/a_req_int
+add wave test_tb/b_req_int
+add wave test_tb/c_req_int
 
-add wave click_join/a_ack
-add wave click_join/b_ack
-add wave click_join/c_ack
+add wave test_tb/a_ack_int
+add wave test_tb/b_ack_int
+add wave test_tb/c_ack_int
 
-add wave click_join/ff_clock
-add wave click_join/ff_value
-add wave click_join/c_req_internal
-
-
-# Nothing to do
-force -drive click_join/a_req 0
-force -drive click_join/b_req 0
-force -drive click_join/c_ack 0
+add wave test_tb/dut/ff_clock
+add wave test_tb/dut/ff_value
+add wave test_tb/dut/c_req_internal
 
 
-run 10
-
-force -drive click_join/a_req 1
-
-run 10
-
-force -drive click_join/b_req 1
-
-run 10
-
-force -drive click_join/c_ack 1
-
-run 10
-
-force -drive click_join/b_req 0
-
-run 10
-
-force -drive click_join/a_req 0
-
-
-run 10
-
-force -drive click_join/b_req 1
-
-run 10
-
-force -drive click_join/a_req 1
-
-# There can only happen something again if c_ack goes down!
-
-run 10
-
-force -drive click_join/c_ack 0
-
-run 10
+run 200

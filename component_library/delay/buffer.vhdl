@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
 --! @file buffer.vhdl
---! @brief Delay buffer for asynchronous circuits
+--! @brief Buffer used to delay signals for asynchronous circuits
 --------------------------------------------------------------------------
 
 
@@ -17,11 +17,11 @@ end delay_buffer;
 
 architecture behavioural of delay_buffer is
 
-    -- https://www.xilinx.com/support/answers/6431.html
-    attribute DONT_TOUCH : string;
-
     signal output_int : std_logic;
 
+    -- https://www.xilinx.com/support/answers/6431.html
+    -- This has to be here!
+    attribute DONT_TOUCH : string;
     attribute DONT_TOUCH of output_int : signal is "true";
 
 begin

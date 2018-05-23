@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
---! @file delay.vhdl
---! @brief N-stage delay element for asynchronous circuits
+--! @file ctrl.vhdl
+--! @brief Click-element controller
 --------------------------------------------------------------------------
 
 
@@ -36,6 +36,7 @@ begin
     --            or (a_req and (not a_ack_internal) and (not b_ack)) after 1 ns;
     ff_clock <=  ((not a_req) and a_ack_internal and b_ack) 
                 or (a_req and (not a_ack_internal) and (not b_ack));
+
     b_req_internal <= ff_value;
     a_ack_internal <= ff_value;
 

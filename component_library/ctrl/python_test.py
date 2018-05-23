@@ -1,5 +1,8 @@
 
-# We should make models of our STGS using these kind of classes
+# This file contains an example of how to do state machines
+# in Python.
+# 
+# TODO: We should make models of our STGS using these kind of classes
 # https://github.com/pytransitions/transitions
 # 
 # 

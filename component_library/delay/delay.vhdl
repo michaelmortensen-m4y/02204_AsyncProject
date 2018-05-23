@@ -34,7 +34,6 @@ signal output_int : std_logic;
 
 
 attribute DONT_TOUCH : string;
-
 attribute DONT_TOUCH of buffer_inputs : signal is "true";
 attribute DONT_TOUCH of buffer_outputs : signal is "true";
 

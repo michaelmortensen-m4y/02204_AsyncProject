@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
 --! @file ctrl.vhdl
---! @brief Click-element controller
+--! @brief Click-element controller using 2-phase
 --------------------------------------------------------------------------
 
 
@@ -31,9 +31,6 @@ begin
         end if;
     end process;
 
-    -- Remove this delay
-    --ff_clock <=  transport ((not a_req) and a_ack_internal and b_ack) 
-    --            or (a_req and (not a_ack_internal) and (not b_ack)) after 1 ns;
     ff_clock <=  ((not a_req) and a_ack_internal and b_ack) 
                 or (a_req and (not a_ack_internal) and (not b_ack));
 

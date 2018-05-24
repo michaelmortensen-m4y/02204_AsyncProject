@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
---! @file delay.vhdl
---! @brief N-stage delay element for asynchronous circuits
+--! @file join.vhdl
+--! @brief Implements a 2-phase bundled data join component for click-elements.
 --------------------------------------------------------------------------
 
 
@@ -19,7 +19,6 @@ architecture behavioural of click_join is
 
     signal ff_clock : std_logic := '0';
     signal ff_value : std_logic := '0';
-    signal c_req_internal : std_logic := '0';
 
 begin
 
@@ -30,13 +29,12 @@ begin
         end if;
     end process;
 
-                -- (a.req =/= c.ack) and (b.req =/= c.ack) and (c.ack = c.req)
-    --ff_clock <=  transport (a_req xor c_ack) and (b_req xor c_ack) and (c_ack xnor c_req_internal) after 1 ns;
-    ff_clock <=  (a_req xor c_ack) and (b_req xor c_ack) and (c_ack xnor c_req_internal);
-    c_req_internal <= ff_value;
+    ff_clock <=  (a_req and not c_ack and b_req and not c_ack) 
+                or (not a_req and not b_req and ff_value and c_ack);
+
 
     b_ack <= ff_value;
     a_ack <= ff_value;
-    c_req <= c_req_internal;
+    c_req <= ff_value;
 
 end behavioural;

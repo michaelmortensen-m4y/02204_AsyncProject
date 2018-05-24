@@ -8,15 +8,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity delay_stage is
+entity delay_n_stage is
     generic (stages : natural := 10);
     port (
         input: in  std_logic;
         output : out  std_logic
     );
-end delay_stage;
+end delay_n_stage;
 
-architecture behavioural of delay_stage is
+architecture behavioural of delay_n_stage is
 
 component delay_buffer is
     port (

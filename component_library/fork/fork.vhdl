@@ -18,7 +18,6 @@ architecture behavioural of click_fork is
 
     signal ff_clock : std_logic := '0';
     signal ff_value : std_logic := '0';
-    signal a_ack_internal : std_logic := '0';
 
 begin
 
@@ -29,13 +28,10 @@ begin
         end if;
     end process;
 
-                -- (b.ack =/= a.req) and (c.ack =/= a.req) and (b.ack = c.ack)
-    --ff_clock <=  transport (b_ack xor a_req) and (c_ack xor a_req) and (b_ack xnor c_ack) after 1 ns;
-    ff_clock <=  (b_ack xor a_req) and (c_ack xor a_req) and (a_ack_internal xnor b_ack)  and (a_ack_internal xnor c_ack);
+    ff_clock <= (a_req and not b_ack and not c_ack and not ff_value) 
+                or (not a_req and b_ack and c_ack and ff_value);
 
-    a_ack_internal <= ff_value;
-
-    a_ack <= a_ack_internal;
+    a_ack <= ff_value;
     b_req <= ff_value;
     c_req <= ff_value;
 

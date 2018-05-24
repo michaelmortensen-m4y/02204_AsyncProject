@@ -8,17 +8,16 @@ config wave -signalnamewidth 1
 
 # Add inputs
 
-add wave test_tb/a_req_int
-add wave test_tb/b_req_int
-add wave test_tb/c_req_int
+add wave test_tb/a_req
+add wave test_tb/b_req
+add wave test_tb/c_req
 
-add wave test_tb/a_ack_int
-add wave test_tb/b_ack_int
-add wave test_tb/c_ack_int
+add wave test_tb/a_ack
+add wave test_tb/b_ack
+add wave test_tb/c_ack
 
 add wave test_tb/dut/ff_clock
 add wave test_tb/dut/ff_value
-add wave test_tb/dut/c_req_internal
 
 
 run 200

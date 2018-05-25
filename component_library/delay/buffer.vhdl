@@ -26,7 +26,7 @@ architecture behavioural of delay_buffer is
 
 begin
 
-    output_int <= not (not input);
+    output_int <= not (not input) after 1 ns;
     output <= output_int;
 
 end behavioural;

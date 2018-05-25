@@ -11,12 +11,13 @@ config wave -signalnamewidth 1
 add wave test_tb/button
 add wave test_tb/clock
 add wave test_tb/reset
-add wave test_tb/output
+add wave test_tb/led1
+add wave test_tb/led2
 
-add wave test_tb/dut/a_req
-add wave test_tb/dut/a_ack
-add wave test_tb/dut/b_ack
-add wave test_tb/dut/b_req
+add wave test_tb/dut/ctrl1_req
+add wave test_tb/dut/ctrl1_ack
+add wave test_tb/dut/ctrl2_req
+add wave test_tb/dut/ctrl2_ack
 
 
 run 200

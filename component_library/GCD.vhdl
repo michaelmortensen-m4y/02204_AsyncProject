@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
---! @file top_ring.vhdl
---! @brief Test a single ring running
+--! @file gcd.vhdl
+--! @brief asynchronous compatible GCD
 --------------------------------------------------------------------------
 
 

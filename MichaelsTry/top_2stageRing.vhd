@@ -23,10 +23,10 @@ architecture behavioural of top_2stageRing is
 component click_ctrl_withDelay is
     generic(forwardDelay : time := 2.0 ns;
             backwardDelay : time := 1.0 ns;
-            initialOut : std_logic := '1');
+            initialOut : std_logic := '0');
     port (
-        a_req, b_ack  : in  std_logic;
-        a_ack, b_req, latchClock  : out  std_logic
+        a_req, b_ack, enable : in  std_logic;
+        a_ack, b_req, latchClock : out  std_logic
     );
 end component;
 
@@ -44,49 +44,70 @@ component GCD is
     );
 end component;
 
-signal stage1_ack, stage2_req : std_logic;
-signal stage1_req, stage2_ack : std_logic;
-signal latchClk1, latchClk2 : std_logic;
+signal stage1_ack, stage2_ack, stage3_ack : std_logic;
+signal stage1_req, stage2_req, stage3_req : std_logic;
+
+signal latchClk1, latchClk2, latchClk3 : std_logic;
 
 signal stage1_dataAin, stage1_dataBin, stage1_dataAout, stage1_dataBout : std_logic_vector(7 downto 0) := (others => '0');
 signal stage2_dataA, stage2_dataB : std_logic_vector(7 downto 0) := (others => '0');
+signal stage3_dataA, stage3_dataB : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
-    process (latchClk1, latchClk2, stage2_dataA, stage2_dataB, stage1_dataAout, stage1_dataBout)
+    process (latchClk1, latchClk2, latchClk3, stage2_dataA, stage2_dataB, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout)
     begin
         if (latchClk1 = '1') then
-            stage1_dataAin <= stage2_dataA;
-            stage1_dataBin <= stage2_dataB;
+            stage1_dataAin <= stage3_dataA;
+            stage1_dataBin <= stage3_dataB;
         end if;
         if (latchClk2 = '1') then
             stage2_dataA <= stage1_dataAout;
             stage2_dataB <= stage1_dataBout;
         end if;
+        if (latchClk3 = '1') then
+            stage3_dataA <= stage2_dataA;
+            stage3_dataB <= stage2_dataB;
+        end if;
     end process;
 
     ctrl1 : click_ctrl_withDelay 
-    generic map (forwardDelay => 2 ns,
-                 backwardDelay => 1 ns,
-                 initialOut => '1')
+    generic map (forwardDelay => 5.0 ns,
+                 backwardDelay => 3.0 ns,
+                 initialOut => '1') -- The phase is initialized to 1 so that the ring oscillates when enabled
     port map (
-        a_req => stage2_req,
+        a_req => stage3_req,
         b_ack => stage1_ack,
-        a_ack => stage2_ack,
+        a_ack => stage3_ack,
         b_req => stage1_req,
-        latchClock => latchClk1
+        latchClock => latchClk1,
+        enable => start
     );
     
     ctrl2 : click_ctrl_withDelay 
-    generic map (forwardDelay => 2 ns,
-                 backwardDelay => 1 ns,
+    generic map (forwardDelay => 5.0 ns,
+                 backwardDelay => 3.0 ns,
                  initialOut => '0')
     port map (
         a_req => stage1_req,
         b_ack => stage2_ack,
         a_ack => stage1_ack,
         b_req => stage2_req,
-        latchClock => latchClk2
+        latchClock => latchClk2,
+        enable => start
+    );
+    
+    ctrl3 : click_ctrl_withDelay 
+    generic map (forwardDelay => 5.0 ns,
+                 backwardDelay => 3.0 ns,
+                 initialOut => '0')
+    port map (
+        a_req => stage2_req,
+        b_ack => stage3_ack,
+        a_ack => stage2_ack,
+        b_req => stage3_req,
+        latchClock => latchClk3,
+        enable => start
     );
     
     gcd1 : GCD

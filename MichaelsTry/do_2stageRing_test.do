@@ -18,11 +18,15 @@ add wave tb_2stagering/dut/stage1_req
 add wave tb_2stagering/dut/stage1_ack
 add wave tb_2stagering/dut/stage2_req
 add wave tb_2stagering/dut/stage2_ack
+add wave tb_2stagering/dut/stage3_req
+add wave tb_2stagering/dut/stage3_ack
 
 add wave tb_2stagering/dut/ctrl1/latchClock
 add wave tb_2stagering/dut/ctrl1/ff_value
 add wave tb_2stagering/dut/ctrl2/latchClock
 add wave tb_2stagering/dut/ctrl2/ff_value
+add wave tb_2stagering/dut/ctrl3/latchClock
+add wave tb_2stagering/dut/ctrl3/ff_value
 
 run 50
 

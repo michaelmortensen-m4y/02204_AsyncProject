@@ -13,14 +13,11 @@ entity verification_circuit is
     port (
         start_test, clock, reset : in std_logic;
 
-        A_m, B_m, C_m : out mem_master; -- Master interface to memory, see top-level
-        A_s, B_s, C_s : in mem_slave;
-
         -- GCD Circuit
-        C  : in std_logic_vector(DATA_WIDTH-1 downto 0);    -- Output from GCD
+        C_from_gcd  : in std_logic_vector(DATA_WIDTH-1 downto 0);    -- Output from GCD
         done : in std_logic;                                -- Done signal from GCD
         start_gcd : out std_logic;                          -- Start signal to GCD
-        A, B: out std_logic_vector(DATA_WIDTH-1 downto 0);  -- Direct input to GCD
+        A_to_gcd, B_to_gcd: out std_logic_vector(DATA_WIDTH-1 downto 0);  -- Direct input to GCD
 
         count : out std_logic_vector(DATA_WIDTH-1 downto 0);-- Count for test time
         correct : out std_logic                             -- 0 if any value was wrong.
@@ -29,6 +26,36 @@ entity verification_circuit is
 end verification_circuit;
 
 architecture behavioural of verification_circuit is
+
+component rams_21a is
+    port (
+        clock : in std_logic;
+        en: in std_logic;
+        addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
+end component;
+
+
+component rams_21b is
+    port (
+        clock : in std_logic;
+        en: in std_logic;
+        addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
+end component;
+
+
+component rams_21c is
+    port (
+        clock : in std_logic;
+        en: in std_logic;
+        addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
+end component;
+
+
+
+
 
 -- signal declarations
 type state_type is (idle, load, send_data, count, verify)
@@ -40,8 +67,41 @@ signal test_addr : std_logic_vector(DATA_WIDTH-1 downto 0); -- Current test vect
 signal count_int_next : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal test_addr_next : std_logic_vector(DATA_WIDTH-1 downto 0);
 
+signal C_int : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
+
+--  Map Components
+
+    romA : rams_21a 
+    port map (
+        clock => clock,
+        en => '1',
+        addr => test_addr,
+        data => A_to_gcd
+    );
+    
+
+    romB : rams_21b 
+    port map (
+        clock => clock,
+        en => '1',
+        addr => test_addr,
+        data => B_to_gcd
+    );
+    
+
+    romC : rams_21c 
+    port map (
+        clock => clock,
+        en => '1',
+        addr => test_addr,
+        data => C_int
+    );
+    
+
+
+
 
 -- State and data registers
     process(clock, reset) is
@@ -118,16 +178,5 @@ begin
     end process;
 
     count <= count_int;
-
-    A_m.addr <= test_addr;
-    B_m.addr <= test_addr;
-    C_m.addr <= test_addr;
-
-    A_m.wr <= '0';
-    B_m.wr <= '0';
-    C_m.wr <= '0';
-
-    A <= A_s.dout;
-    B <= A_s.dout;
 
 end behavioural;

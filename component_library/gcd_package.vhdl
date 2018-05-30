@@ -15,15 +15,4 @@ package GCD_PACKAGE is
     constant DATA_WIDTH : natural := 8; 
     constant ADDR_WIDTH : natural := integer(ceil(log2(real(MAX_TESTS))) + 1);
 
-    -- Record definitions
-    type mem_master is record
-        wr   : std_logic;
-        addr : std_logic_vector(ADDR_WIDTH - 1 downto 0);
-        din  : std_logic_vector(DATA_WIDTH - 1 downto 0);
-    end record;    
-
-    type mem_slave is record
-        dout : std_logic_vector(DATA_WIDTH - 1 downto 0);
-    end record;       
-
 end GCD_PACKAGE;

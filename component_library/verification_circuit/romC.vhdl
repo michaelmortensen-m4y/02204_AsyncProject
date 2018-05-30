@@ -11,15 +11,16 @@ use ieee.std_logic_unsigned.all;
 
 use work.GCD_PACKAGE.all;
 
-entity rams_21b is
+entity rams_21c is
     port (
         clock : in std_logic;
         en: in std_logic;
         addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
-end rams_21b;
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0)
+    );
+end rams_21c;
 
-architecture syn of rams_21b is
+architecture syn of rams_21c is
 
     type rom_type is array (MAX_TESTS-1 downto 0) of std_logic_vector (DATA_WIDTH-1 downto 0);
     signal ROM : rom_type:= (X"0200A", X"00300", X"08101", X"04000", X"08601", X"0233A",
@@ -38,7 +39,7 @@ begin
     process (clock)
     begin
         if rising_edge(clock) then
-            if (en = ’1’) then
+            if (en = '1') then
                 data <= ROM(conv_integer(addr));
             end if;
         end if;

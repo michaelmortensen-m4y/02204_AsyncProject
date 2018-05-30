@@ -38,7 +38,7 @@ begin
     process (clock)
     begin
         if rising_edge(clock) then
-            if (en = ’1’) then
+            if (en = '1') then
                 data <= ROM(conv_integer(addr));
             end if;
         end if;

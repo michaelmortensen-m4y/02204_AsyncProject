@@ -27,12 +27,15 @@ end verification_circuit;
 
 architecture behavioural of verification_circuit is
 
+
+-- ROMs containing the test vectors
 component rams_21a is
     port (
         clock : in std_logic;
         en: in std_logic;
         addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0)
+    );
 end component;
 
 
@@ -41,7 +44,8 @@ component rams_21b is
         clock : in std_logic;
         en: in std_logic;
         addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0)
+    );
 end component;
 
 
@@ -50,24 +54,22 @@ component rams_21c is
         clock : in std_logic;
         en: in std_logic;
         addr : in std_logic_vector(ADDR_WIDTH-1 downto 0);
-        data : out std_logic_vector(DATA_WIDTH-1 downto 0));
+        data : out std_logic_vector(DATA_WIDTH-1 downto 0)
+    );
 end component;
 
 
-
-
-
 -- signal declarations
-type state_type is (idle, load, send_data, count, verify)
+type state_type is (idle, load, send_data, timing, verify);
 signal state_reg, state_next: state_type;
 
 signal count_int : std_logic_vector(DATA_WIDTH-1 downto 0); -- Counts number of clock cycles
-signal test_addr : std_logic_vector(DATA_WIDTH-1 downto 0); -- Current test vector
+signal test_addr : std_logic_vector(ADDR_WIDTH-1 downto 0); -- Current test vector
 
 signal count_int_next : std_logic_vector(DATA_WIDTH-1 downto 0);
-signal test_addr_next : std_logic_vector(DATA_WIDTH-1 downto 0);
+signal test_addr_next : std_logic_vector(ADDR_WIDTH-1 downto 0);
 
-signal C_int : std_logic_vector(DATA_WIDTH-1 downto 0);
+signal C_verification : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 begin
 
@@ -96,12 +98,9 @@ begin
         clock => clock,
         en => '1',
         addr => test_addr,
-        data => C_int
+        data => C_verification
     );
     
-
-
-
 
 -- State and data registers
     process(clock, reset) is
@@ -112,8 +111,13 @@ begin
             test_addr <= (others => '0');
         elsif(rising_edge(clock)) then 
             state_reg <= state_next;
-            count_int <= count_int_next;
             test_addr <= test_addr_next;
+            -- If it just accumulates in the same state, this is better
+            if (state_reg = timing) then
+                count_int <= std_logic_vector(unsigned(count_int) + "1");
+            else
+                count_int <= count_int;
+            end if;
         end if;
     end process;
 
@@ -149,26 +153,25 @@ begin
             when send_data =>   -- Input data is now ready, start test
 
                 start_gcd <= '1';
-                state_next <= count;
+                state_next <= timing;
 
-            when count =>       -- Count number of clock cycles before test completion
+            when timing =>       -- Count number of clock cycles before test completion
 
                 if(done = '0') then
-                    state_next <= count;
-                    count_int_next <= count_int + 1;
-
+                    state_next <= timing;
                 else
                     state_next <= verify;
-
                 end if;
 
             when verify =>      -- Verify correct output
 
-                if (C != C_s.dout) then
+                test_addr_next <= std_logic_vector(unsigned(test_addr) + "1");
+
+                if (C_from_gcd /= C_verification) then
                     correct <= '1'; -- Error
                 end if;
 
-                if (test_addr < MAX_TESTS) then
+                if (unsigned(test_addr) < MAX_TESTS) then
                     state_next <= load;
                 else
                     state_next <= idle; -- Test is complete

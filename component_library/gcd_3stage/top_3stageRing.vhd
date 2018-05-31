@@ -20,19 +20,20 @@ end top_3stageRing;
 
 architecture behavioural of top_3stageRing is
 
-component click_ctrl_withDelay is
-    generic(forwardDelay : time := 2.0 ns;
-            backwardDelay : time := 1.0 ns;
-            initialOut : std_logic := '0');
+component click_ctrl_delay is
+    generic(
+        a_req_delay : natural := 10;
+        b_ack_delay : natural := 10;
+        initialOutput : std_logic := '0'
+    );
     port (
         a_req, b_ack, enable : in  std_logic;
-        a_ack, b_req, latchClock : out  std_logic
+        a_ack, b_req, ff_clock : out  std_logic
     );
 end component;
 
 component GCD is
     port (
-
         a_in , b_in: in std_logic_vector (7 downto 0);
         a_out, b_out: out std_logic_vector (7 downto 0);
         done : out  std_logic
@@ -85,42 +86,42 @@ begin
 
 
 
-    ctrl1 : click_ctrl_withDelay
-    generic map (forwardDelay => 5.0 ns,
-                 backwardDelay => 3.0 ns,
-                 initialOut => '1') -- The phase is initialized to 1 so that the ring oscillates when enabled
+    ctrl1 : click_ctrl_delay
+    generic map (a_req_delay => 2,
+                 b_ack_delay => 2,
+                 initialOutput => '1') -- The phase is initialized to 1 so that the ring oscillates when enabled
     port map (
         a_req => stage3_req,
         b_ack => stage1_ack,
         a_ack => stage3_ack,
         b_req => stage1_req,
-        latchClock => latchClk1,
+        ff_clock => latchClk1,
         enable => start
     );
 
-    ctrl2 : click_ctrl_withDelay
-    generic map (forwardDelay => 5.0 ns,
-                 backwardDelay => 3.0 ns,
-                 initialOut => '0')
+    ctrl2 : click_ctrl_delay
+    generic map (a_req_delay => 2,
+                 b_ack_delay => 2,
+                 initialOutput => '0')
     port map (
         a_req => stage1_req,
         b_ack => stage2_ack,
         a_ack => stage1_ack,
         b_req => stage2_req,
-        latchClock => latchClk2,
+        ff_clock => latchClk2,
         enable => start
     );
 
-    ctrl3 : click_ctrl_withDelay
-    generic map (forwardDelay => 5.0 ns,
-                 backwardDelay => 3.0 ns,
-                 initialOut => '0')
+    ctrl3 : click_ctrl_delay
+    generic map (a_req_delay => 2,
+                 b_ack_delay => 2,
+                 initialOutput => '0')
     port map (
         a_req => stage2_req,
         b_ack => stage3_ack,
         a_ack => stage2_ack,
         b_req => stage3_req,
-        latchClock => latchClk3,
+        ff_clock => latchClk3,
         enable => start
     );
 

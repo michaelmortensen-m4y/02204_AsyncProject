@@ -33,11 +33,11 @@ add wave tb_3stagering/dut/stage3_dataA
 add wave tb_3stagering/dut/stage3_dataB
 
 
-add wave tb_3stagering/dut/ctrl1/latchClock
+add wave tb_3stagering/dut/ctrl1/ff_clock
 add wave tb_3stagering/dut/ctrl1/ff_value
-add wave tb_3stagering/dut/ctrl2/latchClock
+add wave tb_3stagering/dut/ctrl2/ff_clock
 add wave tb_3stagering/dut/ctrl2/ff_value
-add wave tb_3stagering/dut/ctrl3/latchClock
+add wave tb_3stagering/dut/ctrl3/ff_clock
 add wave tb_3stagering/dut/ctrl3/ff_value
 
 run 50
@@ -54,6 +54,6 @@ run 300
 # Deassert start signal
 force -freeze sim:/tb_3stagering/test_start 0 0
 
-run 30
+run 100
 
 # 

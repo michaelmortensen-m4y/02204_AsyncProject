@@ -53,8 +53,15 @@ component synchronizer is
     );
 end component;
 
+component button_synchronizer is
+    port (
+        clock, reset, button  : in  std_logic;
+        output  : out  std_logic
+    );
+end component;
 
-signal start_gcd, done_gcd, done_gcd_synchronized, correct : std_logic;
+
+signal start_gcd, done_gcd, done_gcd_synchronized, start_button_synchronized, correct : std_logic;
 signal result_gcd, input1_gcd, input2_gcd, count : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 
@@ -66,7 +73,7 @@ begin
     port map (
         clock => clock,
         reset => reset,
-        start_test => start_button,
+        start_test => start_button_synchronized,
         done => done_gcd_synchronized,
         start_gcd => start_gcd,
         result_gcd => result_gcd,
@@ -95,5 +102,12 @@ begin
     );
 
 
+button_synchronizer1 : button_synchronizer
+    port map (
+        clock => clock,
+        reset => reset,
+        button => start_button,
+        output => start_button_synchronized
+    );
 
 end behavioural;

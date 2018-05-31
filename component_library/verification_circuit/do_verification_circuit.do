@@ -11,12 +11,12 @@ config wave -signalnamewidth 1
 add wave test_tb/clock
 add wave test_tb/reset
 add wave test_tb/start_test
-add wave test_tb/C_from_gcd
+add wave test_tb/result_gcd
 
 add wave test_tb/done
 add wave test_tb/start_gcd
-add wave test_tb/A_to_gcd
-add wave test_tb/B_to_gcd
+add wave test_tb/input1_gcd
+add wave test_tb/input2_gcd
 
 add wave test_tb/count
 add wave test_tb/correct
@@ -31,4 +31,4 @@ add wave test_tb/dut/state_reg
 
 
 
-run 200
+run 400

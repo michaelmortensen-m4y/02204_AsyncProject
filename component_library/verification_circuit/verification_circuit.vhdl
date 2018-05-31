@@ -11,15 +11,16 @@ use work.GCD_PACKAGE.all;
 
 entity verification_circuit is
     port (
-        start_test, clock, reset : in std_logic;
+        clock, reset, start_test : in std_logic;
 
-        -- GCD Circuit
-        C_from_gcd  : in std_logic_vector(DATA_WIDTH-1 downto 0);    -- Output from GCD
+        -- GCD Circuit signals
         done : in std_logic;                                -- Done signal from GCD
         start_gcd : out std_logic;                          -- Start signal to GCD
-        A_to_gcd, B_to_gcd: out std_logic_vector(DATA_WIDTH-1 downto 0);  -- Direct input to GCD
+        result_gcd  : in std_logic_vector(DATA_WIDTH-1 downto 0);    -- Output from GCD
+        input1_gcd, input2_gcd: out std_logic_vector(DATA_WIDTH-1 downto 0);  -- Direct input to GCD
 
-        count : out std_logic_vector(DATA_WIDTH-1 downto 0);-- Count for test time
+        -- Verification signals
+        count : out std_logic_vector(DATA_WIDTH - 1 downto 0);-- Count for test time
         correct : out std_logic                             -- 0 if any value was wrong.
 
     );
@@ -80,7 +81,7 @@ begin
         clock => clock,
         en => '1',
         addr => test_addr,
-        data => A_to_gcd
+        data => input1_gcd
     );
     
 
@@ -89,7 +90,7 @@ begin
         clock => clock,
         en => '1',
         addr => test_addr,
-        data => B_to_gcd
+        data => input2_gcd
     );
     
 
@@ -127,8 +128,6 @@ begin
 
         -- default values
         start_gcd <= '0';
-        correct <= '1';
-
 
         count_int_next <= count_int;
         test_addr_next <= test_addr;
@@ -137,6 +136,7 @@ begin
 
             when idle =>        -- Reset count
 
+                correct <= '1';
                 count_int_next <= (others => '0');
                 test_addr_next <= (others => '0');
 
@@ -152,10 +152,14 @@ begin
 
             when send_data =>   -- Input data is now ready, start test
 
-                start_gcd <= '1';
                 state_next <= timing;
 
             when timing =>       -- Count number of clock cycles before test completion
+
+                -- Delay start_gcd one cycle compared to send data to ensure
+                -- valid data, otherwise we might add delays
+
+                start_gcd <= '1';
 
                 if(done = '0') then
                     state_next <= timing;
@@ -165,13 +169,13 @@ begin
 
             when verify =>      -- Verify correct output
 
-                test_addr_next <= std_logic_vector(unsigned(test_addr) + "1");
 
-                if (C_from_gcd /= C_verification) then
-                    correct <= '1'; -- Error
+                if (result_gcd /= C_verification) then
+                    correct <= '0'; -- Error
                 end if;
 
-                if (unsigned(test_addr) < MAX_TESTS) then
+                if (unsigned(test_addr_next) < MAX_TESTS - 1) then
+                    test_addr_next <= std_logic_vector(unsigned(test_addr) + "1");
                     state_next <= load;
                 else
                     state_next <= idle; -- Test is complete

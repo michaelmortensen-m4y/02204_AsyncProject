@@ -11,8 +11,8 @@ use ieee.math_real."log2";
 
 package GCD_PACKAGE is
 
-    constant MAX_TESTS : natural := 64; 
-    constant DATA_WIDTH : natural := 20; 
+    constant MAX_TESTS : natural := 4; 
+    constant DATA_WIDTH : natural := 8; 
     constant ADDR_WIDTH : natural := integer(ceil(log2(real(MAX_TESTS)))) + 1;
 
 end GCD_PACKAGE;

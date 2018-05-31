@@ -24,6 +24,9 @@ begin
     --here we control the start of the GCD iterations by taking inputs
     process(a_in, b_in) is
     begin
+
+        done <='0';
+
       if a_in > b_in then
         a_out <= std_logic_vector(unsigned(a_in(7 downto 0)) - unsigned(b_in(7 downto 0)));
         b_out <= b_in;

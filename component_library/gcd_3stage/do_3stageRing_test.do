@@ -40,20 +40,5 @@ add wave tb_3stagering/dut/ctrl2/ff_value
 add wave tb_3stagering/dut/ctrl3/ff_clock
 add wave tb_3stagering/dut/ctrl3/ff_value
 
-run 50
 
-# Set operand A input to 00000001:
-force -freeze sim:/tb_3stagering/test_operandAIn 8'h7E 0
-force -freeze sim:/tb_3stagering/test_operandBIn 8'h60 0
-
-# Assert start signal
-force -freeze sim:/tb_3stagering/test_start 1 0
-
-run 300
-
-# Deassert start signal
-force -freeze sim:/tb_3stagering/test_start 0 0
-
-run 100
-
-# 
+run 200 ns

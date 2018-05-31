@@ -48,7 +48,7 @@ signal latchClk1, latchClk2, latchClk3 : std_logic;
 signal stage1_dataAin, stage1_dataBin, stage1_dataAout, stage1_dataBout : std_logic_vector(7 downto 0) := (others => '0');
 signal stage2_dataAin, stage2_dataBin, stage2_dataAout, stage2_dataBout : std_logic_vector(7 downto 0) := (others => '0');
 signal stage3_dataA, stage3_dataB : std_logic_vector(7 downto 0) := (others => '0');
-signal stage1_done, stage2_doneIn, stage2_doneOut, stage3_done : std_logic;
+signal stage1_done, stage2_doneIn, stage2_doneOut, stage3_done : std_logic := '0';
 
 begin
 

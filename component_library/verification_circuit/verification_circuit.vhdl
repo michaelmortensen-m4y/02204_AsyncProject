@@ -62,7 +62,7 @@ end component;
 
 
 -- signal declarations
-type state_type is (idle, load, send_data, timing, verify);
+type state_type is (idle, load, send_data, timing, verify, completed);
 signal state_reg, state_next: state_type;
 
 signal count_int : std_logic_vector(DATA_WIDTH-1 downto 0); -- Counts number of clock cycles
@@ -182,8 +182,14 @@ begin
                     test_addr_next <= std_logic_vector(unsigned(test_addr) + "1");
                     state_next <= load;
                 else
-                    state_next <= idle; -- Test is complete
+                    state_next <= completed; -- Test is complete
                 end if;
+
+
+            when completed =>     -- Wait for reset
+
+                state_next <= completed;
+
             end case;
         
     end process;

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri Jun  1 20:57:03 2018
+| Date         : Fri Jun  1 21:24:37 2018
 | Host         : DESKTOP-V4T9AF7 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_verification_circuit_methodology_drc_routed.rpt -pb top_level_verification_circuit_methodology_drc_routed.pb -rpx top_level_verification_circuit_methodology_drc_routed.rpx
 | Design       : top_level_verification_circuit
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 56
+             Violations found: 57
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 3          |
-| TIMING-18 | Warning  | Missing input or output delay | 3          |
+| TIMING-18 | Warning  | Missing input or output delay | 4          |
 | TIMING-20 | Warning  | Non-clocked latch             | 50         |
 +-----------+----------+-------------------------------+------------+
 
@@ -62,6 +62,11 @@ Related violations: <none>
 TIMING-18#3 Warning
 Missing input or output delay  
 An output delay is missing on correct relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on start_gcd relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-20#1 Warning

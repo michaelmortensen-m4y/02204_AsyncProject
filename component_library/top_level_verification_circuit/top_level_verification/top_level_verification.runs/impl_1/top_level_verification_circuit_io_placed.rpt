@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date                      : Fri Jun  1 20:56:24 2018
+| Date                      : Fri Jun  1 21:23:59 2018
 | Host                      : DESKTOP-V4T9AF7 running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_level_verification_circuit_io_placed.rpt
 | Design                    : top_level_verification_circuit
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             4 |
+|             5 |
 +---------------+
 
 
@@ -211,7 +211,7 @@ Table of Contents
 | K12        |              |            | VCCAUX                       | VCCAUX      |             |         |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |
 | K13        |              | High Range | IO_L17P_T2_A26_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K14        |              | High Range | VCCO_15                      | VCCO        |             |      15 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| K15        |              | High Range | IO_L24P_T3_RS1_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| K15        | start_gcd    | High Range | IO_L24P_T3_RS1_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | K16        |              | High Range | IO_25_15                     | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K17        |              | High Range | IO_L1P_T0_D00_MOSI_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K18        |              | High Range | IO_L1N_T0_D01_DIN_14         | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

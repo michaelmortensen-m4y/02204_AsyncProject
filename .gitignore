@@ -33,7 +33,7 @@ vsim.dbg
 #Exclude all
 #########
 
-!*/
+*/
 !.gitignore
 ###########################################################################
 ##  VIVADO
@@ -52,9 +52,9 @@ vsim.dbg
 #.xci: synthesis and implemented not possible - you need to return back to the previous version to generate output products
 #.xci + .dcp: implementation possible but not re-synthesis
 #*.xci(www.spiritconsortium.org)
-!*.xci
+*.xci
 #*.dcp(checkpoint files)
-!*.dcp
+*.dcp
 *.vds
 *.pb
 #All bd comments and layout coordinates are stored within .ui
@@ -74,8 +74,8 @@ vsim.dbg
 #########
 #MIG
 #########
-!*.prj
-!*.mem
+*.prj
+*.mem
 #########
 #Project files
 #########
@@ -100,8 +100,8 @@ vsim.dbg
 #########
 #Reports
 #########
-!*.rpt
-!*.txt
+*.rpt
+*.txt
 *.vdi
 #########
 #C-files

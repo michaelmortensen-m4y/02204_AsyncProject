@@ -56,10 +56,12 @@ begin
         );
 
 
-    process(ff_clock_int)
+    process(ff_clock_int, enable)
     begin
-        if rising_edge(ff_clock_int) then
-            ff_value <= not ff_value;
+        if rising_edge(ff_clock_int) and enable = '1' then
+           ff_value <= not ff_value;
+        elsif enable = '0' then
+          ff_value <= initialOutput;
         end if;
     end process;
 

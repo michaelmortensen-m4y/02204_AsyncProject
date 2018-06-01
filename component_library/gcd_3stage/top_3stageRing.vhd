@@ -12,6 +12,7 @@ use ieee.std_logic_unsigned.all;
 entity top_3stageRing is
     port (
         operandAIn, operandBIn  : in std_logic_vector(7 downto 0);
+        --reset : in std_logic;
         start : in std_logic;
         done : out std_logic;
         result : out std_logic_vector(7 downto 0)
@@ -40,8 +41,8 @@ component GCD is
     );
 end component;
 
-signal stage1_ack, stage2_ack, stage3_ack : std_logic;
-signal stage1_req, stage2_req, stage3_req : std_logic;
+signal stage1_ack, stage2_ack, stage3_ack : std_logic := '0';
+signal stage1_req, stage2_req, stage3_req : std_logic := '0';
 
 signal latchClk1, latchClk2, latchClk3 : std_logic;
 
@@ -50,14 +51,28 @@ signal stage2_dataAin, stage2_dataBin, stage2_dataAout, stage2_dataBout : std_lo
 signal stage3_dataA, stage3_dataB : std_logic_vector(7 downto 0) := (others => '0');
 signal stage1_done, stage2_doneIn, stage2_doneOut, stage3_done : std_logic := '0';
 
+signal enable_ring : std_logic;
+
 begin
 
-    process (latchClk1, latchClk2, latchClk3, stage2_dataAout, stage2_dataBout, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout)
+    process (start, latchClk1, latchClk2, latchClk3, stage2_dataAout, stage2_dataBout, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout)
     begin
+       if (start = '0') then
+            stage1_dataAin <= (others => '0');
+            stage1_dataBin <= (others => '0');
+            stage1_done <= '0';
+            stage2_dataAin <= (others => '0');
+            stage2_dataBin <= (others => '0');
+            stage2_doneIn <= '0';
+            stage3_dataA <= (others => '0');
+            stage3_dataB <= (others => '0');
+            stage3_done <= '0';
+            --stage2_doneOut <= '0';
+        else
         if (latchClk1 = '1') then
             stage1_dataAin <= stage3_dataA;
             stage1_dataBin <= stage3_dataB;
-	    stage1_done <= stage3_done;
+        stage1_done <= stage3_done;
         end if;
         if (latchClk2 = '1') then
             stage2_dataAin <= stage1_dataAout;
@@ -69,17 +84,25 @@ begin
             stage3_dataB <= stage2_dataBout;
             stage3_done <= stage2_doneOut;
         end if;
+        end if;
     end process;
 
+    enable_ring <= start AND (NOT stage1_done);
+
     --Robert: this stage 1 determines the output
-    process (operandAIn, operandBIn, stage1_dataAin, stage1_dataBin, start, stage1_done)
+    process (start, operandAIn, operandBIn, stage1_dataAin, stage1_dataBin, start, stage1_done)
     begin
-      if stage1_done = '1' and start = '1' then
-        stage1_dataAout <= operandAIn;
-        stage1_dataBout <= operandBIn;
+      if (start = '0') then
+         stage1_dataAout <= (others => '0');
+         stage1_dataBout <= (others => '0');   
       else
-        stage1_dataAout <= stage1_dataAin;
-        stage1_dataBout <= stage1_dataBin;
+          if enable_ring = '0' then
+            stage1_dataAout <= operandAIn;
+            stage1_dataBout <= operandBIn;
+          else
+            stage1_dataAout <= stage1_dataAin;
+            stage1_dataBout <= stage1_dataBin;
+          end if;
       end if;
    end process;
 
@@ -96,7 +119,7 @@ begin
         a_ack => stage3_ack,
         b_req => stage1_req,
         ff_clock => latchClk1,
-        enable => start
+        enable => enable_ring
     );
 
     ctrl2 : click_ctrl_delay
@@ -109,7 +132,7 @@ begin
         a_ack => stage1_ack,
         b_req => stage2_req,
         ff_clock => latchClk2,
-        enable => start
+        enable => enable_ring
     );
 
     ctrl3 : click_ctrl_delay
@@ -122,7 +145,7 @@ begin
         a_ack => stage2_ack,
         b_req => stage3_req,
         ff_clock => latchClk3,
-        enable => start
+        enable => enable_ring
     );
 
     gcd1 : GCD

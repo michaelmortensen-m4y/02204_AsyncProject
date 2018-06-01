@@ -140,7 +140,7 @@ begin
                 count_int_next <= (others => '0');
                 test_addr_next <= (others => '0');
 
-                if (start_test = '1') then
+                if rising_edge(start_test) then
                     state_next <= load;
                 else
                     state_next <= idle;

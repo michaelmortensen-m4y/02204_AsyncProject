@@ -14,6 +14,30 @@ end tb_3stageRing;
 
 architecture arch of tb_3stageRing is
 
+
+-- Taken from
+-- https://stackoverflow.com/questions/24329155/is-there-a-way-to-print-the-values-of-a-signal-to-a-file-from-a-modelsim-simulat
+function to_bstring(sl : std_logic) return string is
+    variable sl_str_v : string(1 to 3);  -- std_logic image with quotes around
+begin
+    sl_str_v := std_logic'image(sl);
+    return "" & sl_str_v(2);  -- "" & character to get string
+end function;
+
+function to_bstring(slv : std_logic_vector) return string is
+    alias    slv_norm : std_logic_vector(1 to slv'length) is slv;
+    variable sl_str_v : string(1 to 1);  -- String of std_logic
+    variable res_v    : string(1 to slv'length);
+begin
+    for idx in slv_norm'range loop
+        sl_str_v := to_bstring(slv_norm(idx));
+        res_v(idx) := sl_str_v(1);
+    end loop;
+    return res_v;
+end function;
+
+
+
     component top_3stageRing is
         port (
             operandAIn, operandBIn  : in std_logic_vector(7 downto 0);
@@ -60,14 +84,28 @@ begin
 
         wait for delay;
 
-        test_operandAIn <= std_logic_vector(xvec(0));
-        test_operandBIn <= std_logic_vector(yvec(0));
+        for i in 0 to 1 loop
 
-        wait for delay;
+            test_operandAIn <= std_logic_vector(xvec(i));
+            test_operandBIn <= std_logic_vector(yvec(i));
 
-        test_start <= '1';
+            wait for delay;
 
-        wait for delay;
+            test_start <= '1';
+
+            while (test_done = '0') loop
+                wait for delay;
+            end loop;
+
+            assert (unsigned(test_result) = svec(i)) report "Result incorrect: test_result = " & to_bstring(test_result) severity error;
+
+            wait for delay;
+
+            test_start <= '0';
+
+        end loop;
+
+        wait;
 
     end process;
 

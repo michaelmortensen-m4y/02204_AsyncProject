@@ -42,7 +42,8 @@ end function;
 -- The design under test
 component top_level_verification_circuit is
     port (
-        clock, reset, start_button : in std_logic
+        clock, reset, start_button : in std_logic;
+        correct : out std_logic -- just used for testing
     );
 end component;
 
@@ -51,6 +52,7 @@ end component;
     signal clock : std_logic := '0';
     signal reset : std_logic := '0';
     signal start_button : std_logic := '0';
+    signal correct : std_logic := '0';
 
     -- Delay used in combinational test
     constant clock_period : time := 10 ns;
@@ -62,7 +64,8 @@ dut: top_level_verification_circuit
     port map (
         reset => reset,
         clock => clock,
-        start_button => start_button
+        start_button => start_button,
+        correct => correct
     );
 
 
@@ -89,10 +92,6 @@ dut: top_level_verification_circuit
         wait for clock_period;
 
         start_button <= '1';
-
-        for i in 0 to 3 loop
-            wait for clock_period;
-        end loop;
 
         wait;
   end process;

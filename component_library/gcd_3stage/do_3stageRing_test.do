@@ -41,4 +41,4 @@ add wave tb_3stagering/dut/ctrl3/ff_clock
 add wave tb_3stagering/dut/ctrl3/ff_value
 
 
-run 200 ns
+run 1500 ns

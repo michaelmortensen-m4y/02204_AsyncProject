@@ -53,10 +53,18 @@ component synchronizer is
     );
 end component;
 
+component button_synchronizer is
+    port (
+        clock, reset, button  : in  std_logic;
+        output  : out  std_logic
+    );
+end component;
 
-signal start_gcd, done_gcd, done_gcd_synchronized, correct : std_logic;
+
+signal start_gcd, done_gcd, done_gcd_synchronized, done_gcd_verification, start_button_synchronized, correct : std_logic;
 signal result_gcd, input1_gcd, input2_gcd, count : std_logic_vector(DATA_WIDTH-1 downto 0);
 
+signal first_done, first_done_next : std_logic;
 
 begin
 
@@ -66,8 +74,8 @@ begin
     port map (
         clock => clock,
         reset => reset,
-        start_test => start_button,
-        done => done_gcd_synchronized,
+        start_test => start_button_synchronized,
+        done => done_gcd_verification,
         start_gcd => start_gcd,
         result_gcd => result_gcd,
         input1_gcd => input1_gcd,
@@ -93,6 +101,39 @@ begin
         input => done_gcd,
         output => done_gcd_synchronized
     );
+
+
+    button_synchronizer1 : button_synchronizer
+        port map (
+            clock => clock,
+            reset => reset,
+            button => start_button,
+            output => start_button_synchronized
+        );
+
+-- State and data registers
+    process(clock, reset) is
+    begin
+        if reset = '1' then
+            first_done <= '0';
+        elsif(rising_edge(clock)) then 
+            first_done <= first_done_next;
+        end if;
+    end process;
+
+-- Combinational circuit
+    process(done_gcd_synchronized, first_done) is
+    begin
+
+        done_gcd_verification <= '0';
+        first_done_next <= first_done;
+
+        if rising_edge(done_gcd_synchronized) and first_done = '0' then
+            first_done_next <= '1';
+        elsif rising_edge(done_gcd_synchronized) and first_done = '1' then
+            done_gcd_verification <= '1';
+        end if;
+    end process;
 
 
 

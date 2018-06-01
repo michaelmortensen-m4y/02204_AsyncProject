@@ -30,20 +30,20 @@ add wave test_tb/dut/verification_circuit1/state_reg
 add wave test_tb/dut/verification_circuit1/test_addr_next
 
 
-add wave test_tb/dut/top_3stageRing1/gcd1/done
-add wave test_tb/dut/top_3stageRing1/gcd1/a_in
-add wave test_tb/dut/top_3stageRing1/gcd1/b_in
+add wave test_tb/dut/gcd_ring1/gcd1/done
+add wave test_tb/dut/gcd_ring1/gcd1/a_in
+add wave test_tb/dut/gcd_ring1/gcd1/b_in
 
-add wave test_tb/dut/top_3stageRing1/start
+add wave test_tb/dut/gcd_ring1/start
 
 
-add wave test_tb/dut/top_3stageRing1/stage1_ack
-add wave test_tb/dut/top_3stageRing1/stage2_ack
-add wave test_tb/dut/top_3stageRing1/stage3_ack
+add wave test_tb/dut/gcd_ring1/stage1_ack
+add wave test_tb/dut/gcd_ring1/stage2_ack
+add wave test_tb/dut/gcd_ring1/stage3_ack
 
-add wave test_tb/dut/top_3stageRing1/stage1_req
-add wave test_tb/dut/top_3stageRing1/stage2_req
-add wave test_tb/dut/top_3stageRing1/stage3_req
+add wave test_tb/dut/gcd_ring1/stage1_req
+add wave test_tb/dut/gcd_ring1/stage2_req
+add wave test_tb/dut/gcd_ring1/stage3_req
 
 
 run 1000

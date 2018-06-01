@@ -1,9 +1,10 @@
---
--- ROMs Using Block RAM Resources.
--- VHDL code for a ROM with registered output 
--- See UG627 (v 11.3)
--- Modified from source
---
+--------------------------------------------------------------------------
+--! @file rom.vhdl
+--! @brief ROM Using Block RAM Resources.
+--! VHDL code for a ROM with registered output 
+--! See UG627 (v 11.3)
+--! Modified from source
+--------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

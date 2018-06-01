@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
 --! @file fork.vhdl
---! @brief Implements a 2-phase bundled data fork for click-elements.
+--! @brief Implements a 2-phase Click fork element.
 --------------------------------------------------------------------------
 
 library ieee;

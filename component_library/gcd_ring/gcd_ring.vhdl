@@ -1,25 +1,25 @@
---------------------------------------------------------------------------------
--- Entity: top_2stageRing
--- Date:2018-05-28
--- Author: Robert Fanning & Michael Mortensen
---
--- Description: Top module for 3-stage ring with clock controllers having internal delays
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--! @file gcd_ring.vhdl
+--! @brief Top module for 3-stage ring with clock controllers 
+--! having internal delays
+----------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity top_3stageRing is
+use work.GCD_PACKAGE.all;
+
+entity gcd_ring is
     port (
-        operandAIn, operandBIn  : in std_logic_vector(7 downto 0);
-        --reset : in std_logic;
+        operandAIn, operandBIn  : in std_logic_vector(DATA_WIDTH-1 downto 0);
         start : in std_logic;
         done : out std_logic;
-        result : out std_logic_vector(7 downto 0)
+        result : out std_logic_vector(DATA_WIDTH-1 downto 0)
     );
-end top_3stageRing;
+end gcd_ring;
 
-architecture behavioural of top_3stageRing is
+architecture behavioural of gcd_ring is
 
 component click_ctrl_delay is
     generic(
@@ -35,8 +35,8 @@ end component;
 
 component GCD is
     port (
-        a_in , b_in: in std_logic_vector (7 downto 0);
-        a_out, b_out: out std_logic_vector (7 downto 0);
+        a_in , b_in: in std_logic_vector (DATA_WIDTH-1 downto 0);
+        a_out, b_out: out std_logic_vector (DATA_WIDTH-1 downto 0);
         done : out  std_logic
     );
 end component;
@@ -44,18 +44,18 @@ end component;
 signal stage1_ack, stage2_ack, stage3_ack : std_logic := '0';
 signal stage1_req, stage2_req, stage3_req : std_logic := '0';
 
-signal latchClk1, latchClk2, latchClk3 : std_logic;
+signal ffClk1, ffClk2, ffClk3 : std_logic;
 
-signal stage1_dataAin, stage1_dataBin, stage1_dataAout, stage1_dataBout : std_logic_vector(7 downto 0) := (others => '0');
-signal stage2_dataAin, stage2_dataBin, stage2_dataAout, stage2_dataBout : std_logic_vector(7 downto 0) := (others => '0');
-signal stage3_dataA, stage3_dataB : std_logic_vector(7 downto 0) := (others => '0');
+signal stage1_dataAin, stage1_dataBin, stage1_dataAout, stage1_dataBout : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+signal stage2_dataAin, stage2_dataBin, stage2_dataAout, stage2_dataBout : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+signal stage3_dataA, stage3_dataB : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
 signal stage1_done, stage2_doneIn, stage2_doneOut, stage3_done : std_logic := '0';
 
 signal enable_ring : std_logic;
 
 begin
 
-    process (start, latchClk1, latchClk2, latchClk3, stage2_dataAout, stage2_dataBout, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout)
+    process (start, ffClk1, ffClk2, ffClk3, stage2_dataAout, stage2_dataBout, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout)
     begin
        if (start = '0') then
             stage1_dataAin <= (others => '0');
@@ -69,17 +69,17 @@ begin
             stage3_done <= '0';
             --stage2_doneOut <= '0';
         else
-        if (latchClk1 = '1') then
+        if (ffClk1 = '1') then
             stage1_dataAin <= stage3_dataA;
             stage1_dataBin <= stage3_dataB;
         stage1_done <= stage3_done;
         end if;
-        if (latchClk2 = '1') then
+        if (ffClk2 = '1') then
             stage2_dataAin <= stage1_dataAout;
             stage2_dataBin <= stage1_dataBout;
             stage2_doneIn <= stage1_done;
         end if;
-        if (latchClk3 = '1') then
+        if (ffClk3 = '1') then
             stage3_dataA <= stage2_dataAout;
             stage3_dataB <= stage2_dataBout;
             stage3_done <= stage2_doneOut;
@@ -118,7 +118,7 @@ begin
         b_ack => stage1_ack,
         a_ack => stage3_ack,
         b_req => stage1_req,
-        ff_clock => latchClk1,
+        ff_clock => ffClk1,
         enable => enable_ring
     );
 
@@ -131,7 +131,7 @@ begin
         b_ack => stage2_ack,
         a_ack => stage1_ack,
         b_req => stage2_req,
-        ff_clock => latchClk2,
+        ff_clock => ffClk2,
         enable => enable_ring
     );
 
@@ -144,7 +144,7 @@ begin
         b_ack => stage3_ack,
         a_ack => stage2_ack,
         b_req => stage3_req,
-        ff_clock => latchClk3,
+        ff_clock => ffClk3,
         enable => enable_ring
     );
 

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
 --! @file ctrl.vhdl
---! @brief Click-element controller using 2-phase
+--! @brief Basic Click element controller using 2-phase handshaking
 --------------------------------------------------------------------------
 
 

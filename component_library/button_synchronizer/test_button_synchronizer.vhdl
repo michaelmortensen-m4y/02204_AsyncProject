@@ -16,7 +16,9 @@ architecture rtl of test_tb is
 -- The design under test
 component button_synchronizer is
     port (
-        clock, reset, button  : in  std_logic;
+        clock   : in  std_logic;
+        reset   : in  std_logic;
+        button  : in  std_logic;
         output  : out  std_logic
     );
 end component;
@@ -73,20 +75,35 @@ dut: button_synchronizer
 
         assert (output = '0') report "Result incorrect: output = " & std_logic'image(output) severity error;
 
-
         wait for clock_period;
 
         assert (output = '0') report "Result incorrect: output = " & std_logic'image(output) severity error;
-
 
         wait for clock_period;
 
         assert (output = '1') report "Result incorrect: output = " & std_logic'image(output) severity error;
 
+        wait for clock_period;
+
+        assert (output = '1') report "Result incorrect: output = " & std_logic'image(output) severity error;
 
         wait for clock_period;
 
+        button <= '0';
+
         wait for clock_period;
+
+        assert (output = '1') report "Result incorrect: output = " & std_logic'image(output) severity error;
+
+        wait for clock_period;
+
+        -- We AND, so except it go low faster
+        assert (output = '0') report "Result incorrect: output = " & std_logic'image(output) severity error;
+
+        wait for clock_period;
+
+        assert (output = '0') report "Result incorrect: output = " & std_logic'image(output) severity error;
+
 
         wait;
   end process;

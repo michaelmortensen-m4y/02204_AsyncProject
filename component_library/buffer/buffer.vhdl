@@ -26,7 +26,9 @@ architecture behavioural of delay_buffer is
 
 begin
 
-    output_int <= not (not input) after 1 ns;
+    output_int <= not (not input) after 1 ns; -- For simulation purposes only!
+                                              -- The idea is that having N stages
+                                              -- means a delay of N ns.
     output <= output_int;
 
 end behavioural;

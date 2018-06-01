@@ -57,6 +57,8 @@ end component;
     alias a_ack : std_logic is test_signals(1);
     alias b_ack : std_logic is test_signals(0);
 
+    signal enable : std_logic := '0';
+
     signal ff_clock : std_logic;
 
     -- Delay used in combinational test
@@ -70,7 +72,7 @@ dut: click_ctrl_delay
         b_ack => b_ack,
         a_ack => a_ack,
         b_req => b_req,
-        enable => '1',
+        enable => enable,
         ff_clock => ff_clock
     );
 
@@ -82,10 +84,42 @@ dut: click_ctrl_delay
         assert (test_signals = "0000") report "Result incorrect: test_signals = " & to_bstring(test_signals) severity error;
 
         --########################################################
+        -- Test that enable locks all values and that enable has
+        -- to be high before the circuit can be used properly
+        --########################################################
+
+
+        wait for delay;
+
+        a_req <= '1';
+
+        wait for delay;
+
+        assert (test_signals = "1000") report "Result incorrect: test_signals = " & to_bstring(test_signals) severity error;
+
+        enable <= '1';
+
+        wait for delay;
+
+        -- Enable needs to be high before we come with a request!
+        assert (test_signals = "1000") report "Result incorrect: test_signals = " & to_bstring(test_signals) severity error;
+
+        wait for delay;
+
+        a_req <= '0';
+        enable <= '0';
+
+
+        wait for delay;
+
+        enable <= '1';
+
+        --########################################################
         -- Test of single handshake
         --########################################################
 
         wait for delay;
+
         a_req <= '1';
 
         wait for delay;

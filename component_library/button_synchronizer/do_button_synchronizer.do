@@ -14,4 +14,4 @@ add wave test_tb/button
 add wave test_tb/output
 
 
-run 200
+run 300 ns

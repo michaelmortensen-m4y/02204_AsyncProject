@@ -8,10 +8,10 @@ config wave -signalnamewidth 1
 
 # Add inputs
 
-add wave test_tb/clock
-add wave test_tb/reset
-add wave test_tb/input
-add wave test_tb/output
-
+add wave test_tb/a_in
+add wave test_tb/b_in
+add wave test_tb/a_out
+add wave test_tb/b_out
+add wave test_tb/done
 
 run 200

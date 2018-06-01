@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
 --! @file test_fork.vhdl
---! @brief Testbench file for the click fork.
+--! @brief Testbench file for the Click fork element.
 --------------------------------------------------------------------------
 
 

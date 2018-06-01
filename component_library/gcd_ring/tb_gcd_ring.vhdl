@@ -1,18 +1,19 @@
---------------------------------------------------------------------------------
--- Entity: tb_2stageRing
--- Date:2018-05-28  
--- Author: Michael Mortensen     
---
--- Description: Testbench for 2-stage ring
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--! @file tb_gcd_ring.vhdl
+--! @brief Testbench for 3-stage ring
+----------------------------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity tb_3stageRing is
-end tb_3stageRing;
+use work.GCD_PACKAGE.all;
 
-architecture arch of tb_3stageRing is
+entity tb_gcd_ring is
+end tb_gcd_ring;
+
+architecture arch of tb_gcd_ring is
 
 
 -- Taken from
@@ -38,25 +39,25 @@ end function;
 
 
 
-    component top_3stageRing is
+    component gcd_ring is
         port (
-            operandAIn, operandBIn  : in std_logic_vector(7 downto 0);
+            operandAIn, operandBIn  : in std_logic_vector(DATA_WIDTH-1 downto 0);
             start : in std_logic;
             done : out std_logic;
-            result : out std_logic_vector(7 downto 0)
+            result : out std_logic_vector(DATA_WIDTH-1 downto 0)
         );
     end component;
 
-    signal test_operandAIn, test_operandBIn : std_logic_vector(7 downto 0) := (others => '0');
+    signal test_operandAIn, test_operandBIn : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
     signal test_start : std_logic := '0';
     signal test_done : std_logic;
-    signal test_result : std_logic_vector(7 downto 0);
+    signal test_result : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 
     -- Delay used in combinational test
     constant delay : time := 5 ns;
 
-    type test_signal is array (0 to 1) of unsigned(7 downto 0);
+    type test_signal is array (0 to 1) of unsigned(DATA_WIDTH-1 downto 0);
 
     -- Test vectors
     signal xvec : test_signal := (resize(x"32", 8), -- Test input x
@@ -70,7 +71,7 @@ end function;
 
 begin
     
-    dut: top_3stageRing 
+    dut: gcd_ring 
     port map (
         operandAIn => test_operandAIn,
         operandBIn => test_operandBIn,

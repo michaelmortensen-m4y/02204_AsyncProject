@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------
---! @file test_button_synchronizer.vhdl
---! @brief Testbench file for the button synchronizer.
+--! @file test_synchronizer.vhdl
+--! @brief Testbench file for the synchronizer when sending req/ack over
+--! a clock-domain crossing or going from async to sync.
 --------------------------------------------------------------------------
 
 
@@ -14,9 +15,9 @@ end test_tb;
 architecture rtl of test_tb is
 
 -- The design under test
-component button_synchronizer is
+component synchronizer is
     port (
-        clock, reset, button  : in  std_logic;
+        clock, reset, input  : in  std_logic;
         output  : out  std_logic
     );
 end component;
@@ -24,7 +25,7 @@ end component;
     -- Internal test signals
     signal clock : std_logic := '0';
     signal reset : std_logic := '0';
-    signal button : std_logic := '0';
+    signal input : std_logic := '0';
     signal output : std_logic;
 
     -- Delay used in combinational test
@@ -32,11 +33,11 @@ end component;
 
 begin 
 
-dut: button_synchronizer 
+dut: synchronizer 
     port map (
         clock => clock,
         reset => reset,
-        button => button,
+        input => input,
         output => output
     );
 
@@ -67,17 +68,15 @@ dut: button_synchronizer
 
         wait for clock_period;
 
-        button <= '1';
+        input <= '1';
 
         wait for clock_period;
 
         assert (output = '0') report "Result incorrect: output = " & std_logic'image(output) severity error;
 
-
         wait for clock_period;
 
-        assert (output = '0') report "Result incorrect: output = " & std_logic'image(output) severity error;
-
+        assert (output = '1') report "Result incorrect: output = " & std_logic'image(output) severity error;
 
         wait for clock_period;
 

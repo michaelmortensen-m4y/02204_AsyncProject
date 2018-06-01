@@ -10,8 +10,8 @@ use ieee.numeric_std.all;
 
 entity synchronizer is
     port (
-        clock, reset, input  : in  std_logic;
-        output  : out  std_logic
+        clock, reset, input : in std_logic;
+        output : out std_logic
     );
 end synchronizer;
 

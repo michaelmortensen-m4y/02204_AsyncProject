@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------
 --! @file ctrl.vhdl
 --! @brief Click-element controller using 2-phase and with signals delayed
+--! and reset to initial values using enable going to 0
 --------------------------------------------------------------------------
 
 

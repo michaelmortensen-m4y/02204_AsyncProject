@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------
 --! @file join.vhdl
---! @brief Implements a 2-phase bundled data join component for click-elements.
+--! @brief Implements a 2-phase Click join component.
 --------------------------------------------------------------------------
 
 
@@ -31,7 +31,6 @@ begin
 
     ff_clock <=  (a_req and not c_ack and b_req and not c_ack) 
                 or (not a_req and not b_req and ff_value and c_ack);
-
 
     b_ack <= ff_value;
     a_ack <= ff_value;

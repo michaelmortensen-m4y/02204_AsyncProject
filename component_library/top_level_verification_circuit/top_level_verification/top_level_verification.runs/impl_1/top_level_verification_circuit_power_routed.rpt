@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri Jun  1 20:31:52 2018
+| Date             : Fri Jun  1 20:57:03 2018
 | Host             : DESKTOP-V4T9AF7 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_verification_circuit_power_routed.rpt -pb top_level_verification_circuit_power_summary_routed.pb -rpx top_level_verification_circuit_power_routed.rpx
 | Design           : top_level_verification_circuit
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.098        |
+| Total On-Chip Power (W)  | 0.086        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
-| Device Static (W)        | 0.097        |
+| Dynamic (W)              | 0.002        |
+| Device Static (W)        | 0.084        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.6         |
 | Junction Temperature (C) | 25.4         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      208 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       89 |     63400 |            0.14 |
+| Slice Logic    |    <0.001 |      491 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      329 |     63400 |            0.52 |
 |   Register     |    <0.001 |       74 |    126800 |            0.06 |
-|   Others       |     0.000 |       17 |       --- |             --- |
+|   Others       |     0.000 |       15 |       --- |             --- |
 |   CARRY4       |     0.000 |        6 |     15850 |            0.04 |
-| Signals        |    <0.001 |      152 |       --- |             --- |
+| Signals        |    <0.001 |      440 |       --- |             --- |
 | I/O            |    <0.001 |        4 |       210 |            1.90 |
-| Static Power   |     0.097 |          |           |                 |
-| Total          |     0.098 |          |           |                 |
+| Static Power   |     0.084 |          |           |                 |
+| Total          |     0.086 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
+| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
-| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,36 +140,324 @@ Table of Contents
 +-------------------------------------------------------+-----------+
 | Name                                                  | Power (W) |
 +-------------------------------------------------------+-----------+
-| top_level_verification_circuit                        |     0.001 |
+| top_level_verification_circuit                        |     0.002 |
 |   button_synchronizer1                                |    <0.001 |
-|   gcd_ring1                                           |    <0.001 |
+|   gcd_ring1                                           |     0.001 |
 |     ctrl1                                             |    <0.001 |
 |       delay_a_req                                     |    <0.001 |
 |         generate_delays[0].initial_buffer.bufferStart |     0.000 |
+|         generate_delays[10].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[11].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[12].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[13].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[14].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[15].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[16].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[17].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[18].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[19].internal_buffer.bufferX   |     0.000 |
 |         generate_delays[1].internal_buffer.bufferX    |     0.000 |
-|         generate_delays[2].final_buffer.bufferEnd     |     0.000 |
+|         generate_delays[20].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[21].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[22].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[23].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[24].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[25].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[26].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[27].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[28].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[29].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[2].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[30].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[31].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[32].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[33].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[34].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[35].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[36].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[37].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[38].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[39].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[3].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[40].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[41].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[42].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[43].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[44].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[45].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[46].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[47].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[48].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[49].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[4].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[50].final_buffer.bufferEnd    |     0.000 |
+|         generate_delays[5].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[6].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[7].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[8].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[9].internal_buffer.bufferX    |     0.000 |
 |       delay_b_req                                     |    <0.001 |
 |         generate_delays[0].initial_buffer.bufferStart |     0.000 |
+|         generate_delays[10].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[11].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[12].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[13].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[14].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[15].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[16].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[17].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[18].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[19].internal_buffer.bufferX   |     0.000 |
 |         generate_delays[1].internal_buffer.bufferX    |     0.000 |
-|         generate_delays[2].final_buffer.bufferEnd     |     0.000 |
+|         generate_delays[20].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[21].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[22].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[23].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[24].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[25].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[26].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[27].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[28].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[29].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[2].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[30].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[31].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[32].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[33].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[34].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[35].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[36].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[37].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[38].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[39].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[3].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[40].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[41].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[42].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[43].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[44].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[45].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[46].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[47].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[48].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[49].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[4].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[50].final_buffer.bufferEnd    |     0.000 |
+|         generate_delays[5].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[6].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[7].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[8].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[9].internal_buffer.bufferX    |     0.000 |
 |     ctrl2                                             |    <0.001 |
 |       delay_a_req                                     |    <0.001 |
 |         generate_delays[0].initial_buffer.bufferStart |     0.000 |
+|         generate_delays[10].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[11].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[12].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[13].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[14].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[15].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[16].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[17].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[18].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[19].internal_buffer.bufferX   |     0.000 |
 |         generate_delays[1].internal_buffer.bufferX    |     0.000 |
-|         generate_delays[2].final_buffer.bufferEnd     |     0.000 |
+|         generate_delays[20].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[21].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[22].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[23].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[24].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[25].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[26].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[27].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[28].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[29].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[2].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[30].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[31].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[32].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[33].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[34].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[35].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[36].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[37].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[38].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[39].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[3].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[40].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[41].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[42].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[43].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[44].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[45].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[46].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[47].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[48].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[49].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[4].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[50].final_buffer.bufferEnd    |     0.000 |
+|         generate_delays[5].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[6].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[7].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[8].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[9].internal_buffer.bufferX    |     0.000 |
 |       delay_b_req                                     |    <0.001 |
 |         generate_delays[0].initial_buffer.bufferStart |     0.000 |
+|         generate_delays[10].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[11].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[12].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[13].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[14].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[15].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[16].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[17].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[18].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[19].internal_buffer.bufferX   |     0.000 |
 |         generate_delays[1].internal_buffer.bufferX    |     0.000 |
-|         generate_delays[2].final_buffer.bufferEnd     |     0.000 |
+|         generate_delays[20].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[21].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[22].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[23].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[24].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[25].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[26].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[27].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[28].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[29].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[2].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[30].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[31].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[32].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[33].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[34].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[35].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[36].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[37].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[38].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[39].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[3].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[40].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[41].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[42].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[43].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[44].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[45].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[46].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[47].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[48].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[49].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[4].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[50].final_buffer.bufferEnd    |     0.000 |
+|         generate_delays[5].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[6].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[7].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[8].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[9].internal_buffer.bufferX    |     0.000 |
 |     ctrl3                                             |    <0.001 |
 |       delay_a_req                                     |    <0.001 |
 |         generate_delays[0].initial_buffer.bufferStart |     0.000 |
+|         generate_delays[10].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[11].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[12].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[13].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[14].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[15].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[16].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[17].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[18].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[19].internal_buffer.bufferX   |     0.000 |
 |         generate_delays[1].internal_buffer.bufferX    |     0.000 |
-|         generate_delays[2].final_buffer.bufferEnd     |     0.000 |
+|         generate_delays[20].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[21].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[22].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[23].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[24].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[25].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[26].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[27].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[28].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[29].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[2].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[30].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[31].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[32].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[33].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[34].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[35].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[36].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[37].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[38].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[39].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[3].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[40].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[41].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[42].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[43].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[44].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[45].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[46].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[47].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[48].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[49].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[4].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[50].final_buffer.bufferEnd    |     0.000 |
+|         generate_delays[5].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[6].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[7].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[8].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[9].internal_buffer.bufferX    |     0.000 |
 |       delay_b_req                                     |    <0.001 |
 |         generate_delays[0].initial_buffer.bufferStart |     0.000 |
+|         generate_delays[10].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[11].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[12].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[13].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[14].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[15].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[16].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[17].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[18].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[19].internal_buffer.bufferX   |     0.000 |
 |         generate_delays[1].internal_buffer.bufferX    |     0.000 |
-|         generate_delays[2].final_buffer.bufferEnd     |     0.000 |
+|         generate_delays[20].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[21].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[22].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[23].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[24].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[25].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[26].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[27].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[28].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[29].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[2].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[30].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[31].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[32].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[33].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[34].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[35].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[36].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[37].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[38].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[39].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[3].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[40].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[41].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[42].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[43].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[44].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[45].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[46].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[47].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[48].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[49].internal_buffer.bufferX   |     0.000 |
+|         generate_delays[4].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[50].final_buffer.bufferEnd    |     0.000 |
+|         generate_delays[5].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[6].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[7].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[8].internal_buffer.bufferX    |     0.000 |
+|         generate_delays[9].internal_buffer.bufferX    |     0.000 |
 |     gcd1                                              |     0.000 |
 |   synchronizer1                                       |    <0.001 |
 |   verification_circuit1                               |    <0.001 |

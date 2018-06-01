@@ -38,7 +38,7 @@ component verification_circuit is
 end component;
 
 
-component top_3stageRing is
+component gcd_ring is
     port (
         operandAIn, operandBIn  : in std_logic_vector(7 downto 0);
         start : in std_logic;
@@ -85,7 +85,7 @@ begin
         correct => correct_int
     );
 
-    top_3stageRing1 : top_3stageRing 
+    gcd_ring1 : gcd_ring 
     port map (
         operandAIn => input1_gcd,
         operandBIn => input2_gcd,

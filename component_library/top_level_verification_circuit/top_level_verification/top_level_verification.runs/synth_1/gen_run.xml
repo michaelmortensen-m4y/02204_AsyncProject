@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1527880024">
-  <File Type="VDS-TIMING-PB" Name="top_level_verification_circuit_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_level_verification_circuit_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="top_level_verification_circuit.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="top_level_verification_circuit_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_level_verification_circuit_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_level_verification_circuit_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="top_level_verification_circuit.vds"/>
-  <File Type="REPORTS-TCL" Name="top_level_verification_circuit_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1527881391">
   <File Type="PA-TCL" Name="top_level_verification_circuit.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_level_verification_circuit_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_level_verification_circuit_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_level_verification_circuit.vds"/>
+  <File Type="RDS-UTIL" Name="top_level_verification_circuit_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_level_verification_circuit_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_level_verification_circuit.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_level_verification_circuit_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_level_verification_circuit_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../buffer/buffer.vhdl">
@@ -108,9 +108,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

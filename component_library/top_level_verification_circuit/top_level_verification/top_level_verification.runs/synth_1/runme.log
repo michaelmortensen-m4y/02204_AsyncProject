@@ -4,7 +4,7 @@
 
 
 ****** Vivado v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
@@ -14,88 +14,88 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10133 
+INFO: Helper process launched with PID 3456 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1249.332 ; gain = 74.984 ; free physical = 122 ; free virtual = 773
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 346.801 ; gain = 101.801
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_level_verification_circuit' [/home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:19]
-INFO: [Synth 8-3491] module 'verification_circuit' declared at '/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:13' bound to instance 'verification_circuit1' of component 'verification_circuit' [/home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:74]
-INFO: [Synth 8-638] synthesizing module 'verification_circuit' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:30]
-INFO: [Synth 8-3491] module 'rams_21a' declared at '/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl:14' bound to instance 'romA' of component 'rams_21a' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:80]
-INFO: [Synth 8-638] synthesizing module 'rams_21a' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl:23]
-INFO: [Synth 8-256] done synthesizing module 'rams_21a' (1#1) [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl:23]
-INFO: [Synth 8-3491] module 'rams_21b' declared at '/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl:14' bound to instance 'romB' of component 'rams_21b' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:89]
-INFO: [Synth 8-638] synthesizing module 'rams_21b' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl:23]
-INFO: [Synth 8-256] done synthesizing module 'rams_21b' (2#1) [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl:23]
-INFO: [Synth 8-3491] module 'rams_21c' declared at '/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl:14' bound to instance 'romC' of component 'rams_21c' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:98]
-INFO: [Synth 8-638] synthesizing module 'rams_21c' [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl:23]
-INFO: [Synth 8-256] done synthesizing module 'rams_21c' (3#1) [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl:23]
-WARNING: [Synth 8-614] signal 'count_int' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
-WARNING: [Synth 8-614] signal 'test_addr' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
-WARNING: [Synth 8-614] signal 'result_gcd' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
-WARNING: [Synth 8-614] signal 'C_verification' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
-WARNING: [Synth 8-614] signal 'test_addr_next' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
-INFO: [Synth 8-256] done synthesizing module 'verification_circuit' (4#1) [/home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:30]
-INFO: [Synth 8-3491] module 'gcd_ring' declared at '/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:13' bound to instance 'gcd_ring1' of component 'gcd_ring' [/home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:88]
-INFO: [Synth 8-638] synthesizing module 'gcd_ring' [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:22]
-WARNING: [Synth 8-614] signal 'stage3_done' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:58]
-WARNING: [Synth 8-614] signal 'stage1_done' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:58]
-WARNING: [Synth 8-614] signal 'stage2_doneOut' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:58]
-WARNING: [Synth 8-614] signal 'enable_ring' is read in the process but is not in the sensitivity list [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:93]
+INFO: [Synth 8-638] synthesizing module 'top_level_verification_circuit' [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:19]
+INFO: [Synth 8-3491] module 'verification_circuit' declared at 'C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:13' bound to instance 'verification_circuit1' of component 'verification_circuit' [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:74]
+INFO: [Synth 8-638] synthesizing module 'verification_circuit' [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:30]
+INFO: [Synth 8-3491] module 'rams_21a' declared at 'C:/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl:14' bound to instance 'romA' of component 'rams_21a' [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:80]
+INFO: [Synth 8-638] synthesizing module 'rams_21a' [C:/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'rams_21a' (1#1) [C:/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl:23]
+INFO: [Synth 8-3491] module 'rams_21b' declared at 'C:/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl:14' bound to instance 'romB' of component 'rams_21b' [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:89]
+INFO: [Synth 8-638] synthesizing module 'rams_21b' [C:/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'rams_21b' (2#1) [C:/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl:23]
+INFO: [Synth 8-3491] module 'rams_21c' declared at 'C:/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl:14' bound to instance 'romC' of component 'rams_21c' [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:98]
+INFO: [Synth 8-638] synthesizing module 'rams_21c' [C:/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'rams_21c' (3#1) [C:/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl:23]
+WARNING: [Synth 8-614] signal 'count_int' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
+WARNING: [Synth 8-614] signal 'test_addr' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
+WARNING: [Synth 8-614] signal 'result_gcd' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
+WARNING: [Synth 8-614] signal 'C_verification' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
+WARNING: [Synth 8-614] signal 'test_addr_next' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:127]
+INFO: [Synth 8-256] done synthesizing module 'verification_circuit' (4#1) [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:30]
+INFO: [Synth 8-3491] module 'gcd_ring' declared at 'C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:13' bound to instance 'gcd_ring1' of component 'gcd_ring' [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:88]
+INFO: [Synth 8-638] synthesizing module 'gcd_ring' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:22]
+WARNING: [Synth 8-614] signal 'stage3_done' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:58]
+WARNING: [Synth 8-614] signal 'stage1_done' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:58]
+WARNING: [Synth 8-614] signal 'stage2_doneOut' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:58]
+WARNING: [Synth 8-614] signal 'enable_ring' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:93]
 	Parameter a_req_delay bound to: 2 - type: integer 
 	Parameter b_ack_delay bound to: 2 - type: integer 
 	Parameter initialOutput bound to: 1'b1 
-INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at '/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl1' of component 'click_ctrl_delay' [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:112]
-INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay' [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
+INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at 'C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl1' of component 'click_ctrl_delay' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:112]
+INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay' [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
 	Parameter a_req_delay bound to: 2 - type: integer 
 	Parameter b_ack_delay bound to: 2 - type: integer 
 	Parameter initialOutput bound to: 1'b1 
 	Parameter stages bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'delay_n_stage' declared at '/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:45]
-INFO: [Synth 8-638] synthesizing module 'delay_n_stage' [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:19]
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:45]
+INFO: [Synth 8-638] synthesizing module 'delay_n_stage' [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:19]
 	Parameter stages bound to: 2 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:30]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:31]
-INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:11' bound to instance 'bufferStart' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:49]
-INFO: [Synth 8-638] synthesizing module 'delay_buffer' [/home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:18]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:20]
-INFO: [Synth 8-256] done synthesizing module 'delay_buffer' (5#1) [/home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:18]
-INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:70]
-INFO: [Synth 8-3491] module 'delay_buffer' declared at '/home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:11' bound to instance 'bufferEnd' of component 'delay_buffer' [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:59]
-INFO: [Synth 8-256] done synthesizing module 'delay_n_stage' (6#1) [/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:19]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:30]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:31]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:11' bound to instance 'bufferStart' of component 'delay_buffer' [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:49]
+INFO: [Synth 8-638] synthesizing module 'delay_buffer' [C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:18]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'delay_buffer' (5#1) [C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:18]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl:11' bound to instance 'bufferEnd' of component 'delay_buffer' [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:59]
+INFO: [Synth 8-256] done synthesizing module 'delay_n_stage' (6#1) [C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:19]
 	Parameter stages bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'delay_n_stage' declared at '/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:52]
-INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay' (7#1) [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay' (7#1) [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
 	Parameter a_req_delay bound to: 2 - type: integer 
 	Parameter b_ack_delay bound to: 2 - type: integer 
 	Parameter initialOutput bound to: 1'b0 
-INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at '/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl2' of component 'click_ctrl_delay' [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:125]
-INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay__parameterized1' [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
+INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at 'C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl2' of component 'click_ctrl_delay' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:125]
+INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay__parameterized1' [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
 	Parameter a_req_delay bound to: 2 - type: integer 
 	Parameter b_ack_delay bound to: 2 - type: integer 
 	Parameter initialOutput bound to: 1'b0 
 	Parameter stages bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'delay_n_stage' declared at '/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:45]
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:45]
 	Parameter stages bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'delay_n_stage' declared at '/home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:52]
-INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay__parameterized1' (7#1) [/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay__parameterized1' (7#1) [C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:24]
 	Parameter a_req_delay bound to: 2 - type: integer 
 	Parameter b_ack_delay bound to: 2 - type: integer 
 	Parameter initialOutput bound to: 1'b0 
-INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at '/home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl3' of component 'click_ctrl_delay' [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:138]
-INFO: [Synth 8-3491] module 'GCD' declared at '/home/andreas/github/02204_AsyncProject/component_library/gcd/gcd.vhdl:14' bound to instance 'gcd1' of component 'GCD' [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:151]
-INFO: [Synth 8-638] synthesizing module 'GCD' [/home/andreas/github/02204_AsyncProject/component_library/gcd/gcd.vhdl:22]
-INFO: [Synth 8-256] done synthesizing module 'GCD' (8#1) [/home/andreas/github/02204_AsyncProject/component_library/gcd/gcd.vhdl:22]
-INFO: [Synth 8-256] done synthesizing module 'gcd_ring' (9#1) [/home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:22]
-INFO: [Synth 8-3491] module 'synchronizer' declared at '/home/andreas/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl:11' bound to instance 'synchronizer1' of component 'synchronizer' [/home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:98]
-INFO: [Synth 8-638] synthesizing module 'synchronizer' [/home/andreas/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl:18]
-INFO: [Synth 8-256] done synthesizing module 'synchronizer' (10#1) [/home/andreas/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl:18]
-INFO: [Synth 8-3491] module 'button_synchronizer' declared at '/home/andreas/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl:11' bound to instance 'button_synchronizer1' of component 'button_synchronizer' [/home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:107]
-INFO: [Synth 8-638] synthesizing module 'button_synchronizer' [/home/andreas/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl:20]
-INFO: [Synth 8-256] done synthesizing module 'button_synchronizer' (11#1) [/home/andreas/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl:20]
-INFO: [Synth 8-256] done synthesizing module 'top_level_verification_circuit' (12#1) [/home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:19]
+INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at 'C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl3' of component 'click_ctrl_delay' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:138]
+INFO: [Synth 8-3491] module 'GCD' declared at 'C:/github/02204_AsyncProject/component_library/gcd/gcd.vhdl:14' bound to instance 'gcd1' of component 'GCD' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:151]
+INFO: [Synth 8-638] synthesizing module 'GCD' [C:/github/02204_AsyncProject/component_library/gcd/gcd.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'GCD' (8#1) [C:/github/02204_AsyncProject/component_library/gcd/gcd.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'gcd_ring' (9#1) [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:22]
+INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl:11' bound to instance 'synchronizer1' of component 'synchronizer' [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:98]
+INFO: [Synth 8-638] synthesizing module 'synchronizer' [C:/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'synchronizer' (10#1) [C:/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl:18]
+INFO: [Synth 8-3491] module 'button_synchronizer' declared at 'C:/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl:11' bound to instance 'button_synchronizer1' of component 'button_synchronizer' [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:107]
+INFO: [Synth 8-638] synthesizing module 'button_synchronizer' [C:/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'button_synchronizer' (11#1) [C:/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'top_level_verification_circuit' (12#1) [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1291.863 ; gain = 117.516 ; free physical = 151 ; free virtual = 788
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.598 ; gain = 154.598
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -105,6 +105,435 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1291.863 ; gain = 117.516 ; free physical = 120 ; free virtual = 785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.598 ; gain = 154.598
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_verification_circuit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_verification_circuit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 751.270 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'verification_circuit'
+INFO: [Synth 8-5544] ROM "count_int" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element count_int_reg was removed.  [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:112]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                            00001 |                              000
+                    load |                            00010 |                              001
+               send_data |                            00100 |                              010
+                  timing |                            01000 |                              011
+                  verify |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'one-hot' in module 'verification_circuit'
+WARNING: [Synth 8-327] inferring latch for variable 'correct_reg' [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:140]
+WARNING: [Synth 8-327] inferring latch for variable 'stage1_done_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:63]
+WARNING: [Synth 8-327] inferring latch for variable 'stage1_dataAin_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:61]
+WARNING: [Synth 8-327] inferring latch for variable 'stage3_done_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:69]
+WARNING: [Synth 8-327] inferring latch for variable 'stage3_dataA_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:67]
+WARNING: [Synth 8-327] inferring latch for variable 'stage2_dataAin_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:64]
+WARNING: [Synth 8-327] inferring latch for variable 'stage2_dataBin_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:65]
+WARNING: [Synth 8-327] inferring latch for variable 'stage1_dataBin_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:62]
+WARNING: [Synth 8-327] inferring latch for variable 'stage3_dataB_reg' [C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl:68]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 7     
+	   9 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rams_21a 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module rams_21b 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module rams_21c 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module verification_circuit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   9 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module click_ctrl_delay 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module click_ctrl_delay__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module GCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+Module gcd_ring 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+Module synchronizer 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module button_synchronizer 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element verification_circuit1/count_int_reg was removed.  [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:112]
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[0]' (FD) to 'verification_circuit1/romB/data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[0]' (FD) to 'verification_circuit1/romA/data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[2]' (FD) to 'verification_circuit1/romC/data_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\verification_circuit1/romB/data_reg[3] )
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[3]' (FD) to 'verification_circuit1/romA/data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[4]' (FD) to 'verification_circuit1/romA/data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[6]' (FD) to 'verification_circuit1/romA/data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[7]' (FD) to 'verification_circuit1/romA/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\verification_circuit1/romA/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romC/data_reg[1]' (FD) to 'verification_circuit1/romC/data_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (verification_circuit1/romB/data_reg[3]) is unused and will be removed from module top_level_verification_circuit.
+WARNING: [Synth 8-3332] Sequential element (synchronizer1/shift_reg_reg[2]) is unused and will be removed from module top_level_verification_circuit.
+WARNING: [Synth 8-3332] Sequential element (button_synchronizer1/shift_reg_reg[3]) is unused and will be removed from module top_level_verification_circuit.
+WARNING: [Synth 8-3332] Sequential element (verification_circuit1/romA/data_reg[7]) is unused and will be removed from module top_level_verification_circuit.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_7/\verification_circuit1/i_1 /O (GATE_2_2)
+     1: i_7/\verification_circuit1/i_1 /I0 (GATE_2_2)
+     2: i_7/\verification_circuit1/i_0 /O (GATE_2_7_NAND)
+     3: i_7/\verification_circuit1/i_0 /I0 (GATE_2_7_NAND)
+      : i_7/D[1]
+      : i_3/out2[1]
+      : i_3/i_0/out2[1]
+     4: i_3/i_0/\verification_circuit1/i_11 /O (GATE_2_8_AND)
+     5: i_3/i_0/\verification_circuit1/i_11 /I0 (GATE_2_8_AND)
+     6: i_3/i_0/\verification_circuit1/i_8 /O (GATE_2_14_OR)
+     7: i_3/i_0/\verification_circuit1/i_8 /I1 (GATE_2_14_OR)
+     8: i_3/i_0/\verification_circuit1/i_7 /O (GATE_2_8_AND)
+     9: i_3/i_0/\verification_circuit1/i_7 /I1 (GATE_2_8_AND)
+      : i_3/i_0/in9[1]
+      : i_3/in9[1]
+      : i_7/test_addr_next[1]
+    10: i_7/\verification_circuit1/i_4 /O (GATE_2_6_XOR)
+    11: i_7/\verification_circuit1/i_4 /I0 (GATE_2_6_XOR)
+    12: i_7/\verification_circuit1/i_3 /O (GATE_2_8_AND)
+    13: i_7/\verification_circuit1/i_3 /I0 (GATE_2_8_AND)
+    14: i_7/\verification_circuit1/i_1 /O (GATE_2_2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:177]
+Inferred a: "set_disable_timing -from I0 -to O i_7/\verification_circuit1/i_1 "
+Found timing loop:
+     0: i_7/\verification_circuit1/i_1 /O (GATE_2_2)
+     1: i_7/\verification_circuit1/i_1 /O (GATE_2_2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl:177]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_7/\verification_circuit1/i_1 /O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 751.270 ; gain = 506.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[1]' (FDR) to 'verification_circuit1/romA/data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[1]' (FDR) to 'verification_circuit1/romC/data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[6]' (FDR) to 'verification_circuit1/romC/data_reg[2]'
+Found timing loop:
+     0: i_79/O (LUT2)
+     1: i_79/I1 (LUT2)
+     2: \verification_circuit1/i_4 /O (LUT5)
+     3: \verification_circuit1/i_4 /I2 (LUT5)
+     4: \verification_circuit1/i_5 /O (LUT5)
+     5: \verification_circuit1/i_5 /I4 (LUT5)
+     6: i_79/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:12]
+Inferred a: "set_disable_timing -from I1 -to O i_79"
+Found timing loop:
+     0: i_79/O (LUT2)
+     1: i_79/I0 (LUT2)
+     2: i_78/O (LUT6)
+     3: i_78/I3 (LUT6)
+     4: i_79/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl:12]
+Inferred a: "set_disable_timing -from I0 -to O i_79"
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \FSM_onehot_state_reg[1]_i_4 /O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \verification_circuit1/test_addr[2]_i_2 /O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \verification_circuit1//FSM_onehot_state_reg[1]_i_1 /O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \verification_circuit1//FSM_onehot_state_reg[0]_i_1 /O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \verification_circuit1/test_addr[1]_i_1 /O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through \verification_circuit1/test_addr[0]_i_1 /O'
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |    18|
+|4     |LUT2   |    21|
+|5     |LUT3   |    17|
+|6     |LUT4   |    38|
+|7     |LUT5   |     9|
+|8     |LUT6   |     8|
+|9     |FDCE   |     9|
+|10    |FDPE   |     2|
+|11    |FDRE   |    12|
+|12    |LD     |     1|
+|13    |LDC    |    50|
+|14    |IBUF   |     3|
+|15    |OBUF   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------------------+-----------------------------------+------+
+|      |Instance                                                |Module                             |Cells |
++------+--------------------------------------------------------+-----------------------------------+------+
+|1     |top                                                     |                                   |   196|
+|2     |  button_synchronizer1                                  |button_synchronizer                |     3|
+|3     |  gcd_ring1                                             |gcd_ring                           |   141|
+|4     |    gcd1                                                |GCD                                |     6|
+|5     |    ctrl1                                               |click_ctrl_delay                   |     9|
+|6     |      delay_a_req                                       |delay_n_stage_15                   |     3|
+|7     |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_20                    |     0|
+|8     |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_21                    |     0|
+|9     |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_22                    |     0|
+|10    |      delay_b_req                                       |delay_n_stage_16                   |     3|
+|11    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_17                    |     0|
+|12    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_18                    |     0|
+|13    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_19                    |     0|
+|14    |    ctrl2                                               |click_ctrl_delay__parameterized1   |     8|
+|15    |      delay_a_req                                       |delay_n_stage_7                    |     4|
+|16    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_12                    |     0|
+|17    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_13                    |     0|
+|18    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_14                    |     0|
+|19    |      delay_b_req                                       |delay_n_stage_8                    |     2|
+|20    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_9                     |     0|
+|21    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_10                    |     0|
+|22    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_11                    |     0|
+|23    |    ctrl3                                               |click_ctrl_delay__parameterized1_0 |     8|
+|24    |      delay_a_req                                       |delay_n_stage                      |     3|
+|25    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_4                     |     0|
+|26    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_5                     |     0|
+|27    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_6                     |     0|
+|28    |      delay_b_req                                       |delay_n_stage_1                    |     3|
+|29    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer                       |     0|
+|30    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_2                     |     0|
+|31    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_3                     |     0|
+|32    |  synchronizer1                                         |synchronizer                       |     2|
+|33    |  verification_circuit1                                 |verification_circuit               |    45|
+|34    |    romA                                                |rams_21a                           |     4|
+|35    |    romB                                                |rams_21b                           |     6|
+|36    |    romC                                                |rams_21c                           |    11|
++------+--------------------------------------------------------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 4 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 761.512 ; gain = 164.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 761.512 ; gain = 516.512
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 51 instances were transformed.
+  LD => LDCE: 1 instances
+  LDC => LDCE: 50 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+79 Infos, 31 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 763.652 ; gain = 531.602
+INFO: [Common 17-1381] The checkpoint 'C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.runs/synth_1/top_level_verification_circuit.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_verification_circuit_utilization_synth.rpt -pb top_level_verification_circuit_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 763.652 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  1 20:30:35 2018...

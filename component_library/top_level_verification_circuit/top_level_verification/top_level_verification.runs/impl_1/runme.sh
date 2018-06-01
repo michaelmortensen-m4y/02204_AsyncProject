@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.runs/synth_1'
+HD_PWD='C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log top_level_verification_circuit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_verification_circuit.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log top_level_verification_circuit.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_level_verification_circuit.tcl -notrace
+
+

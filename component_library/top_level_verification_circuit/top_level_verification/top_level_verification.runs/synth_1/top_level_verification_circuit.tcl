@@ -21,27 +21,26 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.cache/wt [current_project]
-set_property parent.project_path /home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.xpr [current_project]
+set_property webtalk.parent_dir C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.cache/wt [current_project]
+set_property parent.project_path C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo /home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.cache/ip [current_project]
+set_property ip_output_repo c:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification/top_level_verification.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  /home/andreas/github/02204_AsyncProject/component_library/buffer/buffer.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/gcd_package.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/gcd/gcd.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl
-  /home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl
+  C:/github/02204_AsyncProject/component_library/buffer/buffer.vhdl
+  C:/github/02204_AsyncProject/component_library/button_synchronizer/button_synchronizer.vhdl
+  C:/github/02204_AsyncProject/component_library/ctrl_delay/ctrl_delay.vhdl
+  C:/github/02204_AsyncProject/component_library/delay/delay_n_stage.vhdl
+  C:/github/02204_AsyncProject/component_library/gcd_package.vhdl
+  C:/github/02204_AsyncProject/component_library/gcd/gcd.vhdl
+  C:/github/02204_AsyncProject/component_library/gcd_ring/gcd_ring.vhdl
+  C:/github/02204_AsyncProject/component_library/verification_circuit/romA.vhdl
+  C:/github/02204_AsyncProject/component_library/verification_circuit/romB.vhdl
+  C:/github/02204_AsyncProject/component_library/verification_circuit/romC.vhdl
+  C:/github/02204_AsyncProject/component_library/synchronizer/synchronizer.vhdl
+  C:/github/02204_AsyncProject/component_library/verification_circuit/verification_circuit.vhdl
+  C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/top_level_verification_circuit.vhdl
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -51,8 +50,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files /home/andreas/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc]
+read_xdc C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files C:/github/02204_AsyncProject/component_library/top_level_verification_circuit/Nexys-4-DDR-Master.xdc]
 
 
 synth_design -top top_level_verification_circuit -part xc7a100tcsg324-1

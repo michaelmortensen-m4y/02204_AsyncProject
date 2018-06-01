@@ -168,8 +168,7 @@ begin
                     state_next <= verify;
                 end if;
 
-            when verify =>      -- Verify correct output
-
+            when verify =>
 
                 if (result_gcd /= C_verification) then
                     correct <= '0'; -- Error

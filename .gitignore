@@ -101,7 +101,7 @@ vsim.dbg
 #########
 #Reports
 #########
-*.rpt
+!*.rpt
 *.rst
 *.wdf
 *.rpx

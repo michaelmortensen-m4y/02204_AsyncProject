@@ -78,7 +78,7 @@ architecture behavioural of gcd_ring is
 
 
 
-    attribute MARK_DEBUG of stage1_dataAin : signal is "true";
+    --attribute MARK_DEBUG of stage1_dataAin : signal is "true";
     --attribute DONT_TOUCH of stage1_dataBin : signal is "true";
     --attribute DONT_TOUCH of stage1_dataAout : signal is "true";
     --attribute DONT_TOUCH of stage1_dataBout : signal is "true";
@@ -92,7 +92,7 @@ architecture behavioural of gcd_ring is
     --attribute DONT_TOUCH of stage3_dataA : signal is "true";
     --attribute DONT_TOUCH of stage3_dataB : signal is "true";
 
-    attribute MARK_DEBUG of enable_ring : signal is "true";
+    --attribute MARK_DEBUG of enable_ring : signal is "true";
 
 
 begin
@@ -145,10 +145,10 @@ begin
 
 
 
-
+    -- Needs at least around 2
     ctrl1 : click_ctrl_delay
-    generic map (a_req_delay => 100,
-                 b_ack_delay => 100,
+    generic map (a_req_delay => 2,
+                 b_ack_delay => 2,
                  initialOutput => '1') -- The phase is initialized to 1 so that the ring oscillates when enabled
     port map (
         a_req => stage3_req,
@@ -159,9 +159,10 @@ begin
         enable => enable_ring
     );
 
+    -- Needs at least around 25, lower if we increase the one above
     ctrl2 : click_ctrl_delay
-    generic map (a_req_delay => 100,
-                 b_ack_delay => 100,
+    generic map (a_req_delay => 25,
+                 b_ack_delay => 25,
                  initialOutput => '0')
     port map (
         a_req => stage1_req,
@@ -172,9 +173,10 @@ begin
         enable => enable_ring
     );
 
+    -- Needs at least around 15
     ctrl3 : click_ctrl_delay
-    generic map (a_req_delay => 100,
-                 b_ack_delay => 100,
+    generic map (a_req_delay => 15,
+                 b_ack_delay => 15,
                  initialOutput => '0')
     port map (
         a_req => stage2_req,

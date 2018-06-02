@@ -70,7 +70,7 @@ signal result_gcd, input1_gcd, input2_gcd, count : std_logic_vector(DATA_WIDTH-1
     attribute MARK_DEBUG : string;
 
 
-    attribute MARK_DEBUG of correct_int : signal is "true";
+    --attribute MARK_DEBUG of correct_int : signal is "true";
 
     --attribute DONT_TOUCH of done_gcd : signal is "true";
     --attribute DONT_TOUCH of done_gcd_synchronized : signal is "true";

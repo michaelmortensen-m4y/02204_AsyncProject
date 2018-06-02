@@ -1,0 +1,1203 @@
+
+*** Running vivado
+    with args -log top_level_verification_circuit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_verification_circuit.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top_level_verification_circuit.tcl -notrace
+Command: synth_design -top top_level_verification_circuit -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22264 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 346.617 ; gain = 101.547
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level_verification_circuit' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:19]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:66]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:66]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:66]
+INFO: [Synth 8-3491] module 'verification_circuit' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:13' bound to instance 'verification_circuit1' of component 'verification_circuit' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:84]
+INFO: [Synth 8-638] synthesizing module 'verification_circuit' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:30]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:68]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:69]
+INFO: [Synth 8-3491] module 'rams_21a' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:14' bound to instance 'romA' of component 'rams_21a' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:87]
+INFO: [Synth 8-638] synthesizing module 'rams_21a' [C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'rams_21a' (1#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:23]
+INFO: [Synth 8-3491] module 'rams_21b' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:14' bound to instance 'romB' of component 'rams_21b' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:96]
+INFO: [Synth 8-638] synthesizing module 'rams_21b' [C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'rams_21b' (2#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:23]
+INFO: [Synth 8-3491] module 'rams_21c' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:14' bound to instance 'romC' of component 'rams_21c' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:105]
+INFO: [Synth 8-638] synthesizing module 'rams_21c' [C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:23]
+INFO: [Synth 8-256] done synthesizing module 'rams_21c' (3#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:23]
+WARNING: [Synth 8-614] signal 'count_int' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:136]
+WARNING: [Synth 8-614] signal 'test_addr' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:136]
+WARNING: [Synth 8-614] signal 'correct_reg' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:136]
+WARNING: [Synth 8-614] signal 'result_gcd' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:136]
+WARNING: [Synth 8-614] signal 'C_verification' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:136]
+INFO: [Synth 8-256] done synthesizing module 'verification_circuit' (4#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:30]
+INFO: [Synth 8-3491] module 'gcd_ring' declared at 'C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:13' bound to instance 'gcd_ring1' of component 'gcd_ring' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:98]
+INFO: [Synth 8-638] synthesizing module 'gcd_ring' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:22]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:44]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:44]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:44]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:45]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:45]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:45]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:47]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:47]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:47]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:50]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:50]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:50]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:50]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:51]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:51]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:52]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:52]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:52]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:56]
+WARNING: [Synth 8-614] signal 'operandAIn' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:100]
+WARNING: [Synth 8-614] signal 'operandBIn' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:100]
+WARNING: [Synth 8-614] signal 'enable_ring' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:133]
+	Parameter a_req_delay bound to: 100 - type: integer 
+	Parameter b_ack_delay bound to: 100 - type: integer 
+	Parameter initialOutput bound to: 1'b1 
+INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at 'C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl1' of component 'click_ctrl_delay' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:149]
+INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
+	Parameter a_req_delay bound to: 100 - type: integer 
+	Parameter b_ack_delay bound to: 100 - type: integer 
+	Parameter initialOutput bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:29]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:30]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:31]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:32]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:34]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:35]
+	Parameter stages bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:57]
+INFO: [Synth 8-638] synthesizing module 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:19]
+	Parameter stages bound to: 100 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:30]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:31]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferStart' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:49]
+INFO: [Synth 8-638] synthesizing module 'delay_buffer' [C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:18]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'delay_buffer' (5#1) [C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:18]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'delay_n_stage' (6#1) [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:19]
+	Parameter stages bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay' (7#1) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
+	Parameter a_req_delay bound to: 100 - type: integer 
+	Parameter b_ack_delay bound to: 100 - type: integer 
+	Parameter initialOutput bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay__parameterized1' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
+	Parameter a_req_delay bound to: 100 - type: integer 
+	Parameter b_ack_delay bound to: 100 - type: integer 
+	Parameter initialOutput bound to: 1'b0 
+	Parameter stages bound to: 100 - type: integer 
+	Parameter stages bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay__parameterized1' (7#1) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
+	Parameter a_req_delay bound to: 100 - type: integer 
+	Parameter b_ack_delay bound to: 100 - type: integer 
+	Parameter initialOutput bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'GCD' [C:/github/02204_AsyncProject/hardware/gcd/gcd.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'GCD' (8#1) [C:/github/02204_AsyncProject/hardware/gcd/gcd.vhdl:22]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl3'. This will prevent further optimization [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:175]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl2'. This will prevent further optimization [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:162]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl1'. This will prevent further optimization [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:149]
+INFO: [Synth 8-256] done synthesizing module 'gcd_ring' (9#1) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:22]
+INFO: [Synth 8-638] synthesizing module 'synchronizer' [C:/github/02204_AsyncProject/hardware/synchronizer/synchronizer.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'synchronizer' (10#1) [C:/github/02204_AsyncProject/hardware/synchronizer/synchronizer.vhdl:18]
+INFO: [Synth 8-638] synthesizing module 'button_synchronizer' [C:/github/02204_AsyncProject/hardware/button_synchronizer/button_synchronizer.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'button_synchronizer' (11#1) [C:/github/02204_AsyncProject/hardware/button_synchronizer/button_synchronizer.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'top_level_verification_circuit' (12#1) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.758 ; gain = 154.688
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.758 ; gain = 154.688
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/github/02204_AsyncProject/hardware/fpga/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/github/02204_AsyncProject/hardware/fpga/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/github/02204_AsyncProject/hardware/fpga/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_verification_circuit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_verification_circuit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 757.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'verification_circuit'
+INFO: [Synth 8-5544] ROM "count_int" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    load |                              001 |                              001
+               send_data |                              010 |                              010
+                  timing |                              011 |                              011
+                  verify |                              100 |                              100
+               completed |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'verification_circuit'
+WARNING: [Synth 8-327] inferring latch for variable 'stage1_dataAout_reg' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:118]
+WARNING: [Synth 8-327] inferring latch for variable 'stage1_dataBout_reg' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:119]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 10    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 9     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rams_21a 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module rams_21b 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module rams_21c 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module verification_circuit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module click_ctrl_delay 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module click_ctrl_delay__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module GCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+Module gcd_ring 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 6     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+Module synchronizer 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module button_synchronizer 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[0]' (FD) to 'verification_circuit1/romB/data_reg[5]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\verification_circuit1/romB/data_reg[3] )
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[4]' (FD) to 'verification_circuit1/romA/data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[6]' (FD) to 'verification_circuit1/romA/data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[7]' (FD) to 'verification_circuit1/romA/data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[0]' (FD) to 'verification_circuit1/romA/data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[2]' (FD) to 'verification_circuit1/romC/data_reg[0]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[3]' (FD) to 'verification_circuit1/romA/data_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\verification_circuit1/romA/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romC/data_reg[1]' (FD) to 'verification_circuit1/romC/data_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (verification_circuit1/romB/data_reg[3]) is unused and will be removed from module top_level_verification_circuit.
+WARNING: [Synth 8-3332] Sequential element (verification_circuit1/romA/data_reg[7]) is unused and will be removed from module top_level_verification_circuit.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 757.324 ; gain = 512.254
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[1]' (FDR) to 'verification_circuit1/romC/data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[1]' (FDR) to 'verification_circuit1/romC/data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'verification_circuit1/romA/data_reg[6]' (FDR) to 'verification_circuit1/romC/data_reg[2]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:104]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:105]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:107]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |   623|
+|4     |LUT2   |    57|
+|5     |LUT3   |    48|
+|6     |LUT4   |    30|
+|7     |LUT5   |     4|
+|8     |LUT6   |     7|
+|9     |FDCE   |    66|
+|10    |FDCP   |    16|
+|11    |FDPE   |    18|
+|12    |FDRE   |    12|
+|13    |LD     |    16|
+|14    |LDC    |    16|
+|15    |IBUF   |     3|
+|16    |OBUF   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------------------+------------------------------------+------+
+|      |Instance                                                |Module                              |Cells |
++------+--------------------------------------------------------+------------------------------------+------+
+|1     |top                                                     |                                    |   925|
+|2     |  gcd_ring1                                             |gcd_ring                            |   858|
+|3     |    ctrl1                                               |click_ctrl_delay                    |   206|
+|4     |      delay_a_req                                       |delay_n_stage_406                   |   100|
+|5     |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_509                    |     0|
+|6     |        \generate_delays[100].final_buffer.bufferEnd    |delay_buffer_510                    |     0|
+|7     |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_511                    |     0|
+|8     |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_512                    |     0|
+|9     |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_513                    |     0|
+|10    |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_514                    |     0|
+|11    |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_515                    |     0|
+|12    |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_516                    |     0|
+|13    |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_517                    |     0|
+|14    |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_518                    |     0|
+|15    |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_519                    |     0|
+|16    |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_520                    |     0|
+|17    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_521                    |     0|
+|18    |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_522                    |     0|
+|19    |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_523                    |     0|
+|20    |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_524                    |     0|
+|21    |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_525                    |     0|
+|22    |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_526                    |     0|
+|23    |        \generate_delays[25].internal_buffer.bufferX    |delay_buffer_527                    |     0|
+|24    |        \generate_delays[26].internal_buffer.bufferX    |delay_buffer_528                    |     0|
+|25    |        \generate_delays[27].internal_buffer.bufferX    |delay_buffer_529                    |     0|
+|26    |        \generate_delays[28].internal_buffer.bufferX    |delay_buffer_530                    |     0|
+|27    |        \generate_delays[29].internal_buffer.bufferX    |delay_buffer_531                    |     0|
+|28    |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_532                    |     0|
+|29    |        \generate_delays[30].internal_buffer.bufferX    |delay_buffer_533                    |     0|
+|30    |        \generate_delays[31].internal_buffer.bufferX    |delay_buffer_534                    |     0|
+|31    |        \generate_delays[32].internal_buffer.bufferX    |delay_buffer_535                    |     0|
+|32    |        \generate_delays[33].internal_buffer.bufferX    |delay_buffer_536                    |     0|
+|33    |        \generate_delays[34].internal_buffer.bufferX    |delay_buffer_537                    |     0|
+|34    |        \generate_delays[35].internal_buffer.bufferX    |delay_buffer_538                    |     0|
+|35    |        \generate_delays[36].internal_buffer.bufferX    |delay_buffer_539                    |     0|
+|36    |        \generate_delays[37].internal_buffer.bufferX    |delay_buffer_540                    |     0|
+|37    |        \generate_delays[38].internal_buffer.bufferX    |delay_buffer_541                    |     0|
+|38    |        \generate_delays[39].internal_buffer.bufferX    |delay_buffer_542                    |     0|
+|39    |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_543                    |     0|
+|40    |        \generate_delays[40].internal_buffer.bufferX    |delay_buffer_544                    |     0|
+|41    |        \generate_delays[41].internal_buffer.bufferX    |delay_buffer_545                    |     0|
+|42    |        \generate_delays[42].internal_buffer.bufferX    |delay_buffer_546                    |     0|
+|43    |        \generate_delays[43].internal_buffer.bufferX    |delay_buffer_547                    |     0|
+|44    |        \generate_delays[44].internal_buffer.bufferX    |delay_buffer_548                    |     0|
+|45    |        \generate_delays[45].internal_buffer.bufferX    |delay_buffer_549                    |     0|
+|46    |        \generate_delays[46].internal_buffer.bufferX    |delay_buffer_550                    |     0|
+|47    |        \generate_delays[47].internal_buffer.bufferX    |delay_buffer_551                    |     0|
+|48    |        \generate_delays[48].internal_buffer.bufferX    |delay_buffer_552                    |     0|
+|49    |        \generate_delays[49].internal_buffer.bufferX    |delay_buffer_553                    |     0|
+|50    |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_554                    |     0|
+|51    |        \generate_delays[50].internal_buffer.bufferX    |delay_buffer_555                    |     0|
+|52    |        \generate_delays[51].internal_buffer.bufferX    |delay_buffer_556                    |     0|
+|53    |        \generate_delays[52].internal_buffer.bufferX    |delay_buffer_557                    |     0|
+|54    |        \generate_delays[53].internal_buffer.bufferX    |delay_buffer_558                    |     0|
+|55    |        \generate_delays[54].internal_buffer.bufferX    |delay_buffer_559                    |     0|
+|56    |        \generate_delays[55].internal_buffer.bufferX    |delay_buffer_560                    |     0|
+|57    |        \generate_delays[56].internal_buffer.bufferX    |delay_buffer_561                    |     0|
+|58    |        \generate_delays[57].internal_buffer.bufferX    |delay_buffer_562                    |     0|
+|59    |        \generate_delays[58].internal_buffer.bufferX    |delay_buffer_563                    |     0|
+|60    |        \generate_delays[59].internal_buffer.bufferX    |delay_buffer_564                    |     0|
+|61    |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_565                    |     0|
+|62    |        \generate_delays[60].internal_buffer.bufferX    |delay_buffer_566                    |     0|
+|63    |        \generate_delays[61].internal_buffer.bufferX    |delay_buffer_567                    |     0|
+|64    |        \generate_delays[62].internal_buffer.bufferX    |delay_buffer_568                    |     0|
+|65    |        \generate_delays[63].internal_buffer.bufferX    |delay_buffer_569                    |     0|
+|66    |        \generate_delays[64].internal_buffer.bufferX    |delay_buffer_570                    |     0|
+|67    |        \generate_delays[65].internal_buffer.bufferX    |delay_buffer_571                    |     0|
+|68    |        \generate_delays[66].internal_buffer.bufferX    |delay_buffer_572                    |     0|
+|69    |        \generate_delays[67].internal_buffer.bufferX    |delay_buffer_573                    |     0|
+|70    |        \generate_delays[68].internal_buffer.bufferX    |delay_buffer_574                    |     0|
+|71    |        \generate_delays[69].internal_buffer.bufferX    |delay_buffer_575                    |     0|
+|72    |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_576                    |     0|
+|73    |        \generate_delays[70].internal_buffer.bufferX    |delay_buffer_577                    |     0|
+|74    |        \generate_delays[71].internal_buffer.bufferX    |delay_buffer_578                    |     0|
+|75    |        \generate_delays[72].internal_buffer.bufferX    |delay_buffer_579                    |     0|
+|76    |        \generate_delays[73].internal_buffer.bufferX    |delay_buffer_580                    |     0|
+|77    |        \generate_delays[74].internal_buffer.bufferX    |delay_buffer_581                    |     0|
+|78    |        \generate_delays[75].internal_buffer.bufferX    |delay_buffer_582                    |     0|
+|79    |        \generate_delays[76].internal_buffer.bufferX    |delay_buffer_583                    |     0|
+|80    |        \generate_delays[77].internal_buffer.bufferX    |delay_buffer_584                    |     0|
+|81    |        \generate_delays[78].internal_buffer.bufferX    |delay_buffer_585                    |     0|
+|82    |        \generate_delays[79].internal_buffer.bufferX    |delay_buffer_586                    |     0|
+|83    |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_587                    |     0|
+|84    |        \generate_delays[80].internal_buffer.bufferX    |delay_buffer_588                    |     0|
+|85    |        \generate_delays[81].internal_buffer.bufferX    |delay_buffer_589                    |     0|
+|86    |        \generate_delays[82].internal_buffer.bufferX    |delay_buffer_590                    |     0|
+|87    |        \generate_delays[83].internal_buffer.bufferX    |delay_buffer_591                    |     0|
+|88    |        \generate_delays[84].internal_buffer.bufferX    |delay_buffer_592                    |     0|
+|89    |        \generate_delays[85].internal_buffer.bufferX    |delay_buffer_593                    |     0|
+|90    |        \generate_delays[86].internal_buffer.bufferX    |delay_buffer_594                    |     0|
+|91    |        \generate_delays[87].internal_buffer.bufferX    |delay_buffer_595                    |     0|
+|92    |        \generate_delays[88].internal_buffer.bufferX    |delay_buffer_596                    |     0|
+|93    |        \generate_delays[89].internal_buffer.bufferX    |delay_buffer_597                    |     0|
+|94    |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_598                    |     0|
+|95    |        \generate_delays[90].internal_buffer.bufferX    |delay_buffer_599                    |     0|
+|96    |        \generate_delays[91].internal_buffer.bufferX    |delay_buffer_600                    |     0|
+|97    |        \generate_delays[92].internal_buffer.bufferX    |delay_buffer_601                    |     0|
+|98    |        \generate_delays[93].internal_buffer.bufferX    |delay_buffer_602                    |     0|
+|99    |        \generate_delays[94].internal_buffer.bufferX    |delay_buffer_603                    |     0|
+|100   |        \generate_delays[95].internal_buffer.bufferX    |delay_buffer_604                    |     0|
+|101   |        \generate_delays[96].internal_buffer.bufferX    |delay_buffer_605                    |     0|
+|102   |        \generate_delays[97].internal_buffer.bufferX    |delay_buffer_606                    |     0|
+|103   |        \generate_delays[98].internal_buffer.bufferX    |delay_buffer_607                    |     0|
+|104   |        \generate_delays[99].internal_buffer.bufferX    |delay_buffer_608                    |     0|
+|105   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_609                    |     0|
+|106   |      delay_b_req                                       |delay_n_stage_407                   |   100|
+|107   |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_408                    |     0|
+|108   |        \generate_delays[100].final_buffer.bufferEnd    |delay_buffer_409                    |     0|
+|109   |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_410                    |     0|
+|110   |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_411                    |     0|
+|111   |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_412                    |     0|
+|112   |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_413                    |     0|
+|113   |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_414                    |     0|
+|114   |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_415                    |     0|
+|115   |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_416                    |     0|
+|116   |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_417                    |     0|
+|117   |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_418                    |     0|
+|118   |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_419                    |     0|
+|119   |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_420                    |     0|
+|120   |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_421                    |     0|
+|121   |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_422                    |     0|
+|122   |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_423                    |     0|
+|123   |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_424                    |     0|
+|124   |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_425                    |     0|
+|125   |        \generate_delays[25].internal_buffer.bufferX    |delay_buffer_426                    |     0|
+|126   |        \generate_delays[26].internal_buffer.bufferX    |delay_buffer_427                    |     0|
+|127   |        \generate_delays[27].internal_buffer.bufferX    |delay_buffer_428                    |     0|
+|128   |        \generate_delays[28].internal_buffer.bufferX    |delay_buffer_429                    |     0|
+|129   |        \generate_delays[29].internal_buffer.bufferX    |delay_buffer_430                    |     0|
+|130   |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_431                    |     0|
+|131   |        \generate_delays[30].internal_buffer.bufferX    |delay_buffer_432                    |     0|
+|132   |        \generate_delays[31].internal_buffer.bufferX    |delay_buffer_433                    |     0|
+|133   |        \generate_delays[32].internal_buffer.bufferX    |delay_buffer_434                    |     0|
+|134   |        \generate_delays[33].internal_buffer.bufferX    |delay_buffer_435                    |     0|
+|135   |        \generate_delays[34].internal_buffer.bufferX    |delay_buffer_436                    |     0|
+|136   |        \generate_delays[35].internal_buffer.bufferX    |delay_buffer_437                    |     0|
+|137   |        \generate_delays[36].internal_buffer.bufferX    |delay_buffer_438                    |     0|
+|138   |        \generate_delays[37].internal_buffer.bufferX    |delay_buffer_439                    |     0|
+|139   |        \generate_delays[38].internal_buffer.bufferX    |delay_buffer_440                    |     0|
+|140   |        \generate_delays[39].internal_buffer.bufferX    |delay_buffer_441                    |     0|
+|141   |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_442                    |     0|
+|142   |        \generate_delays[40].internal_buffer.bufferX    |delay_buffer_443                    |     0|
+|143   |        \generate_delays[41].internal_buffer.bufferX    |delay_buffer_444                    |     0|
+|144   |        \generate_delays[42].internal_buffer.bufferX    |delay_buffer_445                    |     0|
+|145   |        \generate_delays[43].internal_buffer.bufferX    |delay_buffer_446                    |     0|
+|146   |        \generate_delays[44].internal_buffer.bufferX    |delay_buffer_447                    |     0|
+|147   |        \generate_delays[45].internal_buffer.bufferX    |delay_buffer_448                    |     0|
+|148   |        \generate_delays[46].internal_buffer.bufferX    |delay_buffer_449                    |     0|
+|149   |        \generate_delays[47].internal_buffer.bufferX    |delay_buffer_450                    |     0|
+|150   |        \generate_delays[48].internal_buffer.bufferX    |delay_buffer_451                    |     0|
+|151   |        \generate_delays[49].internal_buffer.bufferX    |delay_buffer_452                    |     0|
+|152   |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_453                    |     0|
+|153   |        \generate_delays[50].internal_buffer.bufferX    |delay_buffer_454                    |     0|
+|154   |        \generate_delays[51].internal_buffer.bufferX    |delay_buffer_455                    |     0|
+|155   |        \generate_delays[52].internal_buffer.bufferX    |delay_buffer_456                    |     0|
+|156   |        \generate_delays[53].internal_buffer.bufferX    |delay_buffer_457                    |     0|
+|157   |        \generate_delays[54].internal_buffer.bufferX    |delay_buffer_458                    |     0|
+|158   |        \generate_delays[55].internal_buffer.bufferX    |delay_buffer_459                    |     0|
+|159   |        \generate_delays[56].internal_buffer.bufferX    |delay_buffer_460                    |     0|
+|160   |        \generate_delays[57].internal_buffer.bufferX    |delay_buffer_461                    |     0|
+|161   |        \generate_delays[58].internal_buffer.bufferX    |delay_buffer_462                    |     0|
+|162   |        \generate_delays[59].internal_buffer.bufferX    |delay_buffer_463                    |     0|
+|163   |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_464                    |     0|
+|164   |        \generate_delays[60].internal_buffer.bufferX    |delay_buffer_465                    |     0|
+|165   |        \generate_delays[61].internal_buffer.bufferX    |delay_buffer_466                    |     0|
+|166   |        \generate_delays[62].internal_buffer.bufferX    |delay_buffer_467                    |     0|
+|167   |        \generate_delays[63].internal_buffer.bufferX    |delay_buffer_468                    |     0|
+|168   |        \generate_delays[64].internal_buffer.bufferX    |delay_buffer_469                    |     0|
+|169   |        \generate_delays[65].internal_buffer.bufferX    |delay_buffer_470                    |     0|
+|170   |        \generate_delays[66].internal_buffer.bufferX    |delay_buffer_471                    |     0|
+|171   |        \generate_delays[67].internal_buffer.bufferX    |delay_buffer_472                    |     0|
+|172   |        \generate_delays[68].internal_buffer.bufferX    |delay_buffer_473                    |     0|
+|173   |        \generate_delays[69].internal_buffer.bufferX    |delay_buffer_474                    |     0|
+|174   |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_475                    |     0|
+|175   |        \generate_delays[70].internal_buffer.bufferX    |delay_buffer_476                    |     0|
+|176   |        \generate_delays[71].internal_buffer.bufferX    |delay_buffer_477                    |     0|
+|177   |        \generate_delays[72].internal_buffer.bufferX    |delay_buffer_478                    |     0|
+|178   |        \generate_delays[73].internal_buffer.bufferX    |delay_buffer_479                    |     0|
+|179   |        \generate_delays[74].internal_buffer.bufferX    |delay_buffer_480                    |     0|
+|180   |        \generate_delays[75].internal_buffer.bufferX    |delay_buffer_481                    |     0|
+|181   |        \generate_delays[76].internal_buffer.bufferX    |delay_buffer_482                    |     0|
+|182   |        \generate_delays[77].internal_buffer.bufferX    |delay_buffer_483                    |     0|
+|183   |        \generate_delays[78].internal_buffer.bufferX    |delay_buffer_484                    |     0|
+|184   |        \generate_delays[79].internal_buffer.bufferX    |delay_buffer_485                    |     0|
+|185   |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_486                    |     0|
+|186   |        \generate_delays[80].internal_buffer.bufferX    |delay_buffer_487                    |     0|
+|187   |        \generate_delays[81].internal_buffer.bufferX    |delay_buffer_488                    |     0|
+|188   |        \generate_delays[82].internal_buffer.bufferX    |delay_buffer_489                    |     0|
+|189   |        \generate_delays[83].internal_buffer.bufferX    |delay_buffer_490                    |     0|
+|190   |        \generate_delays[84].internal_buffer.bufferX    |delay_buffer_491                    |     0|
+|191   |        \generate_delays[85].internal_buffer.bufferX    |delay_buffer_492                    |     0|
+|192   |        \generate_delays[86].internal_buffer.bufferX    |delay_buffer_493                    |     0|
+|193   |        \generate_delays[87].internal_buffer.bufferX    |delay_buffer_494                    |     0|
+|194   |        \generate_delays[88].internal_buffer.bufferX    |delay_buffer_495                    |     0|
+|195   |        \generate_delays[89].internal_buffer.bufferX    |delay_buffer_496                    |     0|
+|196   |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_497                    |     0|
+|197   |        \generate_delays[90].internal_buffer.bufferX    |delay_buffer_498                    |     0|
+|198   |        \generate_delays[91].internal_buffer.bufferX    |delay_buffer_499                    |     0|
+|199   |        \generate_delays[92].internal_buffer.bufferX    |delay_buffer_500                    |     0|
+|200   |        \generate_delays[93].internal_buffer.bufferX    |delay_buffer_501                    |     0|
+|201   |        \generate_delays[94].internal_buffer.bufferX    |delay_buffer_502                    |     0|
+|202   |        \generate_delays[95].internal_buffer.bufferX    |delay_buffer_503                    |     0|
+|203   |        \generate_delays[96].internal_buffer.bufferX    |delay_buffer_504                    |     0|
+|204   |        \generate_delays[97].internal_buffer.bufferX    |delay_buffer_505                    |     0|
+|205   |        \generate_delays[98].internal_buffer.bufferX    |delay_buffer_506                    |     0|
+|206   |        \generate_delays[99].internal_buffer.bufferX    |delay_buffer_507                    |     0|
+|207   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_508                    |     0|
+|208   |    ctrl2                                               |click_ctrl_delay__parameterized1__1 |   206|
+|209   |      delay_a_req                                       |delay_n_stage_202                   |   100|
+|210   |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_305                    |     0|
+|211   |        \generate_delays[100].final_buffer.bufferEnd    |delay_buffer_306                    |     0|
+|212   |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_307                    |     0|
+|213   |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_308                    |     0|
+|214   |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_309                    |     0|
+|215   |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_310                    |     0|
+|216   |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_311                    |     0|
+|217   |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_312                    |     0|
+|218   |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_313                    |     0|
+|219   |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_314                    |     0|
+|220   |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_315                    |     0|
+|221   |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_316                    |     0|
+|222   |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_317                    |     0|
+|223   |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_318                    |     0|
+|224   |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_319                    |     0|
+|225   |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_320                    |     0|
+|226   |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_321                    |     0|
+|227   |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_322                    |     0|
+|228   |        \generate_delays[25].internal_buffer.bufferX    |delay_buffer_323                    |     0|
+|229   |        \generate_delays[26].internal_buffer.bufferX    |delay_buffer_324                    |     0|
+|230   |        \generate_delays[27].internal_buffer.bufferX    |delay_buffer_325                    |     0|
+|231   |        \generate_delays[28].internal_buffer.bufferX    |delay_buffer_326                    |     0|
+|232   |        \generate_delays[29].internal_buffer.bufferX    |delay_buffer_327                    |     0|
+|233   |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_328                    |     0|
+|234   |        \generate_delays[30].internal_buffer.bufferX    |delay_buffer_329                    |     0|
+|235   |        \generate_delays[31].internal_buffer.bufferX    |delay_buffer_330                    |     0|
+|236   |        \generate_delays[32].internal_buffer.bufferX    |delay_buffer_331                    |     0|
+|237   |        \generate_delays[33].internal_buffer.bufferX    |delay_buffer_332                    |     0|
+|238   |        \generate_delays[34].internal_buffer.bufferX    |delay_buffer_333                    |     0|
+|239   |        \generate_delays[35].internal_buffer.bufferX    |delay_buffer_334                    |     0|
+|240   |        \generate_delays[36].internal_buffer.bufferX    |delay_buffer_335                    |     0|
+|241   |        \generate_delays[37].internal_buffer.bufferX    |delay_buffer_336                    |     0|
+|242   |        \generate_delays[38].internal_buffer.bufferX    |delay_buffer_337                    |     0|
+|243   |        \generate_delays[39].internal_buffer.bufferX    |delay_buffer_338                    |     0|
+|244   |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_339                    |     0|
+|245   |        \generate_delays[40].internal_buffer.bufferX    |delay_buffer_340                    |     0|
+|246   |        \generate_delays[41].internal_buffer.bufferX    |delay_buffer_341                    |     0|
+|247   |        \generate_delays[42].internal_buffer.bufferX    |delay_buffer_342                    |     0|
+|248   |        \generate_delays[43].internal_buffer.bufferX    |delay_buffer_343                    |     0|
+|249   |        \generate_delays[44].internal_buffer.bufferX    |delay_buffer_344                    |     0|
+|250   |        \generate_delays[45].internal_buffer.bufferX    |delay_buffer_345                    |     0|
+|251   |        \generate_delays[46].internal_buffer.bufferX    |delay_buffer_346                    |     0|
+|252   |        \generate_delays[47].internal_buffer.bufferX    |delay_buffer_347                    |     0|
+|253   |        \generate_delays[48].internal_buffer.bufferX    |delay_buffer_348                    |     0|
+|254   |        \generate_delays[49].internal_buffer.bufferX    |delay_buffer_349                    |     0|
+|255   |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_350                    |     0|
+|256   |        \generate_delays[50].internal_buffer.bufferX    |delay_buffer_351                    |     0|
+|257   |        \generate_delays[51].internal_buffer.bufferX    |delay_buffer_352                    |     0|
+|258   |        \generate_delays[52].internal_buffer.bufferX    |delay_buffer_353                    |     0|
+|259   |        \generate_delays[53].internal_buffer.bufferX    |delay_buffer_354                    |     0|
+|260   |        \generate_delays[54].internal_buffer.bufferX    |delay_buffer_355                    |     0|
+|261   |        \generate_delays[55].internal_buffer.bufferX    |delay_buffer_356                    |     0|
+|262   |        \generate_delays[56].internal_buffer.bufferX    |delay_buffer_357                    |     0|
+|263   |        \generate_delays[57].internal_buffer.bufferX    |delay_buffer_358                    |     0|
+|264   |        \generate_delays[58].internal_buffer.bufferX    |delay_buffer_359                    |     0|
+|265   |        \generate_delays[59].internal_buffer.bufferX    |delay_buffer_360                    |     0|
+|266   |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_361                    |     0|
+|267   |        \generate_delays[60].internal_buffer.bufferX    |delay_buffer_362                    |     0|
+|268   |        \generate_delays[61].internal_buffer.bufferX    |delay_buffer_363                    |     0|
+|269   |        \generate_delays[62].internal_buffer.bufferX    |delay_buffer_364                    |     0|
+|270   |        \generate_delays[63].internal_buffer.bufferX    |delay_buffer_365                    |     0|
+|271   |        \generate_delays[64].internal_buffer.bufferX    |delay_buffer_366                    |     0|
+|272   |        \generate_delays[65].internal_buffer.bufferX    |delay_buffer_367                    |     0|
+|273   |        \generate_delays[66].internal_buffer.bufferX    |delay_buffer_368                    |     0|
+|274   |        \generate_delays[67].internal_buffer.bufferX    |delay_buffer_369                    |     0|
+|275   |        \generate_delays[68].internal_buffer.bufferX    |delay_buffer_370                    |     0|
+|276   |        \generate_delays[69].internal_buffer.bufferX    |delay_buffer_371                    |     0|
+|277   |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_372                    |     0|
+|278   |        \generate_delays[70].internal_buffer.bufferX    |delay_buffer_373                    |     0|
+|279   |        \generate_delays[71].internal_buffer.bufferX    |delay_buffer_374                    |     0|
+|280   |        \generate_delays[72].internal_buffer.bufferX    |delay_buffer_375                    |     0|
+|281   |        \generate_delays[73].internal_buffer.bufferX    |delay_buffer_376                    |     0|
+|282   |        \generate_delays[74].internal_buffer.bufferX    |delay_buffer_377                    |     0|
+|283   |        \generate_delays[75].internal_buffer.bufferX    |delay_buffer_378                    |     0|
+|284   |        \generate_delays[76].internal_buffer.bufferX    |delay_buffer_379                    |     0|
+|285   |        \generate_delays[77].internal_buffer.bufferX    |delay_buffer_380                    |     0|
+|286   |        \generate_delays[78].internal_buffer.bufferX    |delay_buffer_381                    |     0|
+|287   |        \generate_delays[79].internal_buffer.bufferX    |delay_buffer_382                    |     0|
+|288   |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_383                    |     0|
+|289   |        \generate_delays[80].internal_buffer.bufferX    |delay_buffer_384                    |     0|
+|290   |        \generate_delays[81].internal_buffer.bufferX    |delay_buffer_385                    |     0|
+|291   |        \generate_delays[82].internal_buffer.bufferX    |delay_buffer_386                    |     0|
+|292   |        \generate_delays[83].internal_buffer.bufferX    |delay_buffer_387                    |     0|
+|293   |        \generate_delays[84].internal_buffer.bufferX    |delay_buffer_388                    |     0|
+|294   |        \generate_delays[85].internal_buffer.bufferX    |delay_buffer_389                    |     0|
+|295   |        \generate_delays[86].internal_buffer.bufferX    |delay_buffer_390                    |     0|
+|296   |        \generate_delays[87].internal_buffer.bufferX    |delay_buffer_391                    |     0|
+|297   |        \generate_delays[88].internal_buffer.bufferX    |delay_buffer_392                    |     0|
+|298   |        \generate_delays[89].internal_buffer.bufferX    |delay_buffer_393                    |     0|
+|299   |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_394                    |     0|
+|300   |        \generate_delays[90].internal_buffer.bufferX    |delay_buffer_395                    |     0|
+|301   |        \generate_delays[91].internal_buffer.bufferX    |delay_buffer_396                    |     0|
+|302   |        \generate_delays[92].internal_buffer.bufferX    |delay_buffer_397                    |     0|
+|303   |        \generate_delays[93].internal_buffer.bufferX    |delay_buffer_398                    |     0|
+|304   |        \generate_delays[94].internal_buffer.bufferX    |delay_buffer_399                    |     0|
+|305   |        \generate_delays[95].internal_buffer.bufferX    |delay_buffer_400                    |     0|
+|306   |        \generate_delays[96].internal_buffer.bufferX    |delay_buffer_401                    |     0|
+|307   |        \generate_delays[97].internal_buffer.bufferX    |delay_buffer_402                    |     0|
+|308   |        \generate_delays[98].internal_buffer.bufferX    |delay_buffer_403                    |     0|
+|309   |        \generate_delays[99].internal_buffer.bufferX    |delay_buffer_404                    |     0|
+|310   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_405                    |     0|
+|311   |      delay_b_req                                       |delay_n_stage_203                   |   100|
+|312   |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_204                    |     0|
+|313   |        \generate_delays[100].final_buffer.bufferEnd    |delay_buffer_205                    |     0|
+|314   |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_206                    |     0|
+|315   |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_207                    |     0|
+|316   |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_208                    |     0|
+|317   |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_209                    |     0|
+|318   |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_210                    |     0|
+|319   |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_211                    |     0|
+|320   |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_212                    |     0|
+|321   |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_213                    |     0|
+|322   |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_214                    |     0|
+|323   |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_215                    |     0|
+|324   |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_216                    |     0|
+|325   |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_217                    |     0|
+|326   |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_218                    |     0|
+|327   |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_219                    |     0|
+|328   |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_220                    |     0|
+|329   |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_221                    |     0|
+|330   |        \generate_delays[25].internal_buffer.bufferX    |delay_buffer_222                    |     0|
+|331   |        \generate_delays[26].internal_buffer.bufferX    |delay_buffer_223                    |     0|
+|332   |        \generate_delays[27].internal_buffer.bufferX    |delay_buffer_224                    |     0|
+|333   |        \generate_delays[28].internal_buffer.bufferX    |delay_buffer_225                    |     0|
+|334   |        \generate_delays[29].internal_buffer.bufferX    |delay_buffer_226                    |     0|
+|335   |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_227                    |     0|
+|336   |        \generate_delays[30].internal_buffer.bufferX    |delay_buffer_228                    |     0|
+|337   |        \generate_delays[31].internal_buffer.bufferX    |delay_buffer_229                    |     0|
+|338   |        \generate_delays[32].internal_buffer.bufferX    |delay_buffer_230                    |     0|
+|339   |        \generate_delays[33].internal_buffer.bufferX    |delay_buffer_231                    |     0|
+|340   |        \generate_delays[34].internal_buffer.bufferX    |delay_buffer_232                    |     0|
+|341   |        \generate_delays[35].internal_buffer.bufferX    |delay_buffer_233                    |     0|
+|342   |        \generate_delays[36].internal_buffer.bufferX    |delay_buffer_234                    |     0|
+|343   |        \generate_delays[37].internal_buffer.bufferX    |delay_buffer_235                    |     0|
+|344   |        \generate_delays[38].internal_buffer.bufferX    |delay_buffer_236                    |     0|
+|345   |        \generate_delays[39].internal_buffer.bufferX    |delay_buffer_237                    |     0|
+|346   |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_238                    |     0|
+|347   |        \generate_delays[40].internal_buffer.bufferX    |delay_buffer_239                    |     0|
+|348   |        \generate_delays[41].internal_buffer.bufferX    |delay_buffer_240                    |     0|
+|349   |        \generate_delays[42].internal_buffer.bufferX    |delay_buffer_241                    |     0|
+|350   |        \generate_delays[43].internal_buffer.bufferX    |delay_buffer_242                    |     0|
+|351   |        \generate_delays[44].internal_buffer.bufferX    |delay_buffer_243                    |     0|
+|352   |        \generate_delays[45].internal_buffer.bufferX    |delay_buffer_244                    |     0|
+|353   |        \generate_delays[46].internal_buffer.bufferX    |delay_buffer_245                    |     0|
+|354   |        \generate_delays[47].internal_buffer.bufferX    |delay_buffer_246                    |     0|
+|355   |        \generate_delays[48].internal_buffer.bufferX    |delay_buffer_247                    |     0|
+|356   |        \generate_delays[49].internal_buffer.bufferX    |delay_buffer_248                    |     0|
+|357   |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_249                    |     0|
+|358   |        \generate_delays[50].internal_buffer.bufferX    |delay_buffer_250                    |     0|
+|359   |        \generate_delays[51].internal_buffer.bufferX    |delay_buffer_251                    |     0|
+|360   |        \generate_delays[52].internal_buffer.bufferX    |delay_buffer_252                    |     0|
+|361   |        \generate_delays[53].internal_buffer.bufferX    |delay_buffer_253                    |     0|
+|362   |        \generate_delays[54].internal_buffer.bufferX    |delay_buffer_254                    |     0|
+|363   |        \generate_delays[55].internal_buffer.bufferX    |delay_buffer_255                    |     0|
+|364   |        \generate_delays[56].internal_buffer.bufferX    |delay_buffer_256                    |     0|
+|365   |        \generate_delays[57].internal_buffer.bufferX    |delay_buffer_257                    |     0|
+|366   |        \generate_delays[58].internal_buffer.bufferX    |delay_buffer_258                    |     0|
+|367   |        \generate_delays[59].internal_buffer.bufferX    |delay_buffer_259                    |     0|
+|368   |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_260                    |     0|
+|369   |        \generate_delays[60].internal_buffer.bufferX    |delay_buffer_261                    |     0|
+|370   |        \generate_delays[61].internal_buffer.bufferX    |delay_buffer_262                    |     0|
+|371   |        \generate_delays[62].internal_buffer.bufferX    |delay_buffer_263                    |     0|
+|372   |        \generate_delays[63].internal_buffer.bufferX    |delay_buffer_264                    |     0|
+|373   |        \generate_delays[64].internal_buffer.bufferX    |delay_buffer_265                    |     0|
+|374   |        \generate_delays[65].internal_buffer.bufferX    |delay_buffer_266                    |     0|
+|375   |        \generate_delays[66].internal_buffer.bufferX    |delay_buffer_267                    |     0|
+|376   |        \generate_delays[67].internal_buffer.bufferX    |delay_buffer_268                    |     0|
+|377   |        \generate_delays[68].internal_buffer.bufferX    |delay_buffer_269                    |     0|
+|378   |        \generate_delays[69].internal_buffer.bufferX    |delay_buffer_270                    |     0|
+|379   |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_271                    |     0|
+|380   |        \generate_delays[70].internal_buffer.bufferX    |delay_buffer_272                    |     0|
+|381   |        \generate_delays[71].internal_buffer.bufferX    |delay_buffer_273                    |     0|
+|382   |        \generate_delays[72].internal_buffer.bufferX    |delay_buffer_274                    |     0|
+|383   |        \generate_delays[73].internal_buffer.bufferX    |delay_buffer_275                    |     0|
+|384   |        \generate_delays[74].internal_buffer.bufferX    |delay_buffer_276                    |     0|
+|385   |        \generate_delays[75].internal_buffer.bufferX    |delay_buffer_277                    |     0|
+|386   |        \generate_delays[76].internal_buffer.bufferX    |delay_buffer_278                    |     0|
+|387   |        \generate_delays[77].internal_buffer.bufferX    |delay_buffer_279                    |     0|
+|388   |        \generate_delays[78].internal_buffer.bufferX    |delay_buffer_280                    |     0|
+|389   |        \generate_delays[79].internal_buffer.bufferX    |delay_buffer_281                    |     0|
+|390   |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_282                    |     0|
+|391   |        \generate_delays[80].internal_buffer.bufferX    |delay_buffer_283                    |     0|
+|392   |        \generate_delays[81].internal_buffer.bufferX    |delay_buffer_284                    |     0|
+|393   |        \generate_delays[82].internal_buffer.bufferX    |delay_buffer_285                    |     0|
+|394   |        \generate_delays[83].internal_buffer.bufferX    |delay_buffer_286                    |     0|
+|395   |        \generate_delays[84].internal_buffer.bufferX    |delay_buffer_287                    |     0|
+|396   |        \generate_delays[85].internal_buffer.bufferX    |delay_buffer_288                    |     0|
+|397   |        \generate_delays[86].internal_buffer.bufferX    |delay_buffer_289                    |     0|
+|398   |        \generate_delays[87].internal_buffer.bufferX    |delay_buffer_290                    |     0|
+|399   |        \generate_delays[88].internal_buffer.bufferX    |delay_buffer_291                    |     0|
+|400   |        \generate_delays[89].internal_buffer.bufferX    |delay_buffer_292                    |     0|
+|401   |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_293                    |     0|
+|402   |        \generate_delays[90].internal_buffer.bufferX    |delay_buffer_294                    |     0|
+|403   |        \generate_delays[91].internal_buffer.bufferX    |delay_buffer_295                    |     0|
+|404   |        \generate_delays[92].internal_buffer.bufferX    |delay_buffer_296                    |     0|
+|405   |        \generate_delays[93].internal_buffer.bufferX    |delay_buffer_297                    |     0|
+|406   |        \generate_delays[94].internal_buffer.bufferX    |delay_buffer_298                    |     0|
+|407   |        \generate_delays[95].internal_buffer.bufferX    |delay_buffer_299                    |     0|
+|408   |        \generate_delays[96].internal_buffer.bufferX    |delay_buffer_300                    |     0|
+|409   |        \generate_delays[97].internal_buffer.bufferX    |delay_buffer_301                    |     0|
+|410   |        \generate_delays[98].internal_buffer.bufferX    |delay_buffer_302                    |     0|
+|411   |        \generate_delays[99].internal_buffer.bufferX    |delay_buffer_303                    |     0|
+|412   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_304                    |     0|
+|413   |    ctrl3                                               |click_ctrl_delay__parameterized1    |   206|
+|414   |      delay_a_req                                       |delay_n_stage                       |   100|
+|415   |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_101                    |     0|
+|416   |        \generate_delays[100].final_buffer.bufferEnd    |delay_buffer_102                    |     0|
+|417   |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_103                    |     0|
+|418   |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_104                    |     0|
+|419   |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_105                    |     0|
+|420   |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_106                    |     0|
+|421   |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_107                    |     0|
+|422   |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_108                    |     0|
+|423   |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_109                    |     0|
+|424   |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_110                    |     0|
+|425   |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_111                    |     0|
+|426   |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_112                    |     0|
+|427   |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_113                    |     0|
+|428   |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_114                    |     0|
+|429   |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_115                    |     0|
+|430   |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_116                    |     0|
+|431   |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_117                    |     0|
+|432   |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_118                    |     0|
+|433   |        \generate_delays[25].internal_buffer.bufferX    |delay_buffer_119                    |     0|
+|434   |        \generate_delays[26].internal_buffer.bufferX    |delay_buffer_120                    |     0|
+|435   |        \generate_delays[27].internal_buffer.bufferX    |delay_buffer_121                    |     0|
+|436   |        \generate_delays[28].internal_buffer.bufferX    |delay_buffer_122                    |     0|
+|437   |        \generate_delays[29].internal_buffer.bufferX    |delay_buffer_123                    |     0|
+|438   |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_124                    |     0|
+|439   |        \generate_delays[30].internal_buffer.bufferX    |delay_buffer_125                    |     0|
+|440   |        \generate_delays[31].internal_buffer.bufferX    |delay_buffer_126                    |     0|
+|441   |        \generate_delays[32].internal_buffer.bufferX    |delay_buffer_127                    |     0|
+|442   |        \generate_delays[33].internal_buffer.bufferX    |delay_buffer_128                    |     0|
+|443   |        \generate_delays[34].internal_buffer.bufferX    |delay_buffer_129                    |     0|
+|444   |        \generate_delays[35].internal_buffer.bufferX    |delay_buffer_130                    |     0|
+|445   |        \generate_delays[36].internal_buffer.bufferX    |delay_buffer_131                    |     0|
+|446   |        \generate_delays[37].internal_buffer.bufferX    |delay_buffer_132                    |     0|
+|447   |        \generate_delays[38].internal_buffer.bufferX    |delay_buffer_133                    |     0|
+|448   |        \generate_delays[39].internal_buffer.bufferX    |delay_buffer_134                    |     0|
+|449   |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_135                    |     0|
+|450   |        \generate_delays[40].internal_buffer.bufferX    |delay_buffer_136                    |     0|
+|451   |        \generate_delays[41].internal_buffer.bufferX    |delay_buffer_137                    |     0|
+|452   |        \generate_delays[42].internal_buffer.bufferX    |delay_buffer_138                    |     0|
+|453   |        \generate_delays[43].internal_buffer.bufferX    |delay_buffer_139                    |     0|
+|454   |        \generate_delays[44].internal_buffer.bufferX    |delay_buffer_140                    |     0|
+|455   |        \generate_delays[45].internal_buffer.bufferX    |delay_buffer_141                    |     0|
+|456   |        \generate_delays[46].internal_buffer.bufferX    |delay_buffer_142                    |     0|
+|457   |        \generate_delays[47].internal_buffer.bufferX    |delay_buffer_143                    |     0|
+|458   |        \generate_delays[48].internal_buffer.bufferX    |delay_buffer_144                    |     0|
+|459   |        \generate_delays[49].internal_buffer.bufferX    |delay_buffer_145                    |     0|
+|460   |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_146                    |     0|
+|461   |        \generate_delays[50].internal_buffer.bufferX    |delay_buffer_147                    |     0|
+|462   |        \generate_delays[51].internal_buffer.bufferX    |delay_buffer_148                    |     0|
+|463   |        \generate_delays[52].internal_buffer.bufferX    |delay_buffer_149                    |     0|
+|464   |        \generate_delays[53].internal_buffer.bufferX    |delay_buffer_150                    |     0|
+|465   |        \generate_delays[54].internal_buffer.bufferX    |delay_buffer_151                    |     0|
+|466   |        \generate_delays[55].internal_buffer.bufferX    |delay_buffer_152                    |     0|
+|467   |        \generate_delays[56].internal_buffer.bufferX    |delay_buffer_153                    |     0|
+|468   |        \generate_delays[57].internal_buffer.bufferX    |delay_buffer_154                    |     0|
+|469   |        \generate_delays[58].internal_buffer.bufferX    |delay_buffer_155                    |     0|
+|470   |        \generate_delays[59].internal_buffer.bufferX    |delay_buffer_156                    |     0|
+|471   |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_157                    |     0|
+|472   |        \generate_delays[60].internal_buffer.bufferX    |delay_buffer_158                    |     0|
+|473   |        \generate_delays[61].internal_buffer.bufferX    |delay_buffer_159                    |     0|
+|474   |        \generate_delays[62].internal_buffer.bufferX    |delay_buffer_160                    |     0|
+|475   |        \generate_delays[63].internal_buffer.bufferX    |delay_buffer_161                    |     0|
+|476   |        \generate_delays[64].internal_buffer.bufferX    |delay_buffer_162                    |     0|
+|477   |        \generate_delays[65].internal_buffer.bufferX    |delay_buffer_163                    |     0|
+|478   |        \generate_delays[66].internal_buffer.bufferX    |delay_buffer_164                    |     0|
+|479   |        \generate_delays[67].internal_buffer.bufferX    |delay_buffer_165                    |     0|
+|480   |        \generate_delays[68].internal_buffer.bufferX    |delay_buffer_166                    |     0|
+|481   |        \generate_delays[69].internal_buffer.bufferX    |delay_buffer_167                    |     0|
+|482   |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_168                    |     0|
+|483   |        \generate_delays[70].internal_buffer.bufferX    |delay_buffer_169                    |     0|
+|484   |        \generate_delays[71].internal_buffer.bufferX    |delay_buffer_170                    |     0|
+|485   |        \generate_delays[72].internal_buffer.bufferX    |delay_buffer_171                    |     0|
+|486   |        \generate_delays[73].internal_buffer.bufferX    |delay_buffer_172                    |     0|
+|487   |        \generate_delays[74].internal_buffer.bufferX    |delay_buffer_173                    |     0|
+|488   |        \generate_delays[75].internal_buffer.bufferX    |delay_buffer_174                    |     0|
+|489   |        \generate_delays[76].internal_buffer.bufferX    |delay_buffer_175                    |     0|
+|490   |        \generate_delays[77].internal_buffer.bufferX    |delay_buffer_176                    |     0|
+|491   |        \generate_delays[78].internal_buffer.bufferX    |delay_buffer_177                    |     0|
+|492   |        \generate_delays[79].internal_buffer.bufferX    |delay_buffer_178                    |     0|
+|493   |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_179                    |     0|
+|494   |        \generate_delays[80].internal_buffer.bufferX    |delay_buffer_180                    |     0|
+|495   |        \generate_delays[81].internal_buffer.bufferX    |delay_buffer_181                    |     0|
+|496   |        \generate_delays[82].internal_buffer.bufferX    |delay_buffer_182                    |     0|
+|497   |        \generate_delays[83].internal_buffer.bufferX    |delay_buffer_183                    |     0|
+|498   |        \generate_delays[84].internal_buffer.bufferX    |delay_buffer_184                    |     0|
+|499   |        \generate_delays[85].internal_buffer.bufferX    |delay_buffer_185                    |     0|
+|500   |        \generate_delays[86].internal_buffer.bufferX    |delay_buffer_186                    |     0|
+|501   |        \generate_delays[87].internal_buffer.bufferX    |delay_buffer_187                    |     0|
+|502   |        \generate_delays[88].internal_buffer.bufferX    |delay_buffer_188                    |     0|
+|503   |        \generate_delays[89].internal_buffer.bufferX    |delay_buffer_189                    |     0|
+|504   |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_190                    |     0|
+|505   |        \generate_delays[90].internal_buffer.bufferX    |delay_buffer_191                    |     0|
+|506   |        \generate_delays[91].internal_buffer.bufferX    |delay_buffer_192                    |     0|
+|507   |        \generate_delays[92].internal_buffer.bufferX    |delay_buffer_193                    |     0|
+|508   |        \generate_delays[93].internal_buffer.bufferX    |delay_buffer_194                    |     0|
+|509   |        \generate_delays[94].internal_buffer.bufferX    |delay_buffer_195                    |     0|
+|510   |        \generate_delays[95].internal_buffer.bufferX    |delay_buffer_196                    |     0|
+|511   |        \generate_delays[96].internal_buffer.bufferX    |delay_buffer_197                    |     0|
+|512   |        \generate_delays[97].internal_buffer.bufferX    |delay_buffer_198                    |     0|
+|513   |        \generate_delays[98].internal_buffer.bufferX    |delay_buffer_199                    |     0|
+|514   |        \generate_delays[99].internal_buffer.bufferX    |delay_buffer_200                    |     0|
+|515   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_201                    |     0|
+|516   |      delay_b_req                                       |delay_n_stage_0                     |   100|
+|517   |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer                        |     0|
+|518   |        \generate_delays[100].final_buffer.bufferEnd    |delay_buffer_1                      |     0|
+|519   |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_2                      |     0|
+|520   |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_3                      |     0|
+|521   |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_4                      |     0|
+|522   |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_5                      |     0|
+|523   |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_6                      |     0|
+|524   |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_7                      |     0|
+|525   |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_8                      |     0|
+|526   |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_9                      |     0|
+|527   |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_10                     |     0|
+|528   |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_11                     |     0|
+|529   |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_12                     |     0|
+|530   |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_13                     |     0|
+|531   |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_14                     |     0|
+|532   |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_15                     |     0|
+|533   |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_16                     |     0|
+|534   |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_17                     |     0|
+|535   |        \generate_delays[25].internal_buffer.bufferX    |delay_buffer_18                     |     0|
+|536   |        \generate_delays[26].internal_buffer.bufferX    |delay_buffer_19                     |     0|
+|537   |        \generate_delays[27].internal_buffer.bufferX    |delay_buffer_20                     |     0|
+|538   |        \generate_delays[28].internal_buffer.bufferX    |delay_buffer_21                     |     0|
+|539   |        \generate_delays[29].internal_buffer.bufferX    |delay_buffer_22                     |     0|
+|540   |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_23                     |     0|
+|541   |        \generate_delays[30].internal_buffer.bufferX    |delay_buffer_24                     |     0|
+|542   |        \generate_delays[31].internal_buffer.bufferX    |delay_buffer_25                     |     0|
+|543   |        \generate_delays[32].internal_buffer.bufferX    |delay_buffer_26                     |     0|
+|544   |        \generate_delays[33].internal_buffer.bufferX    |delay_buffer_27                     |     0|
+|545   |        \generate_delays[34].internal_buffer.bufferX    |delay_buffer_28                     |     0|
+|546   |        \generate_delays[35].internal_buffer.bufferX    |delay_buffer_29                     |     0|
+|547   |        \generate_delays[36].internal_buffer.bufferX    |delay_buffer_30                     |     0|
+|548   |        \generate_delays[37].internal_buffer.bufferX    |delay_buffer_31                     |     0|
+|549   |        \generate_delays[38].internal_buffer.bufferX    |delay_buffer_32                     |     0|
+|550   |        \generate_delays[39].internal_buffer.bufferX    |delay_buffer_33                     |     0|
+|551   |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_34                     |     0|
+|552   |        \generate_delays[40].internal_buffer.bufferX    |delay_buffer_35                     |     0|
+|553   |        \generate_delays[41].internal_buffer.bufferX    |delay_buffer_36                     |     0|
+|554   |        \generate_delays[42].internal_buffer.bufferX    |delay_buffer_37                     |     0|
+|555   |        \generate_delays[43].internal_buffer.bufferX    |delay_buffer_38                     |     0|
+|556   |        \generate_delays[44].internal_buffer.bufferX    |delay_buffer_39                     |     0|
+|557   |        \generate_delays[45].internal_buffer.bufferX    |delay_buffer_40                     |     0|
+|558   |        \generate_delays[46].internal_buffer.bufferX    |delay_buffer_41                     |     0|
+|559   |        \generate_delays[47].internal_buffer.bufferX    |delay_buffer_42                     |     0|
+|560   |        \generate_delays[48].internal_buffer.bufferX    |delay_buffer_43                     |     0|
+|561   |        \generate_delays[49].internal_buffer.bufferX    |delay_buffer_44                     |     0|
+|562   |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_45                     |     0|
+|563   |        \generate_delays[50].internal_buffer.bufferX    |delay_buffer_46                     |     0|
+|564   |        \generate_delays[51].internal_buffer.bufferX    |delay_buffer_47                     |     0|
+|565   |        \generate_delays[52].internal_buffer.bufferX    |delay_buffer_48                     |     0|
+|566   |        \generate_delays[53].internal_buffer.bufferX    |delay_buffer_49                     |     0|
+|567   |        \generate_delays[54].internal_buffer.bufferX    |delay_buffer_50                     |     0|
+|568   |        \generate_delays[55].internal_buffer.bufferX    |delay_buffer_51                     |     0|
+|569   |        \generate_delays[56].internal_buffer.bufferX    |delay_buffer_52                     |     0|
+|570   |        \generate_delays[57].internal_buffer.bufferX    |delay_buffer_53                     |     0|
+|571   |        \generate_delays[58].internal_buffer.bufferX    |delay_buffer_54                     |     0|
+|572   |        \generate_delays[59].internal_buffer.bufferX    |delay_buffer_55                     |     0|
+|573   |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_56                     |     0|
+|574   |        \generate_delays[60].internal_buffer.bufferX    |delay_buffer_57                     |     0|
+|575   |        \generate_delays[61].internal_buffer.bufferX    |delay_buffer_58                     |     0|
+|576   |        \generate_delays[62].internal_buffer.bufferX    |delay_buffer_59                     |     0|
+|577   |        \generate_delays[63].internal_buffer.bufferX    |delay_buffer_60                     |     0|
+|578   |        \generate_delays[64].internal_buffer.bufferX    |delay_buffer_61                     |     0|
+|579   |        \generate_delays[65].internal_buffer.bufferX    |delay_buffer_62                     |     0|
+|580   |        \generate_delays[66].internal_buffer.bufferX    |delay_buffer_63                     |     0|
+|581   |        \generate_delays[67].internal_buffer.bufferX    |delay_buffer_64                     |     0|
+|582   |        \generate_delays[68].internal_buffer.bufferX    |delay_buffer_65                     |     0|
+|583   |        \generate_delays[69].internal_buffer.bufferX    |delay_buffer_66                     |     0|
+|584   |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_67                     |     0|
+|585   |        \generate_delays[70].internal_buffer.bufferX    |delay_buffer_68                     |     0|
+|586   |        \generate_delays[71].internal_buffer.bufferX    |delay_buffer_69                     |     0|
+|587   |        \generate_delays[72].internal_buffer.bufferX    |delay_buffer_70                     |     0|
+|588   |        \generate_delays[73].internal_buffer.bufferX    |delay_buffer_71                     |     0|
+|589   |        \generate_delays[74].internal_buffer.bufferX    |delay_buffer_72                     |     0|
+|590   |        \generate_delays[75].internal_buffer.bufferX    |delay_buffer_73                     |     0|
+|591   |        \generate_delays[76].internal_buffer.bufferX    |delay_buffer_74                     |     0|
+|592   |        \generate_delays[77].internal_buffer.bufferX    |delay_buffer_75                     |     0|
+|593   |        \generate_delays[78].internal_buffer.bufferX    |delay_buffer_76                     |     0|
+|594   |        \generate_delays[79].internal_buffer.bufferX    |delay_buffer_77                     |     0|
+|595   |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_78                     |     0|
+|596   |        \generate_delays[80].internal_buffer.bufferX    |delay_buffer_79                     |     0|
+|597   |        \generate_delays[81].internal_buffer.bufferX    |delay_buffer_80                     |     0|
+|598   |        \generate_delays[82].internal_buffer.bufferX    |delay_buffer_81                     |     0|
+|599   |        \generate_delays[83].internal_buffer.bufferX    |delay_buffer_82                     |     0|
+|600   |        \generate_delays[84].internal_buffer.bufferX    |delay_buffer_83                     |     0|
+|601   |        \generate_delays[85].internal_buffer.bufferX    |delay_buffer_84                     |     0|
+|602   |        \generate_delays[86].internal_buffer.bufferX    |delay_buffer_85                     |     0|
+|603   |        \generate_delays[87].internal_buffer.bufferX    |delay_buffer_86                     |     0|
+|604   |        \generate_delays[88].internal_buffer.bufferX    |delay_buffer_87                     |     0|
+|605   |        \generate_delays[89].internal_buffer.bufferX    |delay_buffer_88                     |     0|
+|606   |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_89                     |     0|
+|607   |        \generate_delays[90].internal_buffer.bufferX    |delay_buffer_90                     |     0|
+|608   |        \generate_delays[91].internal_buffer.bufferX    |delay_buffer_91                     |     0|
+|609   |        \generate_delays[92].internal_buffer.bufferX    |delay_buffer_92                     |     0|
+|610   |        \generate_delays[93].internal_buffer.bufferX    |delay_buffer_93                     |     0|
+|611   |        \generate_delays[94].internal_buffer.bufferX    |delay_buffer_94                     |     0|
+|612   |        \generate_delays[95].internal_buffer.bufferX    |delay_buffer_95                     |     0|
+|613   |        \generate_delays[96].internal_buffer.bufferX    |delay_buffer_96                     |     0|
+|614   |        \generate_delays[97].internal_buffer.bufferX    |delay_buffer_97                     |     0|
+|615   |        \generate_delays[98].internal_buffer.bufferX    |delay_buffer_98                     |     0|
+|616   |        \generate_delays[99].internal_buffer.bufferX    |delay_buffer_99                     |     0|
+|617   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_100                    |     0|
+|618   |    gcd1                                                |GCD                                 |    55|
+|619   |  button_synchronizer1                                  |button_synchronizer                 |     3|
+|620   |  synchronizer1                                         |synchronizer                        |     2|
+|621   |  verification_circuit1                                 |verification_circuit                |    47|
+|622   |    romA                                                |rams_21a                            |     2|
+|623   |    romB                                                |rams_21b                            |     3|
+|624   |    romC                                                |rams_21c                            |     4|
++------+--------------------------------------------------------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 767.207 ; gain = 164.570
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 767.207 ; gain = 522.137
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 48 instances were transformed.
+  FDCP => FDCP (FDCE, FDPE, LUT3, LDCE, VCC): 16 instances
+  LD => LDCE: 16 instances
+  LDC => LDCE: 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+203 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 771.441 ; gain = 539.320
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/github/02204_AsyncProject/hardware/fpga/vivado/vivado.runs/synth_1/top_level_verification_circuit.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_verification_circuit_utilization_synth.rpt -pb top_level_verification_circuit_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 771.441 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 11:19:13 2018...

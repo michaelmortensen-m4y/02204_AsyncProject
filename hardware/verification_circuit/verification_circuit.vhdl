@@ -80,8 +80,7 @@ signal C_verification : std_logic_vector(DATA_WIDTH-1 downto 0);
     attribute DONT_TOUCH : string;
     attribute MARK_DEBUG : string;
 
-
-    --attribute DONT_TOUCH of test_addr : signal is "true";
+    attribute MARK_DEBUG of correct_reg : signal is "true";
     --attribute DONT_TOUCH of count_int : signal is "true";
 
 

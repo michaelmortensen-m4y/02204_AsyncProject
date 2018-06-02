@@ -12,7 +12,8 @@ use work.GCD_PACKAGE.all;
 entity top_level_verification_circuit is
     port (
         clock, reset, start_button : in std_logic;
-        correct, start_gcd, test_complete : out std_logic -- just used for testing
+        --correct, start_gcd, test_complete : out std_logic -- just used for testing
+        correct, start_gcd : out std_logic -- just used for testing
     );
 end top_level_verification_circuit;
 
@@ -66,13 +67,17 @@ end component;
 signal start_gcd_int, done_gcd, done_gcd_synchronized, start_button_synchronized, correct_int : std_logic;
 signal result_gcd, input1_gcd, input2_gcd : std_logic_vector(DATA_WIDTH-1 downto 0);
 
-signal count : std_logic_vector(COUNT_SIZE-1 downto 0);
+signal count_int : std_logic_vector(COUNT_SIZE-1 downto 0);
+
+signal test_complete_int : std_logic;
 
     attribute DONT_TOUCH : string;
     attribute MARK_DEBUG : string;
 
 
-    --attribute MARK_DEBUG of correct_int : signal is "true";
+    attribute MARK_DEBUG of count_int : signal is "true";
+    attribute MARK_DEBUG of test_complete_int : signal is "true";
+
 
     --attribute DONT_TOUCH of done_gcd : signal is "true";
     --attribute DONT_TOUCH of done_gcd_synchronized : signal is "true";
@@ -94,9 +99,9 @@ begin
         result_gcd => result_gcd,
         input1_gcd => input1_gcd,
         input2_gcd => input2_gcd,
-        count => count,
+        count => count_int,
         correct => correct_int,
-        test_complete => test_complete
+        test_complete => test_complete_int
     );
 
     gcd_ring1 : gcd_ring 
@@ -128,5 +133,6 @@ begin
 
         correct <= correct_int;
         start_gcd <= start_gcd_int;
+        --test_complete <= test_complete_int;
 
 end behavioural;

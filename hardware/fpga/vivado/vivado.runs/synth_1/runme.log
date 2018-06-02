@@ -14,26 +14,31 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23440 
+INFO: Helper process launched with PID 22868 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 346.355 ; gain = 101.297
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 346.660 ; gain = 101.797
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top_level_verification_circuit' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:19]
-INFO: [Synth 8-3491] module 'verification_circuit' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:13' bound to instance 'verification_circuit1' of component 'verification_circuit' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:87]
+INFO: [Synth 8-638] synthesizing module 'top_level_verification_circuit' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:20]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:70]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:72]
+INFO: [Synth 8-3491] module 'verification_circuit' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:13' bound to instance 'verification_circuit1' of component 'verification_circuit' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:92]
 INFO: [Synth 8-638] synthesizing module 'verification_circuit' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:31]
-INFO: [Synth 8-3491] module 'rams_21a' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:14' bound to instance 'romA' of component 'rams_21a' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:92]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:73]
+INFO: [Synth 8-3491] module 'rams_21a' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:14' bound to instance 'romA' of component 'rams_21a' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:91]
 INFO: [Synth 8-638] synthesizing module 'rams_21a' [C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:23]
 INFO: [Synth 8-256] done synthesizing module 'rams_21a' (1#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:23]
-INFO: [Synth 8-3491] module 'rams_21b' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:14' bound to instance 'romB' of component 'rams_21b' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:101]
+INFO: [Synth 8-3491] module 'rams_21b' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:14' bound to instance 'romB' of component 'rams_21b' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:100]
 INFO: [Synth 8-638] synthesizing module 'rams_21b' [C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:23]
 INFO: [Synth 8-256] done synthesizing module 'rams_21b' (2#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:23]
-INFO: [Synth 8-3491] module 'rams_21c' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:14' bound to instance 'romC' of component 'rams_21c' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:110]
+INFO: [Synth 8-3491] module 'rams_21c' declared at 'C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:14' bound to instance 'romC' of component 'rams_21c' [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:109]
 INFO: [Synth 8-638] synthesizing module 'rams_21c' [C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:23]
 INFO: [Synth 8-256] done synthesizing module 'rams_21c' (3#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/romC.vhdl:23]
-WARNING: [Synth 8-614] signal 'test_complete_reg' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:143]
+WARNING: [Synth 8-614] signal 'test_complete_reg' is read in the process but is not in the sensitivity list [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:142]
 INFO: [Synth 8-256] done synthesizing module 'verification_circuit' (4#1) [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:31]
-INFO: [Synth 8-3491] module 'gcd_ring' declared at 'C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:13' bound to instance 'gcd_ring1' of component 'gcd_ring' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:102]
+INFO: [Synth 8-3491] module 'gcd_ring' declared at 'C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:13' bound to instance 'gcd_ring1' of component 'gcd_ring' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:107]
 INFO: [Synth 8-638] synthesizing module 'gcd_ring' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:22]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:49]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:56]
 	Parameter a_req_delay bound to: 2 - type: integer 
 	Parameter b_ack_delay bound to: 2 - type: integer 
 	Parameter initialOutput bound to: 1'b1 
@@ -58,36 +63,96 @@ INFO: [Synth 8-256] done synthesizing module 'delay_n_stage' (6#1) [C:/github/02
 	Parameter stages bound to: 2 - type: integer 
 INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:64]
 INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay' (7#1) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
-	Parameter a_req_delay bound to: 2 - type: integer 
-	Parameter b_ack_delay bound to: 2 - type: integer 
+	Parameter a_req_delay bound to: 25 - type: integer 
+	Parameter b_ack_delay bound to: 25 - type: integer 
 	Parameter initialOutput bound to: 1'b0 
 INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at 'C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl2' of component 'click_ctrl_delay' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:163]
 INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay__parameterized1' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
-	Parameter a_req_delay bound to: 2 - type: integer 
-	Parameter b_ack_delay bound to: 2 - type: integer 
+	Parameter a_req_delay bound to: 25 - type: integer 
+	Parameter b_ack_delay bound to: 25 - type: integer 
 	Parameter initialOutput bound to: 1'b0 
-	Parameter stages bound to: 2 - type: integer 
+	Parameter stages bound to: 25 - type: integer 
 INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:57]
-	Parameter stages bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'delay_n_stage__parameterized2' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:19]
+	Parameter stages bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferStart' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:49]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferEnd' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:59]
+INFO: [Synth 8-256] done synthesizing module 'delay_n_stage__parameterized2' (7#1) [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:19]
+	Parameter stages bound to: 25 - type: integer 
 INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:64]
 INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay__parameterized1' (7#1) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
-	Parameter a_req_delay bound to: 2 - type: integer 
-	Parameter b_ack_delay bound to: 2 - type: integer 
+	Parameter a_req_delay bound to: 15 - type: integer 
+	Parameter b_ack_delay bound to: 15 - type: integer 
 	Parameter initialOutput bound to: 1'b0 
 INFO: [Synth 8-3491] module 'click_ctrl_delay' declared at 'C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:12' bound to instance 'ctrl3' of component 'click_ctrl_delay' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:177]
+INFO: [Synth 8-638] synthesizing module 'click_ctrl_delay__parameterized3' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
+	Parameter a_req_delay bound to: 15 - type: integer 
+	Parameter b_ack_delay bound to: 15 - type: integer 
+	Parameter initialOutput bound to: 1'b0 
+	Parameter stages bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:11' bound to instance 'delay_a_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:57]
+INFO: [Synth 8-638] synthesizing module 'delay_n_stage__parameterized4' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:19]
+	Parameter stages bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferStart' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:49]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferX' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:70]
+INFO: [Synth 8-3491] module 'delay_buffer' declared at 'C:/github/02204_AsyncProject/hardware/buffer/buffer.vhdl:11' bound to instance 'bufferEnd' of component 'delay_buffer' [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:59]
+INFO: [Synth 8-256] done synthesizing module 'delay_n_stage__parameterized4' (7#1) [C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:19]
+	Parameter stages bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'delay_n_stage' declared at 'C:/github/02204_AsyncProject/hardware/delay/delay_n_stage.vhdl:11' bound to instance 'delay_b_req' of component 'delay_n_stage' [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:64]
+INFO: [Synth 8-256] done synthesizing module 'click_ctrl_delay__parameterized3' (7#1) [C:/github/02204_AsyncProject/hardware/ctrl_delay/ctrl_delay.vhdl:24]
 INFO: [Synth 8-3491] module 'GCD' declared at 'C:/github/02204_AsyncProject/hardware/gcd/gcd.vhdl:14' bound to instance 'gcd1' of component 'GCD' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:190]
 INFO: [Synth 8-638] synthesizing module 'GCD' [C:/github/02204_AsyncProject/hardware/gcd/gcd.vhdl:22]
 INFO: [Synth 8-256] done synthesizing module 'GCD' (8#1) [C:/github/02204_AsyncProject/hardware/gcd/gcd.vhdl:22]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl3'. This will prevent further optimization [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:177]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl2'. This will prevent further optimization [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:163]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ctrl1'. This will prevent further optimization [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:149]
 INFO: [Synth 8-256] done synthesizing module 'gcd_ring' (9#1) [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:22]
-INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/github/02204_AsyncProject/hardware/synchronizer/synchronizer.vhdl:11' bound to instance 'synchronizer1' of component 'synchronizer' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:112]
+INFO: [Synth 8-3491] module 'synchronizer' declared at 'C:/github/02204_AsyncProject/hardware/synchronizer/synchronizer.vhdl:11' bound to instance 'synchronizer1' of component 'synchronizer' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:117]
 INFO: [Synth 8-638] synthesizing module 'synchronizer' [C:/github/02204_AsyncProject/hardware/synchronizer/synchronizer.vhdl:18]
 INFO: [Synth 8-256] done synthesizing module 'synchronizer' (10#1) [C:/github/02204_AsyncProject/hardware/synchronizer/synchronizer.vhdl:18]
-INFO: [Synth 8-3491] module 'button_synchronizer' declared at 'C:/github/02204_AsyncProject/hardware/button_synchronizer/button_synchronizer.vhdl:11' bound to instance 'button_synchronizer1' of component 'button_synchronizer' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:121]
+INFO: [Synth 8-3491] module 'button_synchronizer' declared at 'C:/github/02204_AsyncProject/hardware/button_synchronizer/button_synchronizer.vhdl:11' bound to instance 'button_synchronizer1' of component 'button_synchronizer' [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:126]
 INFO: [Synth 8-638] synthesizing module 'button_synchronizer' [C:/github/02204_AsyncProject/hardware/button_synchronizer/button_synchronizer.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'button_synchronizer' (11#1) [C:/github/02204_AsyncProject/hardware/button_synchronizer/button_synchronizer.vhdl:20]
-INFO: [Synth 8-256] done synthesizing module 'top_level_verification_circuit' (12#1) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:19]
+INFO: [Synth 8-256] done synthesizing module 'top_level_verification_circuit' (12#1) [C:/github/02204_AsyncProject/hardware/fpga/fpga.vhdl:20]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.434 ; gain = 154.375
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.984 ; gain = 155.121
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -97,7 +162,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 399.434 ; gain = 154.375
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 399.984 ; gain = 155.121
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -113,31 +178,31 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 749.969 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 752.977 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 749.969 ; gain = 504.910
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 752.977 ; gain = 508.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 749.969 ; gain = 504.910
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 752.977 ; gain = 508.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 749.969 ; gain = 504.910
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 752.977 ; gain = 508.113
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:1032]
+WARNING: [Synth 8-6014] Unused sequential element data_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:1033]
+INFO: [Synth 8-5546] ROM "ROM" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'verification_circuit'
 INFO: [Synth 8-5544] ROM "count_int" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element count_int_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:124]
+WARNING: [Synth 8-6014] Unused sequential element count_int_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:123]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -152,7 +217,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encod
 WARNING: [Synth 8-327] inferring latch for variable 'stage1_dataAout_reg' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:118]
 WARNING: [Synth 8-327] inferring latch for variable 'stage1_dataBout_reg' [C:/github/02204_AsyncProject/hardware/gcd_ring/gcd_ring.vhdl:119]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 749.969 ; gain = 504.910
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 752.977 ; gain = 508.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -165,21 +230,23 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     11 Bit       Adders := 1     
 	   3 Input      8 Bit       Adders := 2     
-	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
+	               11 Bit    Registers := 1     
 	                8 Bit    Registers := 9     
-	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 7     
++---ROMs : 
+	                              ROMs := 2     
 +---Muxes : 
-	  10 Input      8 Bit        Muxes := 3     
+	   6 Input     11 Bit        Muxes := 1     
+	1001 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 9     
-	   6 Input      5 Bit        Muxes := 1     
 	  10 Input      3 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -191,37 +258,41 @@ Module rams_21a
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
-+---Muxes : 
-	  10 Input      8 Bit        Muxes := 1     
++---ROMs : 
+	                              ROMs := 1     
 Module rams_21b 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
-+---Muxes : 
-	  10 Input      8 Bit        Muxes := 1     
++---ROMs : 
+	                              ROMs := 1     
 Module rams_21c 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 1     
 +---Muxes : 
-	  10 Input      8 Bit        Muxes := 1     
+	1001 Input      8 Bit        Muxes := 1     
 Module verification_circuit 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      5 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 +---Registers : 
-	                5 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   6 Input      5 Bit        Muxes := 1     
+	   6 Input     11 Bit        Muxes := 1     
 	  10 Input      3 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 4     
 Module click_ctrl_delay 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 Module click_ctrl_delay__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module click_ctrl_delay__parameterized3 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -262,10 +333,30 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element verification_circuit1/count_int_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:124]
-INFO: [Synth 8-3886] merging instance 'verification_circuit1/romC/data_reg[1]' (FD) to 'verification_circuit1/romC/data_reg[3]'
+WARNING: [Synth 8-6014] Unused sequential element romA/data_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/romA.vhdl:1032]
+WARNING: [Synth 8-6014] Unused sequential element romB/data_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/romB.vhdl:1033]
+WARNING: [Synth 8-6014] Unused sequential element count_int_reg was removed.  [C:/github/02204_AsyncProject/hardware/verification_circuit/verification_circuit.vhdl:123]
+WARNING: [Synth 8-3332] Sequential element (test_addr_reg_rep[10]) is unused and will be removed from module verification_circuit.
+WARNING: [Synth 8-3332] Sequential element (test_addr_reg_rep[10]__0) is unused and will be removed from module verification_circuit.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 749.969 ; gain = 504.910
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 752.977 ; gain = 508.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------------+---------------+---------------+----------------+
+|Module Name          | RTL Object    | Depth x Width | Implemented As | 
++---------------------+---------------+---------------+----------------+
+|rams_21a             | data_reg      | 1024x8        | Block RAM      | 
+|rams_21b             | data_reg      | 1024x8        | Block RAM      | 
+|verification_circuit | romA/data_reg | 1024x8        | Block RAM      | 
+|verification_circuit | romB/data_reg | 1024x8        | Block RAM      | 
++---------------------+---------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,13 +368,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 749.969 ; gain = 504.910
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 752.977 ; gain = 508.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 750.465 ; gain = 505.406
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 752.977 ; gain = 508.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -294,10 +385,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[1]' (FD) to 'verification_circuit1/romC/data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'verification_circuit1/romB/data_reg[4]' (FD) to 'verification_circuit1/romC/data_reg[4]'
+INFO: [Synth 8-4480] The timing for the instance verification_circuit1/romA/data_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance verification_circuit1/romB/data_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,7 +412,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -334,7 +425,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -346,25 +437,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -377,90 +468,168 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     6|
-|3     |LUT1   |    16|
-|4     |LUT2   |    18|
-|5     |LUT3   |    24|
-|6     |LUT4   |    68|
-|7     |LUT5   |    24|
-|8     |LUT6   |     5|
-|9     |FDCE   |    61|
-|10    |FDPE   |    15|
-|11    |FDRE   |    20|
-|12    |LD     |    16|
-|13    |LDC    |    13|
-|14    |IBUF   |     3|
-|15    |OBUF   |     3|
-+------+-------+------+
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |    14|
+|3     |LUT1       |    92|
+|4     |LUT2       |    55|
+|5     |LUT3       |    32|
+|6     |LUT4       |    39|
+|7     |LUT5       |    26|
+|8     |LUT6       |    96|
+|9     |MUXF7      |    34|
+|10    |MUXF8      |    17|
+|11    |RAMB18E1   |     1|
+|12    |RAMB18E1_1 |     1|
+|13    |FDCE       |   119|
+|14    |FDCP       |     8|
+|15    |FDPE       |    18|
+|16    |FDRE       |    12|
+|17    |LD         |    16|
+|18    |LDC        |    16|
+|19    |IBUF       |     3|
+|20    |OBUF       |     2|
++------+-----------+------+
 
 Report Instance Areas: 
-+------+--------------------------------------------------------+-----------------------------------+------+
-|      |Instance                                                |Module                             |Cells |
-+------+--------------------------------------------------------+-----------------------------------+------+
-|1     |top                                                     |                                   |   293|
-|2     |  button_synchronizer1                                  |button_synchronizer                |     3|
-|3     |  gcd_ring1                                             |gcd_ring                           |   193|
-|4     |    gcd1                                                |GCD                                |     6|
-|5     |    ctrl1                                               |click_ctrl_delay                   |     7|
-|6     |      delay_a_req                                       |delay_n_stage_15                   |     3|
-|7     |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_20                    |     0|
-|8     |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_21                    |     0|
-|9     |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_22                    |     0|
-|10    |      delay_b_req                                       |delay_n_stage_16                   |     2|
-|11    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_17                    |     0|
-|12    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_18                    |     0|
-|13    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_19                    |     0|
-|14    |    ctrl2                                               |click_ctrl_delay__parameterized1   |     7|
-|15    |      delay_a_req                                       |delay_n_stage_7                    |     3|
-|16    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_12                    |     0|
-|17    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_13                    |     0|
-|18    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_14                    |     0|
-|19    |      delay_b_req                                       |delay_n_stage_8                    |     2|
-|20    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_9                     |     0|
-|21    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_10                    |     0|
-|22    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_11                    |     0|
-|23    |    ctrl3                                               |click_ctrl_delay__parameterized1_0 |     7|
-|24    |      delay_a_req                                       |delay_n_stage                      |     3|
-|25    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_4                     |     0|
-|26    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_5                     |     0|
-|27    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_6                     |     0|
-|28    |      delay_b_req                                       |delay_n_stage_1                    |     2|
-|29    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer                       |     0|
-|30    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_2                     |     0|
-|31    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_3                     |     0|
-|32    |  synchronizer1                                         |synchronizer                       |     2|
-|33    |  verification_circuit1                                 |verification_circuit               |    88|
-|34    |    romA                                                |rams_21a                           |    28|
-|35    |    romB                                                |rams_21b                           |    16|
-|36    |    romC                                                |rams_21c                           |    12|
-+------+--------------------------------------------------------+-----------------------------------+------+
++------+--------------------------------------------------------+---------------------------------+------+
+|      |Instance                                                |Module                           |Cells |
++------+--------------------------------------------------------+---------------------------------+------+
+|1     |top                                                     |                                 |   602|
+|2     |  verification_circuit1                                 |verification_circuit             |   267|
+|3     |    romA                                                |rams_21a                         |     1|
+|4     |    romB                                                |rams_21b                         |     1|
+|5     |    romC                                                |rams_21c                         |   164|
+|6     |  gcd_ring1                                             |gcd_ring                         |   323|
+|7     |    ctrl1                                               |click_ctrl_delay                 |     9|
+|8     |      delay_a_req                                       |delay_n_stage                    |     3|
+|9     |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_89                  |     0|
+|10    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_90                  |     0|
+|11    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_91                  |     0|
+|12    |      delay_b_req                                       |delay_n_stage_85                 |     2|
+|13    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_86                  |     0|
+|14    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_87                  |     0|
+|15    |        \generate_delays[2].final_buffer.bufferEnd      |delay_buffer_88                  |     0|
+|16    |    ctrl2                                               |click_ctrl_delay__parameterized1 |    55|
+|17    |      delay_a_req                                       |delay_n_stage__parameterized2    |    26|
+|18    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_59                  |     0|
+|19    |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_60                  |     0|
+|20    |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_61                  |     0|
+|21    |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_62                  |     0|
+|22    |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_63                  |     0|
+|23    |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_64                  |     0|
+|24    |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_65                  |     0|
+|25    |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_66                  |     0|
+|26    |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_67                  |     0|
+|27    |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_68                  |     0|
+|28    |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_69                  |     0|
+|29    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_70                  |     0|
+|30    |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_71                  |     0|
+|31    |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_72                  |     0|
+|32    |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_73                  |     0|
+|33    |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_74                  |     0|
+|34    |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_75                  |     0|
+|35    |        \generate_delays[25].final_buffer.bufferEnd     |delay_buffer_76                  |     0|
+|36    |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_77                  |     0|
+|37    |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_78                  |     0|
+|38    |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_79                  |     0|
+|39    |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_80                  |     0|
+|40    |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_81                  |     0|
+|41    |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_82                  |     0|
+|42    |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_83                  |     0|
+|43    |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_84                  |     0|
+|44    |      delay_b_req                                       |delay_n_stage__parameterized2_32 |    25|
+|45    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_33                  |     0|
+|46    |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_34                  |     0|
+|47    |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_35                  |     0|
+|48    |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_36                  |     0|
+|49    |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_37                  |     0|
+|50    |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_38                  |     0|
+|51    |        \generate_delays[15].internal_buffer.bufferX    |delay_buffer_39                  |     0|
+|52    |        \generate_delays[16].internal_buffer.bufferX    |delay_buffer_40                  |     0|
+|53    |        \generate_delays[17].internal_buffer.bufferX    |delay_buffer_41                  |     0|
+|54    |        \generate_delays[18].internal_buffer.bufferX    |delay_buffer_42                  |     0|
+|55    |        \generate_delays[19].internal_buffer.bufferX    |delay_buffer_43                  |     0|
+|56    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_44                  |     0|
+|57    |        \generate_delays[20].internal_buffer.bufferX    |delay_buffer_45                  |     0|
+|58    |        \generate_delays[21].internal_buffer.bufferX    |delay_buffer_46                  |     0|
+|59    |        \generate_delays[22].internal_buffer.bufferX    |delay_buffer_47                  |     0|
+|60    |        \generate_delays[23].internal_buffer.bufferX    |delay_buffer_48                  |     0|
+|61    |        \generate_delays[24].internal_buffer.bufferX    |delay_buffer_49                  |     0|
+|62    |        \generate_delays[25].final_buffer.bufferEnd     |delay_buffer_50                  |     0|
+|63    |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_51                  |     0|
+|64    |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_52                  |     0|
+|65    |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_53                  |     0|
+|66    |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_54                  |     0|
+|67    |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_55                  |     0|
+|68    |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_56                  |     0|
+|69    |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_57                  |     0|
+|70    |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_58                  |     0|
+|71    |    ctrl3                                               |click_ctrl_delay__parameterized3 |    35|
+|72    |      delay_a_req                                       |delay_n_stage__parameterized4    |    16|
+|73    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer_16                  |     0|
+|74    |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_17                  |     0|
+|75    |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_18                  |     0|
+|76    |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_19                  |     0|
+|77    |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_20                  |     0|
+|78    |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_21                  |     0|
+|79    |        \generate_delays[15].final_buffer.bufferEnd     |delay_buffer_22                  |     0|
+|80    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_23                  |     0|
+|81    |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_24                  |     0|
+|82    |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_25                  |     0|
+|83    |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_26                  |     0|
+|84    |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_27                  |     0|
+|85    |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_28                  |     0|
+|86    |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_29                  |     0|
+|87    |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_30                  |     0|
+|88    |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_31                  |     0|
+|89    |      delay_b_req                                       |delay_n_stage__parameterized4_0  |    15|
+|90    |        \generate_delays[0].initial_buffer.bufferStart  |delay_buffer                     |     0|
+|91    |        \generate_delays[10].internal_buffer.bufferX    |delay_buffer_1                   |     0|
+|92    |        \generate_delays[11].internal_buffer.bufferX    |delay_buffer_2                   |     0|
+|93    |        \generate_delays[12].internal_buffer.bufferX    |delay_buffer_3                   |     0|
+|94    |        \generate_delays[13].internal_buffer.bufferX    |delay_buffer_4                   |     0|
+|95    |        \generate_delays[14].internal_buffer.bufferX    |delay_buffer_5                   |     0|
+|96    |        \generate_delays[15].final_buffer.bufferEnd     |delay_buffer_6                   |     0|
+|97    |        \generate_delays[1].internal_buffer.bufferX     |delay_buffer_7                   |     0|
+|98    |        \generate_delays[2].internal_buffer.bufferX     |delay_buffer_8                   |     0|
+|99    |        \generate_delays[3].internal_buffer.bufferX     |delay_buffer_9                   |     0|
+|100   |        \generate_delays[4].internal_buffer.bufferX     |delay_buffer_10                  |     0|
+|101   |        \generate_delays[5].internal_buffer.bufferX     |delay_buffer_11                  |     0|
+|102   |        \generate_delays[6].internal_buffer.bufferX     |delay_buffer_12                  |     0|
+|103   |        \generate_delays[7].internal_buffer.bufferX     |delay_buffer_13                  |     0|
+|104   |        \generate_delays[8].internal_buffer.bufferX     |delay_buffer_14                  |     0|
+|105   |        \generate_delays[9].internal_buffer.bufferX     |delay_buffer_15                  |     0|
+|106   |    gcd1                                                |GCD                              |    55|
+|107   |  button_synchronizer1                                  |button_synchronizer              |     4|
+|108   |  synchronizer1                                         |synchronizer                     |     2|
++------+--------------------------------------------------------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 760.754 ; gain = 165.160
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 760.754 ; gain = 515.695
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 770.992 ; gain = 173.137
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 770.992 ; gain = 526.129
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 110 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 29 instances were transformed.
+  A total of 40 instances were transformed.
+  FDCP => FDCP (FDCE, FDPE, LUT3, LDCE, VCC): 8 instances
   LD => LDCE: 16 instances
-  LDC => LDCE: 13 instances
+  LDC => LDCE: 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-70 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+125 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 763.547 ; gain = 531.438
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 770.992 ; gain = 538.891
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/github/02204_AsyncProject/hardware/fpga/vivado/vivado.runs/synth_1/top_level_verification_circuit.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_verification_circuit_utilization_synth.rpt -pb top_level_verification_circuit_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 763.547 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 15:50:04 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 770.992 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 19:13:17 2018...

@@ -1,7 +1,7 @@
 # 02204_AsyncProject
 Exam project in 02204 Design of Asynchronous Circuits
 
-Asynchronous floating-point multiplier.
+Asynchronous GCD computer.
 
 Group:
 - Michael Mortensen, s144031

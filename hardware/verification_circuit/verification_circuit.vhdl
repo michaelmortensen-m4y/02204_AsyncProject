@@ -76,8 +76,11 @@ signal C_verification : std_logic_vector(DATA_WIDTH-1 downto 0);
 
 
     attribute DONT_TOUCH : string;
-    attribute DONT_TOUCH of test_addr : signal is "true";
-    attribute DONT_TOUCH of count_int : signal is "true";
+    attribute MARK_DEBUG : string;
+
+
+    --attribute DONT_TOUCH of test_addr : signal is "true";
+    --attribute DONT_TOUCH of count_int : signal is "true";
 
 
 begin
@@ -133,7 +136,7 @@ begin
     end process;
 
 -- Combinational circuit
-    process(start_test, done, state_reg) is
+    process(start_test, done, state_reg, count_int, test_addr, correct_reg, result_gcd, C_verification) is
     begin
 
         -- default values
@@ -179,6 +182,8 @@ begin
                 end if;
 
             when verify =>
+
+                start_gcd <= '1';
 
                 if (result_gcd /= C_verification) then
                     correct_reg_next <= '0'; -- Error

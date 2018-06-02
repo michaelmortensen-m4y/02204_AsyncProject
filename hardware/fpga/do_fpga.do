@@ -19,6 +19,7 @@ add wave test_tb/dut/done_gcd_synchronized
 #add wave test_tb/dut/done_gcd_verification
 add wave test_tb/dut/start_button_synchronized
 add wave test_tb/dut/correct
+add wave test_tb/dut/gcd_ring1/enable_ring
 
 add wave test_tb/dut/result_gcd
 add wave test_tb/dut/input1_gcd

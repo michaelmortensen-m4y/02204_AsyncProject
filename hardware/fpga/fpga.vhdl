@@ -69,13 +69,13 @@ signal result_gcd, input1_gcd, input2_gcd, count : std_logic_vector(DATA_WIDTH-1
     attribute MARK_DEBUG : string;
 
 
-    attribute DONT_TOUCH of start_gcd_int : signal is "true";
+    --attribute DONT_TOUCH of start_gcd_int : signal is "true";
 
-    attribute DONT_TOUCH of done_gcd : signal is "true";
-    attribute DONT_TOUCH of done_gcd_synchronized : signal is "true";
-    attribute DONT_TOUCH of result_gcd : signal is "true";
-    attribute DONT_TOUCH of input1_gcd : signal is "true";
-    attribute DONT_TOUCH of input2_gcd : signal is "true";
+    --attribute DONT_TOUCH of done_gcd : signal is "true";
+    --attribute DONT_TOUCH of done_gcd_synchronized : signal is "true";
+    --attribute DONT_TOUCH of result_gcd : signal is "true";
+    --attribute DONT_TOUCH of input1_gcd : signal is "true";
+    --attribute DONT_TOUCH of input2_gcd : signal is "true";
 
 begin
 

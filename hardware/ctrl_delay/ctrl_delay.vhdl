@@ -34,13 +34,13 @@ architecture behavioural of click_ctrl_delay is
     signal a_req_delayed : std_logic := '0';
     signal b_ack_delayed : std_logic := '0';
 
-    attribute DONT_TOUCH : string;
-    attribute DONT_TOUCH of ff_clock_int : signal is "true";
-    attribute DONT_TOUCH of ff_value : signal is "true";
-    attribute DONT_TOUCH of b_req_internal : signal is "true";
-    attribute DONT_TOUCH of a_ack_internal : signal is "true";
-    attribute DONT_TOUCH of a_req_delayed : signal is "true";
-    attribute DONT_TOUCH of b_ack_delayed : signal is "true";
+    --attribute DONT_TOUCH : string;
+    --attribute DONT_TOUCH of ff_clock_int : signal is "true";
+    --attribute DONT_TOUCH of ff_value : signal is "true";
+    --attribute DONT_TOUCH of b_req_internal : signal is "true";
+    --attribute DONT_TOUCH of a_ack_internal : signal is "true";
+    --attribute DONT_TOUCH of a_req_delayed : signal is "true";
+    --attribute DONT_TOUCH of b_ack_delayed : signal is "true";
 
 
 component delay_n_stage is

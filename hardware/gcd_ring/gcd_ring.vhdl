@@ -60,44 +60,44 @@ architecture behavioural of gcd_ring is
     attribute MARK_DEBUG : string;
 
 
-    attribute DONT_TOUCH of stage1_ack : signal is "true";
-    attribute DONT_TOUCH of stage2_ack : signal is "true";
-    attribute DONT_TOUCH of stage3_ack : signal is "true";
-    attribute DONT_TOUCH of stage1_req : signal is "true";
-    attribute DONT_TOUCH of stage2_req : signal is "true";
-    attribute DONT_TOUCH of stage3_req : signal is "true";
+    --attribute DONT_TOUCH of stage1_ack : signal is "true";
+    --attribute DONT_TOUCH of stage2_ack : signal is "true";
+    --attribute DONT_TOUCH of stage3_ack : signal is "true";
+    --attribute DONT_TOUCH of stage1_req : signal is "true";
+    --attribute DONT_TOUCH of stage2_req : signal is "true";
+    --attribute DONT_TOUCH of stage3_req : signal is "true";
 
 
-    attribute DONT_TOUCH of ffClk1 : signal is "true";
-    attribute DONT_TOUCH of ffClk2 : signal is "true";
-    attribute DONT_TOUCH of ffClk3 : signal is "true";
+    --attribute DONT_TOUCH of ffClk1 : signal is "true";
+    --attribute DONT_TOUCH of ffClk2 : signal is "true";
+    --attribute DONT_TOUCH of ffClk3 : signal is "true";
 
-    attribute DONT_TOUCH of stage1_done : signal is "true";
-    attribute DONT_TOUCH of stage2_doneOut : signal is "true";
-    attribute DONT_TOUCH of stage3_done : signal is "true";
+    --attribute DONT_TOUCH of stage1_done : signal is "true";
+    --attribute DONT_TOUCH of stage2_doneOut : signal is "true";
+    --attribute DONT_TOUCH of stage3_done : signal is "true";
 
 
 
     attribute MARK_DEBUG of stage1_dataAin : signal is "true";
-    attribute DONT_TOUCH of stage1_dataBin : signal is "true";
-    attribute DONT_TOUCH of stage1_dataAout : signal is "true";
-    attribute DONT_TOUCH of stage1_dataBout : signal is "true";
+    --attribute DONT_TOUCH of stage1_dataBin : signal is "true";
+    --attribute DONT_TOUCH of stage1_dataAout : signal is "true";
+    --attribute DONT_TOUCH of stage1_dataBout : signal is "true";
 
-    attribute DONT_TOUCH of stage2_dataAin : signal is "true";
-    attribute DONT_TOUCH of stage2_dataBin : signal is "true";
-    attribute DONT_TOUCH of stage2_dataAout : signal is "true";
-    attribute DONT_TOUCH of stage2_dataBout : signal is "true";
+    --attribute DONT_TOUCH of stage2_dataAin : signal is "true";
+    --attribute DONT_TOUCH of stage2_dataBin : signal is "true";
+    --attribute DONT_TOUCH of stage2_dataAout : signal is "true";
+    --attribute DONT_TOUCH of stage2_dataBout : signal is "true";
 
 
-    attribute DONT_TOUCH of stage3_dataA : signal is "true";
-    attribute DONT_TOUCH of stage3_dataB : signal is "true";
+    --attribute DONT_TOUCH of stage3_dataA : signal is "true";
+    --attribute DONT_TOUCH of stage3_dataB : signal is "true";
 
     attribute MARK_DEBUG of enable_ring : signal is "true";
 
 
 begin
 
-    process (start, ffClk1, ffClk2, ffClk3, stage2_dataAout, stage2_dataBout, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout)
+    process (start, ffClk1, ffClk2, ffClk3, stage2_dataAout, stage2_dataBout, stage3_dataA, stage3_dataB, stage1_dataAout, stage1_dataBout, operandAIn, operandBIn, enable_ring)
     begin
        if (start = '0') then
             stage1_dataAin <= operandAIn;
@@ -130,7 +130,7 @@ begin
     enable_ring <= start AND (NOT stage1_done);
 
     --Robert: this stage 1 determines the output
-    process (start, operandAIn, operandBIn, stage1_dataAin, stage1_dataBin, start)
+    process (start, operandAIn, operandBIn, stage1_dataAin, stage1_dataBin, start, enable_ring)
     begin
       if (start = '0') then
             stage1_dataAout <= operandAIn;

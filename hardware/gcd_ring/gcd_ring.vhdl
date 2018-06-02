@@ -92,7 +92,7 @@ architecture behavioural of gcd_ring is
     attribute DONT_TOUCH of stage3_dataA : signal is "true";
     attribute DONT_TOUCH of stage3_dataB : signal is "true";
 
-    attribute DONT_TOUCH of enable_ring : signal is "true";
+    attribute MARK_DEBUG of enable_ring : signal is "true";
 
 
 begin

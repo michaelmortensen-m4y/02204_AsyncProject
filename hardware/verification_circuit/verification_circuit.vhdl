@@ -21,7 +21,7 @@ entity verification_circuit is
         input1_gcd, input2_gcd: out std_logic_vector(DATA_WIDTH-1 downto 0);  -- Direct input to GCD
 
         -- Verification signals
-        count : out std_logic_vector(DATA_WIDTH - 1 downto 0);-- Count for test time
+        count : out std_logic_vector(COUNT_SIZE - 1 downto 0);-- Count for test time
         correct : out std_logic;                             -- 0 if any value was wrong.
         test_complete : out std_logic
 
@@ -66,12 +66,12 @@ end component;
 type state_type is (idle, load, send_data, timing, verify, completed);
 signal state_reg, state_next: state_type;
 
-signal count_int : std_logic_vector(DATA_WIDTH-1 downto 0); -- Counts number of clock cycles
+signal count_int : std_logic_vector(COUNT_SIZE-1 downto 0); -- Counts number of clock cycles
 signal test_addr : std_logic_vector(ADDR_WIDTH-1 downto 0); -- Current test vector
 
 signal test_complete_reg, test_complete_reg_next : std_logic;
 signal correct_reg, correct_reg_next : std_logic;
-signal count_int_next : std_logic_vector(DATA_WIDTH-1 downto 0);
+signal count_int_next : std_logic_vector(COUNT_SIZE-1 downto 0);
 signal test_addr_next : std_logic_vector(ADDR_WIDTH-1 downto 0);
 
 signal C_verification : std_logic_vector(DATA_WIDTH-1 downto 0);

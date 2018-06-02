@@ -102,6 +102,9 @@ vsim.dbg
 #Reports
 #########
 *.rpt
+*.rst
+*.wdf
+*.rpx
 *.txt
 *.vdi
 #########

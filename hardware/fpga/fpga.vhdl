@@ -31,7 +31,7 @@ component verification_circuit is
         input1_gcd, input2_gcd: out std_logic_vector(DATA_WIDTH-1 downto 0);  -- Direct input to GCD
 
         -- Verification signals
-        count : out std_logic_vector(DATA_WIDTH - 1 downto 0);-- Count for test time
+        count : out std_logic_vector(COUNT_SIZE - 1 downto 0);-- Count for test time
         correct : out std_logic;                             -- 0 if any value was wrong.
         test_complete : out std_logic
 
@@ -64,7 +64,9 @@ end component;
 
 
 signal start_gcd_int, done_gcd, done_gcd_synchronized, start_button_synchronized, correct_int : std_logic;
-signal result_gcd, input1_gcd, input2_gcd, count : std_logic_vector(DATA_WIDTH-1 downto 0);
+signal result_gcd, input1_gcd, input2_gcd : std_logic_vector(DATA_WIDTH-1 downto 0);
+
+signal count : std_logic_vector(COUNT_SIZE-1 downto 0);
 
     attribute DONT_TOUCH : string;
     attribute MARK_DEBUG : string;

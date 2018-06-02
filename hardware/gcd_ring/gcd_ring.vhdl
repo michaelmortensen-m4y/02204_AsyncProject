@@ -161,8 +161,8 @@ begin
 
     -- Needs at least around 25, lower if we increase the one above
     ctrl2 : click_ctrl_delay
-    generic map (a_req_delay => 25,
-                 b_ack_delay => 25,
+    generic map (a_req_delay => 2,
+                 b_ack_delay => 2,
                  initialOutput => '0')
     port map (
         a_req => stage1_req,
@@ -175,8 +175,8 @@ begin
 
     -- Needs at least around 15
     ctrl3 : click_ctrl_delay
-    generic map (a_req_delay => 15,
-                 b_ack_delay => 15,
+    generic map (a_req_delay => 2,
+                 b_ack_delay => 2,
                  initialOutput => '0')
     port map (
         a_req => stage2_req,

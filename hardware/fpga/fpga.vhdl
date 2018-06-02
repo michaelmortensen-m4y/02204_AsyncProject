@@ -12,7 +12,7 @@ use work.GCD_PACKAGE.all;
 entity top_level_verification_circuit is
     port (
         clock, reset, start_button : in std_logic;
-        correct, start_gcd : out std_logic -- just used for testing
+        correct, start_gcd, test_complete : out std_logic -- just used for testing
     );
 end top_level_verification_circuit;
 
@@ -32,7 +32,8 @@ component verification_circuit is
 
         -- Verification signals
         count : out std_logic_vector(DATA_WIDTH - 1 downto 0);-- Count for test time
-        correct : out std_logic                             -- 0 if any value was wrong.
+        correct : out std_logic;                             -- 0 if any value was wrong.
+        test_complete : out std_logic
 
     );
 end component;
@@ -69,7 +70,7 @@ signal result_gcd, input1_gcd, input2_gcd, count : std_logic_vector(DATA_WIDTH-1
     attribute MARK_DEBUG : string;
 
 
-    --attribute DONT_TOUCH of start_gcd_int : signal is "true";
+    attribute MARK_DEBUG of correct_int : signal is "true";
 
     --attribute DONT_TOUCH of done_gcd : signal is "true";
     --attribute DONT_TOUCH of done_gcd_synchronized : signal is "true";
@@ -92,7 +93,8 @@ begin
         input1_gcd => input1_gcd,
         input2_gcd => input2_gcd,
         count => count,
-        correct => correct_int
+        correct => correct_int,
+        test_complete => test_complete
     );
 
     gcd_ring1 : gcd_ring 

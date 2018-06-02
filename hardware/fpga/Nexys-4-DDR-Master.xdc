@@ -32,7 +32,7 @@ set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports start_button
 
 set_property -dict {PACKAGE_PIN H17 IOSTANDARD LVCMOS33} [get_ports correct]
 set_property -dict {PACKAGE_PIN K15 IOSTANDARD LVCMOS33} [get_ports start_gcd]
-#set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports { LED[2] }]; #IO_L17N_T2_A25_15 Sch=led[2]
+set_property -dict { PACKAGE_PIN J13   IOSTANDARD LVCMOS33 } [get_ports { test_complete }]; #IO_L17N_T2_A25_15 Sch=led[2]
 #set_property -dict { PACKAGE_PIN N14   IOSTANDARD LVCMOS33 } [get_ports { LED[3] }]; #IO_L8P_T1_D11_14 Sch=led[3]
 #set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { LED[4] }]; #IO_L7P_T1_D09_14 Sch=led[4]
 #set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { LED[5] }]; #IO_L18N_T2_A11_D27_14 Sch=led[5]
@@ -253,21 +253,12 @@ set_property -dict {PACKAGE_PIN K15 IOSTANDARD LVCMOS33} [get_ports start_gcd]
 
 
 
-set_property MARK_DEBUG true [get_nets {result_gcd[0]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[7]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[1]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[2]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[5]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[3]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[4]}]
-set_property MARK_DEBUG true [get_nets {result_gcd[6]}]
-
-
+set_property MARK_DEBUG true [get_nets verification_circuit1/correct]
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
 set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0]
 set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
 set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
 set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
@@ -276,15 +267,23 @@ set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list clock_IBUF_BUFG]]
 set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe0]
 set_property port_width 8 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {result_gcd[0]} {result_gcd[1]} {result_gcd[2]} {result_gcd[3]} {result_gcd[4]} {result_gcd[5]} {result_gcd[6]} {result_gcd[7]}]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {gcd_ring1/stage1_dataAin[0]} {gcd_ring1/stage1_dataAin[1]} {gcd_ring1/stage1_dataAin[2]} {gcd_ring1/stage1_dataAin[3]} {gcd_ring1/stage1_dataAin[4]} {gcd_ring1/stage1_dataAin[5]} {gcd_ring1/stage1_dataAin[6]} {gcd_ring1/stage1_dataAin[7]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe1]
 set_property port_width 8 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {gcd_ring1/stage1_dataAin[0]} {gcd_ring1/stage1_dataAin[1]} {gcd_ring1/stage1_dataAin[2]} {gcd_ring1/stage1_dataAin[3]} {gcd_ring1/stage1_dataAin[4]} {gcd_ring1/stage1_dataAin[5]} {gcd_ring1/stage1_dataAin[6]} {gcd_ring1/stage1_dataAin[7]}]]
+connect_debug_port u_ila_0/probe1 [get_nets [list {result_gcd[0]} {result_gcd[1]} {result_gcd[2]} {result_gcd[3]} {result_gcd[4]} {result_gcd[5]} {result_gcd[6]} {result_gcd[7]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
 set_property port_width 1 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list gcd_ring1/enable_ring]]
+connect_debug_port u_ila_0/probe2 [get_nets [list verification_circuit1/correct]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list gcd_ring1/enable_ring]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list verification_circuit1/test_complete]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

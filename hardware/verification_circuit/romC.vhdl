@@ -23,7 +23,7 @@ end rams_21c;
 architecture syn of rams_21c is
 
     type rom_type is array (MAX_TESTS-1 downto 0) of std_logic_vector (DATA_WIDTH-1 downto 0);
-    signal ROM : rom_type:= (X"0A", X"04", X"01" ,X"01");
+    signal ROM : rom_type:= (X"01", X"14", X"01", X"01", X"05", X"0A", X"04", X"01" ,X"01");
 
 begin
     process (clock)

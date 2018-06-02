@@ -13,14 +13,14 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
       </probeOptions>
       <nets>
-        <net name="result_gcd[7]"/>
-        <net name="result_gcd[6]"/>
-        <net name="result_gcd[5]"/>
-        <net name="result_gcd[4]"/>
-        <net name="result_gcd[3]"/>
-        <net name="result_gcd[2]"/>
-        <net name="result_gcd[1]"/>
-        <net name="result_gcd[0]"/>
+        <net name="gcd_ring1/stage1_dataAin[7]"/>
+        <net name="gcd_ring1/stage1_dataAin[6]"/>
+        <net name="gcd_ring1/stage1_dataAin[5]"/>
+        <net name="gcd_ring1/stage1_dataAin[4]"/>
+        <net name="gcd_ring1/stage1_dataAin[3]"/>
+        <net name="gcd_ring1/stage1_dataAin[2]"/>
+        <net name="gcd_ring1/stage1_dataAin[1]"/>
+        <net name="gcd_ring1/stage1_dataAin[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
@@ -35,14 +35,14 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
       </probeOptions>
       <nets>
-        <net name="gcd_ring1/stage1_dataAin[7]"/>
-        <net name="gcd_ring1/stage1_dataAin[6]"/>
-        <net name="gcd_ring1/stage1_dataAin[5]"/>
-        <net name="gcd_ring1/stage1_dataAin[4]"/>
-        <net name="gcd_ring1/stage1_dataAin[3]"/>
-        <net name="gcd_ring1/stage1_dataAin[2]"/>
-        <net name="gcd_ring1/stage1_dataAin[1]"/>
-        <net name="gcd_ring1/stage1_dataAin[0]"/>
+        <net name="result_gcd[7]"/>
+        <net name="result_gcd[6]"/>
+        <net name="result_gcd[5]"/>
+        <net name="result_gcd[4]"/>
+        <net name="result_gcd[3]"/>
+        <net name="result_gcd[2]"/>
+        <net name="result_gcd[1]"/>
+        <net name="result_gcd[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -57,7 +57,37 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
+        <net name="verification_circuit1/correct"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23e7d65a79bc59f7bc47406c1714dfae"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="3"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
         <net name="gcd_ring1/enable_ring"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23e7d65a79bc59f7bc47406c1714dfae"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="4"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="verification_circuit1/test_complete"/>
       </nets>
     </probe>
   </probeset>

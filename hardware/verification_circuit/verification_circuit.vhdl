@@ -22,7 +22,8 @@ entity verification_circuit is
 
         -- Verification signals
         count : out std_logic_vector(DATA_WIDTH - 1 downto 0);-- Count for test time
-        correct : out std_logic                             -- 0 if any value was wrong.
+        correct : out std_logic;                             -- 0 if any value was wrong.
+        test_complete : out std_logic
 
     );
 end verification_circuit;
@@ -68,6 +69,7 @@ signal state_reg, state_next: state_type;
 signal count_int : std_logic_vector(DATA_WIDTH-1 downto 0); -- Counts number of clock cycles
 signal test_addr : std_logic_vector(ADDR_WIDTH-1 downto 0); -- Current test vector
 
+signal test_complete_reg, test_complete_reg_next : std_logic;
 signal correct_reg, correct_reg_next : std_logic;
 signal count_int_next : std_logic_vector(DATA_WIDTH-1 downto 0);
 signal test_addr_next : std_logic_vector(ADDR_WIDTH-1 downto 0);
@@ -122,10 +124,12 @@ begin
             count_int <= (others => '0');
             test_addr <= (others => '0');
             correct_reg <= '1';
+            test_complete_reg <= '0';
         elsif(rising_edge(clock)) then 
             state_reg <= state_next;
             test_addr <= test_addr_next;
             correct_reg <= correct_reg_next;
+            test_complete_reg <= test_complete_reg_next;
             -- If it just accumulates in the same state, this is better
             if (state_reg = timing) then
                 count_int <= std_logic_vector(unsigned(count_int) + "1");
@@ -145,6 +149,8 @@ begin
         count_int_next <= count_int;
         test_addr_next <= test_addr;
         correct_reg_next <= correct_reg;
+        test_complete_reg_next <= test_complete_reg;
+
 
         case state_reg is
 
@@ -179,21 +185,21 @@ begin
                     state_next <= timing;
                 else
                     state_next <= verify;
+                    if (result_gcd /= C_verification) then
+                        correct_reg_next <= '0'; -- Error
+                    end if;
                 end if;
 
             when verify =>
 
                 start_gcd <= '1';
 
-                if (result_gcd /= C_verification) then
-                    correct_reg_next <= '0'; -- Error
-                end if;
-
                 if (unsigned(test_addr) < MAX_TESTS - 1) then
                     test_addr_next <= std_logic_vector(unsigned(test_addr) + "1");
                     state_next <= load;
                 else
                     state_next <= completed; -- Test is complete
+                    test_complete_reg_next <= '1';
                 end if;
 
 
@@ -205,6 +211,7 @@ begin
         
     end process;
 
+    test_complete <= test_complete_reg;
     count <= count_int;
     correct <= correct_reg;
 

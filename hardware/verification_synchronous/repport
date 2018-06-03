@@ -1,0 +1,37 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
+| Date         : Sun Jun 03 00:46:22 2018
+| Host         : DESKTOP-4GCH4AU running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file D:/Documents/Eclipse/VHDL/AsyncTesting/syncGCD/repport
+| Design       : top_level_verification_circuit
+| Device       : 7a100tcsg324-3
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------+----------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|              Instance              |        Module        | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++------------------------------------+----------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| top_level_verification_circuit     |                (top) |        153 |        153 |       0 |    0 |  69 |      0 |      2 |            0 |
+|   (top_level_verification_circuit) |                (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   GCDsynch1                        |             GCDsynch |         27 |         27 |       0 |    0 |  21 |      0 |      0 |            0 |
+|   button_synchronizer1             |  button_synchronizer |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|   synchronizer1                    |         synchronizer |          0 |          0 |       0 |    0 |   2 |      0 |      0 |            0 |
+|   verification_circuit1            | verification_circuit |        125 |        125 |       0 |    0 |  43 |      0 |      2 |            0 |
+|     (verification_circuit1)        | verification_circuit |         22 |         22 |       0 |    0 |  35 |      0 |      0 |            0 |
+|     romA                           |             rams_21a |          1 |          1 |       0 |    0 |   1 |      0 |      1 |            0 |
+|     romB                           |             rams_21b |          1 |          1 |       0 |    0 |   0 |      0 |      1 |            0 |
+|     romC                           |             rams_21c |        101 |        101 |       0 |    0 |   7 |      0 |      0 |            0 |
++------------------------------------+----------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

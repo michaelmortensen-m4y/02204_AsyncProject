@@ -145,10 +145,10 @@ begin
 
 
 
-    -- Needs at least around 2
+    -- Needs at least around 5, we have multiplexing here
     ctrl1 : click_ctrl_delay
-    generic map (a_req_delay => 2,
-                 b_ack_delay => 2,
+    generic map (a_req_delay => 0,
+                 b_ack_delay => 0,
                  initialOutput => '1') -- The phase is initialized to 1 so that the ring oscillates when enabled
     port map (
         a_req => stage3_req,
@@ -159,10 +159,10 @@ begin
         enable => enable_ring
     );
 
-    -- Needs at least around 25, lower if we increase the one above
+    -- Needs at least around 10, we have a multiplexor here
     ctrl2 : click_ctrl_delay
-    generic map (a_req_delay => 25,
-                 b_ack_delay => 25,
+    generic map (a_req_delay => 10,
+                 b_ack_delay => 0,
                  initialOutput => '0')
     port map (
         a_req => stage1_req,
@@ -173,10 +173,10 @@ begin
         enable => enable_ring
     );
 
-    -- Needs at least around 15
+    -- Needs at least around 20, we have the GCD circuit here
     ctrl3 : click_ctrl_delay
-    generic map (a_req_delay => 15,
-                 b_ack_delay => 15,
+    generic map (a_req_delay => 20,
+                 b_ack_delay => 0,
                  initialOutput => '0')
     port map (
         a_req => stage2_req,

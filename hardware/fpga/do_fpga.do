@@ -25,7 +25,7 @@ add wave test_tb/dut/gcd_ring1/enable_ring
 add wave test_tb/dut/result_gcd
 add wave test_tb/dut/input1_gcd
 add wave test_tb/dut/input2_gcd
-add wave test_tb/dut/count
+add wave test_tb/dut/count_int
 
 
 add wave test_tb/dut/verification_circuit1/state_reg

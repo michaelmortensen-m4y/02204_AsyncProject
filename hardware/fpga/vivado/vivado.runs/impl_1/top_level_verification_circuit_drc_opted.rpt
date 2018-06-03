@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sat Jun  2 19:15:24 2018
+| Date         : Sun Jun  3 11:19:51 2018
 | Host         : DESKTOP-V4T9AF7 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_level_verification_circuit_drc_opted.rpt -pb top_level_verification_circuit_drc_opted.pb -rpx top_level_verification_circuit_drc_opted.rpx
 | Design       : top_level_verification_circuit
@@ -56,34 +56,34 @@ Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT gcd_ring1/ctrl1/delay_a_req/ff_clock_INST_0 is driving clock pin of 34 cells. This could lead to large hold time violations. First few involved cells are:
-    gcd_ring1/stage1_dataBin_reg[3]_P {FDPE}
-    gcd_ring1/stage1_dataAin_reg[1]_P {FDPE}
-    gcd_ring1/stage1_dataAin_reg[4]_C {FDCE}
+A LUT gcd_ring1/ctrl1/ff_clock_INST_0 is driving clock pin of 34 cells. This could lead to large hold time violations. First few involved cells are:
+    gcd_ring1/ctrl1/ff_value_reg {FDPE}
     gcd_ring1/stage1_dataAin_reg[7]_C {FDCE}
-    gcd_ring1/stage1_dataAin_reg[1]_C {FDCE}
+    gcd_ring1/stage1_dataAin_reg[4]_C {FDCE}
+    gcd_ring1/stage1_dataAin_reg[0]_C {FDCE}
+    gcd_ring1/stage1_dataAin_reg[3]_C {FDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#2 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT gcd_ring1/ctrl2/delay_a_req/ff_clock_INST_0 is driving clock pin of 17 cells. This could lead to large hold time violations. First few involved cells are:
-    gcd_ring1/stage2_dataAin_reg[0] {FDCE}
-    gcd_ring1/stage2_dataAin_reg[1] {FDCE}
-    gcd_ring1/stage2_dataAin_reg[2] {FDCE}
-    gcd_ring1/stage2_dataAin_reg[3] {FDCE}
+    gcd_ring1/ctrl2/ff_value_reg {FDCE}
     gcd_ring1/stage2_dataAin_reg[4] {FDCE}
+    gcd_ring1/stage2_dataBin_reg[4] {FDCE}
+    gcd_ring1/stage2_dataBin_reg[3] {FDCE}
+    gcd_ring1/stage2_dataBin_reg[7] {FDCE}
 
 Related violations: <none>
 
 PLHOLDVIO-2#3 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT gcd_ring1/ctrl3/delay_a_req/ff_clock_INST_0 is driving clock pin of 18 cells. This could lead to large hold time violations. First few involved cells are:
-    gcd_ring1/stage3_dataA_reg[7] {FDCE}
-    gcd_ring1/stage3_dataA_reg[4] {FDCE}
+    gcd_ring1/ctrl3/ff_value_reg {FDCE}
     gcd_ring1/stage3_dataA_reg[2] {FDCE}
-    gcd_ring1/stage3_dataA_reg[0] {FDCE}
-    gcd_ring1/stage3_dataA_reg[5] {FDCE}
+    gcd_ring1/stage3_dataB_reg[0] {FDCE}
+    gcd_ring1/stage3_dataA_reg[3] {FDCE}
+    gcd_ring1/stage3_dataB_reg[1] {FDCE}
 
 Related violations: <none>
 
